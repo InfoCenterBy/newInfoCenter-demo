@@ -1,0 +1,689 @@
+<div class="">
+     <script src="./js/vue.js"></script>
+     <script src="./js/vue-datepicker.js"></script>
+     <script src="./js/imask.js"></script>
+     <style>
+          /* Стили для заблокированных полей */
+          .floating-input:disabled,
+          .form-select:disabled {
+               opacity: 0.6;
+               cursor: not-allowed;
+               background-color: #f8f9fa;
+          }
+
+          .floating-label-content.disabled {
+               opacity: 0.6;
+          }
+
+          /* Стили для подсказок */
+          .field-hint {
+               font-size: 12px;
+               color: #66605b;
+               margin-top: 4px;
+          }
+
+          @layer component {
+               .dp__action_buttons .dp__action_select {
+                    color: var(--color-black);
+               }
+
+               /* theme style */
+               .dp__theme_light {
+                    --dp-background-color: #fbfbfb;
+                    --dp-text-color: #030303;
+                    --dp-hover-color: var(--color-violet-hover);
+                    --dp-hover-text-color: var(--color-white);
+                    --dp-hover-icon-color: var(--color-violet);
+                    --dp-primary-color: var(--color-violet);
+                    /* --dp-primary-disabled-color: #6bacea; */
+                    /* --dp-primary-text-color: #f8f5f5; */
+                    /* --dp-secondary-color: #c0c4cc; */
+                    --dp-border-color: transparent;
+                    /* --dp-menu-border-color: #ddd; */
+                    --dp-border-color-hover: transparent;
+                    --dp-border-color-focus: transparent;
+                    --dp-disabled-color: var(--color-gray-stroke);
+                    --dp-scroll-bar-background: #f3f3f3;
+                    --dp-scroll-bar-color: #959595;
+                    /* --dp-success-color: #76d275; */
+                    /* --dp-success-color-disabled: #a3d9b1; */
+                    --dp-icon-color: #66605b;
+                    /* --dp-danger-color: #ff6f60; */
+                    /* --dp-marker-color: #ff6f60; */
+                    /* --dp-tooltip-color: #fafafa; */
+                    /* --dp-disabled-color-text: #8e8e8e; */
+                    /* --dp-highlight-color: rgb(25 118 210 / 10%); */
+                    /* --dp-range-between-dates-background-color: var(--dp-hover-color, #f3f3f3); */
+                    /* --dp-range-between-dates-text-color: var(--dp-hover-text-color, #212121); */
+                    /* --dp-range-between-border-color: var(--dp-hover-color, #f3f3f3); */
+               }
+               .dp__input {
+                    background-color: transparent !important;
+               }
+               .dp__input[disabled] {
+                    cursor: not-allowed;
+               }
+               .dp__input_icons {
+                    padding: 0.375rem 0 0.375rem 0;
+               }
+               .dp--year-select:hover,
+               .dp__month_year_select:hover {
+                    color: var(--color-black) !important;
+               }
+               .dp__inner_nav:hover {
+                    background: transparent;
+               }
+          }
+     </style>
+     <div id="app">
+          <div class="pb-5 modal fade choice-form" id="choiceForm" tabindex="-1" aria-labelledby="choiceFormLabel" aria-hidden="true">
+               <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                         <form @submit.prevent="onSubmit">
+                              <div class="modal-header">
+                                   <h1 class="modal-title fs-5" id="choiceFormLabel">Предварительная запись</h1>
+                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                   <div class="">
+                                        <div class="d-flex flex-column gap-2">
+                                             <p class="mb-0">
+                                                  При необходимости получения более одной услуги по Предварительной записи (код активации) необходимо получить
+                                                  дополнительное время (дополнительную Предварительную запись — рекомендуем последовательно) для возможности
+                                                  получения остальных услуг.
+                                             </p>
+                                             <p class="mb-0">При получении первой услуги сообщите регистратору о наличии у вас записи на другие услуги.</p>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3 mt-4">
+                                             <div class="attention-block d-flex flex-row gap-3">
+                                                  <div class="attention-block__icon">
+                                                       <i class="bi bi-exclamation-triangle"></i>
+                                                  </div>
+                                                  <div class="d-flex flex-column">
+                                                       <p class="mb-0">
+                                                            Записаться в РЦ для получения услуги издания или продления срока действия сертификата открытого
+                                                            ключа ГосСУОК (ЭЦП) можно с 24-го числа текущего месяца на следующий месяц.
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="attention-block d-flex flex-row gap-3">
+                                                  <div class="attention-block__icon">
+                                                       <i class="bi bi-exclamation-triangle"></i>
+                                                  </div>
+                                                  <div class="d-flex flex-column gap-2">
+                                                       <div class="attention-block__title">
+                                                            Предварительная запись в РЦ по адресу: г. Минск, пр-т Машерова, 25 ведется только по телефону
+                                                            <a href="tel:+375(17)269-19-19" class="link-activity">+375(17) 269-19-19</a>.
+                                                       </div>
+                                                       <div class="d-flex flex-column gap-1">
+                                                            <div class="attention-block__text">
+                                                                 На октябрь 2024 г.&nbsp;предварительная запись в&nbsp;РЦ&nbsp;по&nbsp;адресу г.&nbsp;Минск,
+                                                                 пр-т Машерова, д. 25&nbsp;произведена и&nbsp;больше не&nbsp;осуществляется
+                                                            </div>
+                                                            <div class="attention-block__text">
+                                                                 Записаться в РЦ&nbsp;для получения услуги издания или продления срока действия сертификата
+                                                                 открытого ключа ГосСУОК (ЭЦП) можно с&nbsp;24-го числа текущего месяца на следующий месяц.
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="mt-4">
+                                        <div class="d-flex flex-column gap-3">
+                                             <div class="floating-label-content w-100" :class="{ 'invalid': errors.name && touched.name }">
+                                                  <input
+                                                       v-model="form.name"
+                                                       @input="touched.name = true"
+                                                       @blur="validateField('name')"
+                                                       id="name"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       autocomplete="name" />
+                                                  <label class="floating-label" for="name"> <span>ФИО</span><span class="color-red-attention">*</span> </label>
+                                                  <span class="floating-label-error" v-if="errors.name && touched.name">Данные введены неверно</span>
+                                             </div>
+
+                                             <div class="floating-label-content w-100" :class="{ 'invalid': errors.email && touched.email }">
+                                                  <input
+                                                       v-model="form.email"
+                                                       @input="touched.email = true"
+                                                       @blur="validateField('email')"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       autocomplete="email"
+                                                       id="email"
+                                                       pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" />
+                                                  <label class="floating-label" for="email">
+                                                       <span>Электронная почта</span><span class="color-red-attention">*</span>
+                                                  </label>
+                                                  <span class="floating-label-error" v-if="errors.email && touched.email">Данные введены неверно</span>
+                                             </div>
+
+                                             <div class="floating-label-content w-100" :class="{ 'invalid': errors.phone && touched.phone }">
+                                                  <input
+                                                       v-model="form.phone"
+                                                       @input="onPhoneInput"
+                                                       class="floating-input tel-with-mask"
+                                                       inputmode="numeric"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       id="phone"
+                                                       @focus="telMask($event.target)"
+                                                       @blur="onPhoneBlur"
+                                                       autocomplete="tel" />
+                                                  <label class="floating-label" for="phone">
+                                                       <span>Телефон</span><span class="color-red-attention">*</span>
+                                                  </label>
+                                                  <span class="floating-label-error" v-if="errors.phone && touched.phone">Данные введены неверно</span>
+                                             </div>
+
+                                             <div class="floating-label-content w-100" :class="{ 'invalid': errors.unp && touched.unp }">
+                                                  <input
+                                                       v-model="form.unp"
+                                                       @input="touched.unp = true"
+                                                       @blur="validateField('unp')"
+                                                       id="unp"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       pattern="^[А-Яа-яA-Za-z0-9]{9}$" />
+                                                  <label class="floating-label" for="unp"> <span>УНП</span><span class="color-red-attention">*</span> </label>
+                                                  <span class="floating-label-error" v-if="errors.unp && touched.unp">Данные введены неверно</span>
+                                             </div>
+
+                                             <div class="form-input" :class="{ 'invalid': errors.center && touched.center }">
+                                                  <select
+                                                       v-model="form.center"
+                                                       @change="onCenterChange"
+                                                       @blur="validateField('center')"
+                                                       class="form-select"
+                                                       aria-label="Center Select"
+                                                       required>
+                                                       <option selected disabled value="Выберите РЦ">Выберите РЦ*</option>
+                                                       <option v-for="center in centers" :key="center.id" :value="center.id">{{ center.address }}</option>
+                                                  </select>
+                                                  <span class="input-label-error" v-if="errors.center && touched.center">Данные введены неверно</span>
+                                             </div>
+                                             <div class="floating-label-content w-100" :class="{ 'invalid': errors.date && touched.date }" style="z-index: 3">
+                                                  <div
+                                                       class="floating-input d-flex align-items-center justify-content-center w-100"
+                                                       :class="{ 'disabled': !form.center || form.center === 'Выберите РЦ' }">
+                                                       <vue-date-picker
+                                                            locale="Ru"
+                                                            :min-date="new Date()"
+                                                            :disabled-dates="disabledDates"
+                                                            format="yyyy-MM-dd"
+                                                            model-type="yyyy-MM-dd"
+                                                            id="date"
+                                                            v-model="form.date"
+                                                            @update:model-value="onDateChange"
+                                                            @closed="onDatePickerClosed"
+                                                            cancel-text="Закрыть"
+                                                            select-text="Выбрать"
+                                                            :disabled="!form.center || form.center === 'Выберите РЦ'"
+                                                            :enable-time-picker="false"></vue-date-picker>
+                                                  </div>
+                                                  <label
+                                                       class="floating-label"
+                                                       for="date"
+                                                       :style="{ 'background': !form.center || form.center === 'Выберите РЦ' ? 'var(--color-transparent)' : 'var(--color-white)'  }">
+                                                       <span>Выберите дату</span><span class="color-red-attention">*</span>
+                                                  </label>
+                                                  <span class="floating-label-error" v-if="errors.date && touched.date">Данные введены неверно</span>
+                                                  <div class="field-hint" v-if="!form.center || form.center === 'Выберите РЦ'">
+                                                       Сначала выберите регистрационный центр
+                                                  </div>
+                                             </div>
+
+                                             <div class="form-input" :class="{ 'invalid': errors.time && touched.time }">
+                                                  <select
+                                                       v-model="form.time"
+                                                       @change="onTimeChange"
+                                                       @blur="validateField('time')"
+                                                       class="form-select"
+                                                       aria-label="Default select example"
+                                                       required
+                                                       :disabled="!form.date || form.date === '' || !form.center || form.center === 'Выберите РЦ'">
+                                                       <option selected disabled value="">Выберите время*</option>
+                                                       <option v-for="time in filteredTimes" :key="time" :value="time">{{ time }}</option>
+                                                  </select>
+                                                  <span class="input-label-error" v-if="errors.time && touched.time">Данные введены неверно</span>
+                                                  <div class="field-hint" v-if="!form.center || form.center === 'Выберите РЦ'">
+                                                       Сначала выберите регистрационный центр
+                                                  </div>
+                                                  <div class="field-hint" v-else-if="!form.date || form.date === ''">Сначала выберите дату</div>
+                                                  <div class="field-hint" v-else-if="filteredTimes.length === 0">Нет доступного времени для выбранной даты</div>
+                                             </div>
+
+                                             <div class="floating-label-content form-check" :class="{ 'invalid': errors.agreement }">
+                                                  <div class="">
+                                                       <input
+                                                            v-model="form.agreement"
+                                                            @change="validateField('agreement')"
+                                                            type="checkbox"
+                                                            class="form-check-input"
+                                                            id="agreement"
+                                                            required />
+                                                       <label class="form-check-label fs-16" for="agreement">
+                                                            Даю согласие на обработку персональных данных в соответствии с
+                                                            <a href="" target="_blank" rel="noopener noreferrer" class="link-activity">
+                                                                 политикой обработки персональных данных</a
+                                                            >.
+                                                       </label>
+                                                  </div>
+                                                  <span class="floating-label-error" v-if="errors.agreement">Необходимо ваше согласие</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="justify-content-center modal-footer">
+                                   <button type="submit" class="btn-default" :disabled="!isFormValid">Записаться в РЦ</button>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <script>
+          const { createApp, ref, computed } = Vue;
+          createApp({
+               data() {
+                    return {
+                         form: {
+                              name: '',
+                              email: '',
+                              phone: '',
+                              unp: '',
+                              center: 'Выберите РЦ',
+                              date: '',
+                              time: '',
+                              agreement: false,
+                         },
+                         centers: [
+                              {
+                                   id: 1,
+                                   address: 'РЦ 1 (ул. Примерная, 1)',
+                                   dates: [
+                                        {
+                                             date: '2025-08-20',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: false },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: false },
+                                                  { time: '16:00', available: true },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-25',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: false },
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: true },
+                                                  { time: '16:00', available: false },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-23',
+                                             times: [
+                                                  { time: '09:00', available: false },
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: false },
+                                                  { time: '15:00', available: true },
+                                                  { time: '16:00', available: true },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-21',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: true },
+                                                  { time: '16:00', available: true },
+                                             ],
+                                        },
+                                   ],
+                              },
+                              {
+                                   id: 2,
+                                   address: 'РЦ 2 (ул. Тестовая, 5)',
+                                   dates: [
+                                        {
+                                             date: '2025-08-20',
+                                             times: [
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: false },
+                                                  { time: '15:00', available: true },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-25',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: false },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: false },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-23',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: true },
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: true },
+                                             ],
+                                        },
+                                   ],
+                              },
+                              {
+                                   id: 3,
+                                   address: 'РЦ 3 (пр-т Машерова, 25)',
+                                   dates: [
+                                        {
+                                             date: '2025-08-20',
+                                             times: [
+                                                  { time: '09:00', available: true },
+                                                  { time: '10:00', available: true },
+                                                  { time: '11:00', available: true },
+                                             ],
+                                        },
+                                        {
+                                             date: '2025-08-25',
+                                             times: [
+                                                  { time: '14:00', available: true },
+                                                  { time: '15:00', available: true },
+                                                  { time: '16:00', available: true },
+                                             ],
+                                        },
+                                   ],
+                              },
+                         ],
+                         availableDates: [],
+                         availableTimes: [],
+                         errors: {
+                              name: false,
+                              email: false,
+                              phone: false,
+                              unp: false,
+                              center: false,
+                              date: false,
+                              time: false,
+                              agreement: false,
+                         },
+                         touched: {
+                              name: false,
+                              email: false,
+                              phone: false,
+                              unp: false,
+                              center: false,
+                              date: false,
+                              time: false,
+                         },
+                         flow: ['month, calendar'],
+                         pickerDate: '',
+                         telMaskInstance: null,
+                    };
+               },
+               components: { VueDatePicker },
+               computed: {
+                    filteredDates() {
+                         if (!this.form.center || this.form.center === 'Выберите РЦ') return [];
+                         const center = this.centers.find((c) => c.id == this.form.center);
+                         return center ? center.dates.map((d) => d.date) : [];
+                    },
+                    filteredTimes() {
+                         if (!this.form.center || this.form.center === 'Выберите РЦ' || !this.form.date || this.form.date === '') {
+                              // console.log('filteredTimes: early return - center:', this.form.center, 'date:', this.form.date);
+                              return [];
+                         }
+
+                         const center = this.centers.find((c) => c.id == this.form.center);
+                         if (!center) {
+                              // console.log('filteredTimes: center not found');
+                              return [];
+                         }
+
+                         const dateObj = center.dates.find((d) => d.date === this.form.date);
+                         // console.log('filteredTimes: dateObj found:', !!dateObj, 'for date:', this.form.date);
+
+                         if (dateObj) {
+                              const availableTimes = dateObj.times.filter((t) => t.available).map((t) => t.time);
+                              // console.log('filteredTimes: available times:', availableTimes);
+                              return availableTimes;
+                         }
+
+                         return [];
+                    },
+                    disabledDates() {
+                         if (!this.form.center || this.form.center === 'Выберите РЦ') {
+                              // Если РЦ не выбран, блокируем все даты
+                              return (date) => true;
+                         }
+
+                         const center = this.centers.find((c) => c.id == this.form.center);
+                         if (!center) return (date) => true;
+
+                         const availableDates = center.dates.map((d) => d.date);
+
+                         return (date) => {
+                              // Форматируем дату в формат YYYY-MM-DD для сравнения
+                              const year = date.getFullYear();
+                              const month = String(date.getMonth() + 1).padStart(2, '0');
+                              const day = String(date.getDate()).padStart(2, '0');
+                              const dateString = `${year}-${month}-${day}`;
+                              return !availableDates.includes(dateString);
+                         };
+                    },
+                    isFormValid() {
+                         return (
+                              this.form.name &&
+                              this.validateEmail(this.form.email) &&
+                              this.validatePhone(this.form.phone) &&
+                              this.validateUNP(this.form.unp) &&
+                              this.form.center &&
+                              this.form.date &&
+                              this.form.time &&
+                              this.form.agreement
+                         );
+                    },
+               },
+               methods: {
+                    validateField(field) {
+                         this.touched[field] = true;
+
+                         switch (field) {
+                              case 'name':
+                                   this.errors.name = !this.form.name;
+                                   break;
+                              case 'email':
+                                   this.errors.email = !this.validateEmail(this.form.email);
+                                   break;
+                              case 'phone':
+                                   this.errors.phone = !this.validatePhone(this.form.phone);
+                                   break;
+                              case 'unp':
+                                   this.errors.unp = !this.validateUNP(this.form.unp);
+                                   break;
+                              case 'center':
+                                   this.errors.center = !this.form.center;
+                                   break;
+                              case 'date':
+                                   this.errors.date = !this.form.date || this.form.date === '';
+                                   break;
+                              case 'time':
+                                   this.errors.time = !this.form.time || this.form.time === '';
+                                   break;
+                              case 'agreement':
+                                   this.errors.agreement = !this.form.agreement;
+                                   break;
+                         }
+                    },
+                    validateEmail(email) {
+                         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                         return re.test(email);
+                    },
+                    validatePhone(phone) {
+                         const re = /^\+?[0-9]{7,15}$/;
+                         return re.test(phone.replace(/\D/g, ''));
+                    },
+                    validateUNP(unp) {
+                         const re = /^[А-Яа-яA-Za-z0-9]{9}$/;
+                         return re.test(unp);
+                    },
+                    onCenterChange() {
+                         this.form.date = '';
+                         this.form.time = '';
+                         this.validateField('center');
+
+                         // Сбрасываем ошибки для даты и времени при смене РЦ
+                         this.errors.date = false;
+                         this.errors.time = false;
+                         this.touched.date = false;
+                         this.touched.time = false;
+                    },
+                    onDateChange() {
+                         this.form.time = '';
+                         this.validateField('date');
+
+                         // Сбрасываем ошибку времени при смене даты
+                         this.errors.time = false;
+                         this.touched.time = false;
+                    },
+                    onDatePickerClosed() {
+                         // Дополнительная отладочная информация при закрытии пикера
+                         // console.log('Date picker closed. Current date:', this.form.date);
+                         // console.log('Form state:', {
+                         //      center: this.form.center,
+                         //      date: this.form.date,
+                         //      time: this.form.time,
+                         // });
+                    },
+                    onTimeChange() {
+                         this.validateField('time');
+                    },
+                    formatDate(dateString) {
+                         if (!dateString) return '';
+                         // Если дата уже в формате YYYY-MM-DD, преобразуем её в объект Date
+                         const date = typeof dateString === 'string' ? new Date(dateString + 'T00:00:00') : dateString;
+                         return date.toLocaleDateString('ru-RU', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                         });
+                    },
+                    onSubmit() {
+                         // Mark all fields as touched
+                         Object.keys(this.touched).forEach((key) => (this.touched[key] = true));
+
+                         // Validate all fields
+                         Object.keys(this.errors).forEach((key) => this.validateField(key));
+
+                         // Дополнительная проверка доступности выбранного времени
+                         if (this.form.center && this.form.date && this.form.time) {
+                              const center = this.centers.find((c) => c.id == this.form.center);
+                              if (center) {
+                                   const dateObj = center.dates.find((d) => d.date === this.form.date);
+                                   if (dateObj) {
+                                        const timeObj = dateObj.times.find((t) => t.time === this.form.time);
+                                        if (!timeObj || !timeObj.available) {
+                                             this.errors.time = true;
+                                             alert('Выбранное время недоступно. Пожалуйста, выберите другое время.');
+                                             return;
+                                        }
+                                   }
+                              }
+                         }
+
+                         if (this.isFormValid) {
+                              console.log('Form submitted:', this.form);
+                              console.log('Selected center:', this.centers.find((c) => c.id == this.form.center)?.address);
+                              console.log('Selected date:', this.formatDate(this.form.date));
+                              console.log('Selected time:', this.form.time);
+                              alert('Форма успешно отправлена!');
+                         } else {
+                              alert('Пожалуйста, заполните все обязательные поля корректно.');
+                         }
+                    },
+                    telMask(phone) {
+                         if (!this.telMaskInstance) {
+                              this.telMaskInstance = IMask(phone, {
+                                   mask: '+{375}(00)000-00-00',
+                                   lazy: false,
+                                   blocks: {
+                                        375: {
+                                             mask: '375',
+                                             immutable: true,
+                                        },
+                                        '00': {
+                                             mask: '00',
+                                        },
+                                        '000': {
+                                             mask: '000',
+                                        },
+                                        '00': {
+                                             mask: '00',
+                                        },
+                                        '00': {
+                                             mask: '00',
+                                        },
+                                   },
+                              });
+
+                              // Добавляем обработчик для синхронизации с Vue
+                              this.telMaskInstance.on('accept', () => {
+                                   this.form.phone = this.telMaskInstance.value;
+                              });
+                         } else {
+                              // Синхронизируем маску с текущим значением
+                              this.telMaskInstance.updateValue();
+                         }
+                    },
+                    destroyTelMask(phone) {
+                         if (this.telMaskInstance) {
+                              // Синхронизируем значение перед уничтожением
+                              this.form.phone = this.telMaskInstance.value;
+                              this.telMaskInstance.destroy();
+                              this.telMaskInstance = null;
+                         }
+                    },
+                    onPhoneInput(event) {
+                         this.touched.phone = true;
+                         // Не обновляем значение вручную, пусть маска сама управляет этим
+                    },
+                    onPhoneBlur(event) {
+                         this.validateField('phone');
+                         this.destroyTelMask(event.target);
+                    },
+               },
+               watch: {
+                    'form.phone': {
+                         handler(newValue) {
+                              // Синхронизируем маску при изменении значения через Vue
+                              if (this.telMaskInstance && this.telMaskInstance.el) {
+                                   this.telMaskInstance.updateValue();
+                              }
+                         },
+                         immediate: false,
+                    },
+               },
+               mounted() {},
+          }).mount('#app');
+     </script>
+</div>
