@@ -26,95 +26,489 @@
           <title>Журналы</title>
      </head>
 
-     <body>
-          <header class="header">
-               <div class="header-container w-100">
-                    <div class="bg-gray-bg-illustr d-lg-block d-none">
-                         <div class="container">
-                              <div class="d-flex flex-row justify-content-between align-items-center flex-wrap w-100 py-2">
-                                   <div class="language-block d-flex flex-row gap-3">
-                                        <button class="language-button top-header-button active">
-                                             Lor
-                                        </button>
-                                        <button class="language-button top-header-button">
-                                             Lor
-                                        </button>
-                                        <button class="language-button top-header-button">
-                                             Lo
-                                        </button>
-                                   </div>
-                                   <div class="blind-block">
-                                        <button class="blind-button top-header-button d-flex flex-row justify-content-center flex-wrap align-items-center">
+<body>
+     <header class="header">
+          <div class="header-container w-100">
+               <div class="bg-gray-bg-illustr d-lg-block d-none">
+                    <div class="container">
+                         <div class="d-flex flex-row justify-content-between align-items-center flex-wrap w-100 py-2">
+                              <div class="language-block d-flex flex-row gap-3">
+                                   <button class="language-button top-header-button active">
+                                        Lor
+                                   </button>
+                                   <button class="language-button top-header-button">
+                                        Lor
+                                   </button>
+                                   <button class="language-button top-header-button">
+                                        Lo
+                                   </button>
+                              </div>
+                              <div class="blind-block">
+                                   <button class="blind-button top-header-button d-flex flex-row justify-content-center flex-wrap align-items-center">
+                                        <span>
+                                             Lorem ipsum dolor sit a
+                                        </span>
+                                        <i class="bi bi-eye"></i>
+                                   </button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="container mt-12">
+                    <div class="row align-items-center justify-content-between">
+                         <div class="col-xxl-3 col-lg-4 col-2">
+                              <a href target="_blank" class="header-logo w-100 d-flex flex-row align-items-center gap-1">
+                                   <!-- <picture> -->
+                                        <!-- <source media="(min-width: 992px)" srcset="./img/png/logo/logo-header-x2.png"> -->
+                                   <img src="./img/png/logo/logo-header-x2.png" alt>
+                                   <!-- </picture> -->
+                                   <p class="d-lg-block d-none">
+                                        Lorem ipsum dolor sit amet consectetu <br>
+                                        Lorem ipsum dolor sit amet consec <br>
+                                        Lorem ipsum dolor si
+                                   </p>
+                              </a>
+                         </div>
+                         <div class="col-lg-1 d-xxl-flex d-none"></div>
+                         <div class="col-xl-4 col-lg-3 d-lg-block d-none">
+                              <div class="search-block">
+                                   <form class="form-group d-flex flex-row align-items-center w-100">
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="text" placeholder>
+                                             <label class="floating-label">Lorem</label>
+                                        </div>
+                                        <div class="ms-2">
+                                             <button class="button-serach" type="submit"></button>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div>
+                         <div class="col-lg-2 w-lg-auto d-lg-block d-none">
+                              <div class="dropdown dropdown-header-tel">
+                                   <div class="d-flex flex-column">
+                                        <a href="tel:8 (017) 269-19-19" class="link-tel-drop">
+                                             Lorem ipsum dolor
                                              <span>
-                                                  Lorem ipsum dolor sit a
+                                                  <i class="bi bi-chevron-down"></i>
                                              </span>
-                                             <i class="bi bi-eye"></i>
-                                        </button>
+                                        </a>
+                                        <span class="ff-roboto fs-14 color-gray-txt lh-sm">Lorem ipsu</span>
+                                   </div>
+                                   <div class="dropdown-menu flex-column px-12">
+                                        <a href="tel:+" class="link-tel-drop text-nowrap">
+                                             Lorem ipsum dolor
+                                        </a>
+                                        <span>
+                                             Lorem ipsum dolor sit 
+                                        </span>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-2 w-lg-auto d-flex justify-content-end d-lg-block d-none">
+                              <p class="mb-0 fs-14 ff-roboto lh-sm ls-0 color-gray-txt">
+                                   <span>Lorem ipsum dolor sit am</span> <br>
+                                   <span>Lorem ipsum dolor s</span>
+                              </p>
+                         </div>
+                         <div class="col-6 w-auto d-lg-none d-block d-flex flex-row justify-content-end gap-1 mobile-menu align-items-center">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
+                                   <i class="bi bi-search"></i>
+                              </button>
+                         
+                              <div class="dropdown dropdown-header-tel">
+                                   <button class type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-phone"></i>
+                                   </button>
+                                   <div class="dropdown-menu px-12">
+                                        <div class="d-flex flex-column">
+                                             <div class="d-flex flex-column">
+                                                  <a href="tel:+8(017)269-19-19" class="link-tel-drop text-nowrap">
+                                                       Lorem ipsum dolor
+                                                  </a>
+                                                  <span>
+                                                       Lorem ipsu
+                                                  </span>
+                                             </div>
+                                             <div class="d-flex flex-column">
+                                                  <a href="tel:+8(017)269-18-00" class="link-tel-drop text-nowrap">
+                                                       Lorem ipsum dolor
+                                                  </a>
+                                                  <span>
+                                                       Lorem ipsum dolor sit 
+                                                  </span>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- when not logged -->
+                              <!-- <div class="header-nav-link header-nav-link-person">
+                                   <i class="bi bi-person"></i>
+                              </div> -->
+                              <!-- // -->
+                              <!-- if logged -->
+                              <div class="dropdown dropdown-person-logged">
+                                   <button class="header-nav-link header-nav-link-person header-nav-link-person-logged nav-notification-active" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div class="position-relative">
+                                             <div class="header-nav-link-person__dot"></div>
+                                        </div>
+                                        <i class="bi bi-person"></i>
+                                   </button>
+                                   <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Lorem ipsum dolor s</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem ipsum</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem i</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem </a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem ipsum </a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i><span class="ms-2">Lorem</span></a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              <!-- // -->
+
+                              <button class data-bs-toggle="modal" data-bs-target="#mobileMenu">
+                                   <i class="bi bi-list"></i>
+                              </button>
+                         </div>
+                    </div>
+               </div>
+               <div class="container mt-12 d-lg-flex d-none flex-row w-100 justify-content-between align-items-center gap-xl-4 gap-lg-2 header-nav">
+                    <nav class=" d-flex flex-row w-100 justify-content-between align-items-center">
+                         <div class="header-nav-link header-nav-link-dropdown header-nav-link-about" data-bs-toggle="modal" data-bs-target="#headerNavAboutModal" type="button">
+                              Lorem ipsum d
+                         </div>
+                         <div class="header-nav-link">
+                              Lorem i
+                         </div>
+                         <div class="header-nav-link header-nav-link-dropdown header-nav-link-payment" data-bs-toggle="modal" data-bs-target="#headerNavPaymentModal" type="button">
+                              Lorem ipsum 
+                         </div>
+                         <div class="header-nav-link header-nav-link-dropdown header-nav-link-activity" data-bs-toggle="modal" data-bs-target="#headerNavАctivityModal" type="button">
+                              Lorem ipsum dolor sit am
+                         </div>
+                         <div class="header-nav-link header-nav-link-dropdown header-nav-link-documents" data-bs-toggle="modal" data-bs-target="#headerNavDocumentsModal" type="button">
+                              Lorem ips
+                         </div>
+                         <div class="header-nav-link">
+                              Lorem ipsum
+                         </div>
+                         <div class="header-nav-link">
+                              Lorem ip
+                         </div>
+                    
+                         <!-- when not logged -->
+                         <!-- <div class="header-nav-link fs-18 header-nav-link-person">
+                              <i class="bi bi-person"></i>
+                         </div> -->
+
+                         <!-- if logged -->
+                    
+                    
+                    </nav>
+                    <div class>
+                         <div class="dropdown dropdown-person-logged">
+                              <button class="header-nav-link fs-20 header-nav-link-person header-nav-link-person-logged nav-notification-active" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   <div class="position-relative">
+                                        <div class="header-nav-link-person__dot"></div>
+                                   </div>
+                                   <i class="bi bi-person"></i>
+                              </button>
+                              <ul class="dropdown-menu">
+                                   <li><a class="dropdown-item" href="#">Lorem ipsum dolor s</a></li>
+                                   <li><a class="dropdown-item" href="#">Lorem ipsum</a></li>
+                                   <li><a class="dropdown-item" href="#">Lorem i</a></li>
+                                   <li><a class="dropdown-item" href="#">Lorem </a></li>
+                                   <li><a class="dropdown-item" href="#">Lorem ipsum </a></li>
+                                   <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i><span class="ms-2">Lorem</span></a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+               <div class="header-nav-dropdown-container ">
+                    <div class="modal fade header-nav-about-modal header-modal" id="headerNavAboutModal" tabindex="-1" aria-labelledby="headerNavAboutModalLabel" aria-hidden="true">
+                         <div class="modal-dialog container">
+                              <div class="modal-content w-100">
+                                   <div class="modal-body d-flex flex-row justify-content-between">
+                                        <div class="modal-header-link-list d-flex flex-column gap-2">
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ip
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum dolor sit amet consectetu
+                                             </a>
+                                        </div>
+                                        <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                     </div>
+                    <div class="modal fade header-nav-payment-modal header-modal" id="headerNavPaymentModal" tabindex="-1" aria-labelledby="headerNavPaymentModalLabel" aria-hidden="true">
+                         <div class="modal-dialog container">
+                              <div class="modal-content w-100">
+                                   <div class="modal-body d-flex flex-row justify-content-between">
+                                        <div class="modal-header-link-list d-flex flex-column gap-2">
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum 
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum do
+                                             </a>
+                                        </div>
+                                        <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="modal fade header-nav-activity-modal header-modal" id="headerNavАctivityModal" tabindex="-1" aria-labelledby="headerNavАctivityModalLabel" aria-hidden="true">
+                         <div class="modal-dialog container">
+                              <div class="modal-content w-100">
+                                   <div class="modal-body">
+                                        <div class="row justify-content-between align-items-start">
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ip
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit am
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet c
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor s
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ips
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum 
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2 align-items-start">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lore
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure do
+                                                       </a>
+                                                       <div class="collapse" id="collapseMoreHeader">
+                                                            <div class="d-flex flex-column gap-2 align-items-start">
+                                                                 <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation u
+                                                                 </a>
+                                                                 <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing
+                                                                 </a>
+                                                            </div>
+                                                       </div>
+                                                       <button class="btn-collapse-more collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoreHeader" aria-expanded="false" aria-controls="collapseMoreHeader">
+                                                            Lor
+                                                       </button>
+                                                       <button class="btn-collapse-more-hidden collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoreHeader" aria-expanded="false" aria-controls="collapseMoreHeader">
+                                                            Lorem ip
+                                                       </button>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur adipis
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing el
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exerci
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="mt-4"></div>
+                                        <div class="row justify-content-between align-items-start">
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur 
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href="software-licenses.html" target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor sit
+                                                       </a>
+                                                       <a href rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                                       </a>
+                                                       <a href="1c-bitrix.html" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href="bitrix24.html" rel="noopener noreferrer" class="link-menu">
+                                                            Lorem ips
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="modal-header-link-list d-flex flex-column gap-2">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lore
+                                                       </a>
+                                                       <a href="online-school.html" target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ip
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor sit amet consectetu
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
+                                                            Lorem ipsum dolor 
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-3">
+                                                  <div class="d-flex">
+                                                       <a href target="_blank" class="modal-banner-small">
+                                                            <picture>
+                                                                 <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-sm-2x.png">
+                                                                 <img src="./img/png/header-banner/header-banner-template-sm.png" alt>
+                                                            </picture>
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="modal fade header-nav-documents-modal header-modal" id="headerNavDocumentsModal" tabindex="-1" aria-labelledby="headerNavDocumentsModalLabel" aria-hidden="true">
+                         <div class="modal-dialog container">
+                              <div class="modal-content w-100">
+                                   <div class="modal-body d-flex flex-row justify-content-between">
+                                        <div class="modal-header-link-list d-flex flex-column gap-2">
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum 
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum do
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum do
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="link-menu">
+                                                  Lorem ipsum dolor sit
+                                             </a>
+                                             <a href target="_blank" rel="noopener noreferrer" class="arrow-link">
+                                                  Lorem ipsum d
+                                             </a>
+                                        </div>
+                                        <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                             <a href target="_blank" class="modal-banner-long">
+                                                  <picture>
+                                                       <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
+                                                       <img src="./img/png/header-banner/header-banner-template.png" alt>
+                                                  </picture>
+                                             </a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="border border-1 border-top-0 mt-12 d-lg-none d-block"></div>
+          </div>
+     </header>
+     <div class="modal fade modal-mobile-menu" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+               <div class="modal-content">
                     <div class="container mt-12">
+                         <!-- pe-3 -->
                          <div class="row align-items-center justify-content-between">
                               <div class="col-xxl-3 col-lg-4 col-2">
                                    <a href target="_blank" class="header-logo w-100 d-flex flex-row align-items-center gap-1">
-                                        <!-- <picture> -->
-                                             <!-- <source media="(min-width: 992px)" srcset="./img/png/logo/logo-header-x2.png"> -->
                                         <img src="./img/png/logo/logo-header-x2.png" alt>
-                                        <!-- </picture> -->
-                                        <p class="d-lg-block d-none">
-                                             Lorem ipsum dolor sit amet consectetu <br>
-                                             Lorem ipsum dolor sit amet consec <br>
-                                             Lorem ipsum dolor si
-                                        </p>
                                    </a>
-                              </div>
-                              <div class="col-lg-1 d-xxl-flex d-none"></div>
-                              <div class="col-xl-4 col-lg-3 d-lg-block d-none">
-                                   <div class="search-block">
-                                        <form class="form-group d-flex flex-row align-items-center w-100">
-                                             <div class="floating-label-content w-100">
-                                                  <input class="floating-input" type="text" placeholder>
-                                                  <label class="floating-label">Lorem</label>
-                                             </div>
-                                             <div class="ms-2">
-                                                  <button class="button-serach" type="submit"></button>
-                                             </div>
-                                        </form>
-                                   </div>
-                              </div>
-                              <div class="col-lg-2 w-lg-auto d-lg-block d-none">
-                                   <div class="dropdown dropdown-header-tel">
-                                        <div class="d-flex flex-column">
-                                             <a href="tel:8 (017) 269-19-19" class="link-tel-drop">
-                                                  Lorem ipsum dolor
-                                                  <span>
-                                                       <i class="bi bi-chevron-down"></i>
-                                                  </span>
-                                             </a>
-                                             <span class="ff-roboto fs-14 color-gray-txt lh-sm">Lorem ipsu</span>
-                                        </div>
-                                        <div class="dropdown-menu flex-column px-12">
-                                             <a href="tel:+" class="link-tel-drop text-nowrap">
-                                                  Lorem ipsum dolor
-                                             </a>
-                                             <span>
-                                                  Lorem ipsum dolor sit 
-                                             </span>
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="col-lg-2 w-lg-auto d-flex justify-content-end d-lg-block d-none">
-                                   <p class="mb-0 fs-14 ff-roboto lh-sm ls-0 color-gray-txt">
-                                        <span>Lorem ipsum dolor sit am</span> <br>
-                                        <span>Lorem ipsum dolor s</span>
-                                   </p>
                               </div>
                               <div class="col-6 w-auto d-lg-none d-block d-flex flex-row justify-content-end gap-1 mobile-menu align-items-center">
                                    <button type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
                                         <i class="bi bi-search"></i>
                                    </button>
-                         
                                    <div class="dropdown dropdown-header-tel">
                                         <button class type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                              <i class="bi bi-phone"></i>
@@ -142,8 +536,8 @@
                                    </div>
                                    <!-- when not logged -->
                                    <!-- <div class="header-nav-link header-nav-link-person">
-                                        <i class="bi bi-person"></i>
-                                   </div> -->
+                                                                 <i class="bi bi-person"></i>
+                                                            </div> -->
                                    <!-- // -->
                                    <!-- if logged -->
                                    <div class="dropdown dropdown-person-logged">
@@ -164,736 +558,474 @@
                                         </ul>
                                    </div>
                                    <!-- // -->
-
-                                   <button class data-bs-toggle="modal" data-bs-target="#mobileMenu">
-                                        <i class="bi bi-list"></i>
+                                   <button class data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="bi bi-x-lg"></i>
                                    </button>
                               </div>
                          </div>
                     </div>
-                    <div class="container mt-12 d-lg-flex d-none flex-row w-100 justify-content-between align-items-center gap-xl-4 gap-lg-2 header-nav">
-                         <nav class=" d-flex flex-row w-100 justify-content-between align-items-center">
-                              <div class="header-nav-link header-nav-link-dropdown header-nav-link-about" data-bs-toggle="modal" data-bs-target="#headerNavAboutModal" type="button">
-                                   Lorem ipsum d
-                              </div>
-                              <div class="header-nav-link">
-                                   Lorem i
-                              </div>
-                              <div class="header-nav-link header-nav-link-dropdown header-nav-link-payment" data-bs-toggle="modal" data-bs-target="#headerNavPaymentModal" type="button">
-                                   Lorem ipsum 
-                              </div>
-                              <div class="header-nav-link header-nav-link-dropdown header-nav-link-activity" data-bs-toggle="modal" data-bs-target="#headerNavАctivityModal" type="button">
-                                   Lorem ipsum dolor sit am
-                              </div>
-                              <div class="header-nav-link header-nav-link-dropdown header-nav-link-documents" data-bs-toggle="modal" data-bs-target="#headerNavDocumentsModal" type="button">
-                                   Lorem ips
-                              </div>
-                              <div class="header-nav-link">
-                                   Lorem ipsum
-                              </div>
-                              <div class="header-nav-link">
-                                   Lorem ip
-                              </div>
-                    
-                              <!-- when not logged -->
-                              <!-- <div class="header-nav-link fs-18 header-nav-link-person">
-                                   <i class="bi bi-person"></i>
-                              </div> -->
-
-                              <!-- if logged -->
-                    
-                    
-                         </nav>
-                         <div class>
-                              <div class="dropdown dropdown-person-logged">
-                                   <button class="header-nav-link fs-20 header-nav-link-person header-nav-link-person-logged nav-notification-active" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <div class="position-relative">
-                                             <div class="header-nav-link-person__dot"></div>
-                                        </div>
-                                        <i class="bi bi-person"></i>
-                                   </button>
-                                   <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Lorem ipsum dolor s</a></li>
-                                        <li><a class="dropdown-item" href="#">Lorem ipsum</a></li>
-                                        <li><a class="dropdown-item" href="#">Lorem i</a></li>
-                                        <li><a class="dropdown-item" href="#">Lorem </a></li>
-                                        <li><a class="dropdown-item" href="#">Lorem ipsum </a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i><span class="ms-2">Lorem</span></a>
-                                        </li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="header-nav-dropdown-container ">
-                         <div class="modal fade header-nav-about-modal header-modal" id="headerNavAboutModal" tabindex="-1" aria-labelledby="headerNavAboutModalLabel" aria-hidden="true">
-                              <div class="modal-dialog container">
-                                   <div class="modal-content w-100">
-                                        <div class="modal-body d-flex flex-row justify-content-between">
-                                             <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ip
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum dolor sit amet consectetu
-                                                  </a>
-                                             </div>
-                                             <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="modal fade header-nav-payment-modal header-modal" id="headerNavPaymentModal" tabindex="-1" aria-labelledby="headerNavPaymentModalLabel" aria-hidden="true">
-                              <div class="modal-dialog container">
-                                   <div class="modal-content w-100">
-                                        <div class="modal-body d-flex flex-row justify-content-between">
-                                             <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum 
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum do
-                                                  </a>
-                                             </div>
-                                             <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="modal fade header-nav-activity-modal header-modal" id="headerNavАctivityModal" tabindex="-1" aria-labelledby="headerNavАctivityModalLabel" aria-hidden="true">
-                              <div class="modal-dialog container">
-                                   <div class="modal-content w-100">
-                                        <div class="modal-body">
-                                             <div class="row justify-content-between align-items-start">
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ip
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit am
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet c
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor s
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ips
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum 
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2 align-items-start">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lore
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep
-                                                            </a>
-                                                            <div class="collapse" id="collapseMoreHeader">
-                                                                 <div class="d-flex flex-column gap-2 align-items-start">
-                                                                      <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                           Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamc
-                                                                      </a>
-                                                                      <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                           Lorem ipsum dolor sit amet consectetur adipisicing
-                                                                      </a>
-                                                                 </div>
-                                                            </div>
-                                                            <button class="btn-collapse-more collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoreHeader" aria-expanded="false" aria-controls="collapseMoreHeader">
-                                                                 Lor
-                                                            </button>
-                                                            <button class="btn-collapse-more-hidden collapsed p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoreHeader" aria-expanded="false" aria-controls="collapseMoreHeader">
-                                                                 Lorem ip
-                                                            </button>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur adipis
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing el
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitatio
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                             <div class="mt-4"></div>
-                                             <div class="row justify-content-between align-items-start">
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur 
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href="software-licenses.html" target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor sit
-                                                            </a>
-                                                            <a href rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing
-                                                            </a>
-                                                            <a href="1c-bitrix.html" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href="bitrix24.html" rel="noopener noreferrer" class="link-menu">
-                                                                 Lorem ips
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lore
-                                                            </a>
-                                                            <a href="online-school.html" target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ip
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor sit amet consectetu
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="modal-header-link-list__title">
-                                                                 Lorem ipsum dolor 
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                                  <div class="col-lg-3">
-                                                       <div class="d-flex">
-                                                            <a href target="_blank" class="modal-banner-small">
-                                                                 <picture>
-                                                                      <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-sm-2x.png">
-                                                                      <img src="./img/png/header-banner/header-banner-template-sm.png" alt>
-                                                                 </picture>
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="modal fade header-nav-documents-modal header-modal" id="headerNavDocumentsModal" tabindex="-1" aria-labelledby="headerNavDocumentsModalLabel" aria-hidden="true">
-                              <div class="modal-dialog container">
-                                   <div class="modal-content w-100">
-                                        <div class="modal-body d-flex flex-row justify-content-between">
-                                             <div class="modal-header-link-list d-flex flex-column gap-2">
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum 
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum do
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum do
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="link-menu">
-                                                       Lorem ipsum dolor sit
-                                                  </a>
-                                                  <a href target="_blank" rel="noopener noreferrer" class="arrow-link">
-                                                       Lorem ipsum d
-                                                  </a>
-                                             </div>
-                                             <div class="modal-banner-block d-flex flex-row justify-content-between gap-4 flex-lg-nowrap flex-wrap">
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                                  <a href target="_blank" class="modal-banner-long">
-                                                       <picture>
-                                                            <source media="(min-width: 992px)" srcset="./img/png/header-banner/header-banner-template-2x.png">
-                                                            <img src="./img/png/header-banner/header-banner-template.png" alt>
-                                                       </picture>
-                                                  </a>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="border border-1 border-top-0 mt-12 d-lg-none d-block"></div>
-               </div>
-          </header>
-          <div class="modal fade modal-mobile-menu" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel" aria-hidden="true">
-               <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                         <div class="container mt-12">
-                              <!-- pe-3 -->
-                              <div class="row align-items-center justify-content-between">
-                                   <div class="col-xxl-3 col-lg-4 col-2">
-                                        <a href target="_blank" class="header-logo w-100 d-flex flex-row align-items-center gap-1">
-                                             <img src="./img/png/logo/logo-header-x2.png" alt>
+                    <div class="border border-1 border-top-0 mt-12"></div>
+                    <div class="bg-violet py-5 px-3 h-100 overflow-auto d-flex flex-column align-items-start mobile-menu-tabs gap-20">
+                         <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsAbout" role="button" aria-expanded="false" aria-controls="menuTabsAbout">
+                              Lorem ipsum d
+                         </a>
+                         <div class="collapse menu-tabs-collapse" id="menuTabsAbout">
+                              <div class="d-flex flex-column align-items-start">
+                                   <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsAbout" role="button" aria-expanded="false" aria-controls="menuTabsAbout">
+                                        Lorem ipsum d
+                                   </a>
+                                   <div class="d-flex flex-column gap-12 mt-4">
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ip
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum dolor sit amet consectetu
                                         </a>
                                    </div>
-                                   <div class="col-6 w-auto d-lg-none d-block d-flex flex-row justify-content-end gap-1 mobile-menu align-items-center">
-                                        <button type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
-                                             <i class="bi bi-search"></i>
-                                        </button>
-                                        <div class="dropdown dropdown-header-tel">
-                                             <button class type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <i class="bi bi-phone"></i>
-                                             </button>
-                                             <div class="dropdown-menu px-12">
-                                                  <div class="d-flex flex-column">
-                                                       <div class="d-flex flex-column">
-                                                            <a href="tel:+8(017)269-19-19" class="link-tel-drop text-nowrap">
-                                                                 Lorem ipsum dolor
-                                                            </a>
-                                                            <span>
-                                                                 Lorem ipsu
-                                                            </span>
-                                                       </div>
-                                                       <div class="d-flex flex-column">
-                                                            <a href="tel:+8(017)269-18-00" class="link-tel-drop text-nowrap">
-                                                                 Lorem ipsum dolor
-                                                            </a>
-                                                            <span>
-                                                                 Lorem ipsum dolor sit 
-                                                            </span>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                        <!-- when not logged -->
-                                        <!-- <div class="header-nav-link header-nav-link-person">
-                                                                      <i class="bi bi-person"></i>
-                                                                 </div> -->
-                                        <!-- // -->
-                                        <!-- if logged -->
-                                        <div class="dropdown dropdown-person-logged">
-                                             <button class="header-nav-link header-nav-link-person header-nav-link-person-logged nav-notification-active" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  <div class="position-relative">
-                                                       <div class="header-nav-link-person__dot"></div>
-                                                  </div>
-                                                  <i class="bi bi-person"></i>
-                                             </button>
-                                             <ul class="dropdown-menu">
-                                                  <li><a class="dropdown-item" href="#">Lorem ipsum dolor s</a></li>
-                                                  <li><a class="dropdown-item" href="#">Lorem ipsum</a></li>
-                                                  <li><a class="dropdown-item" href="#">Lorem i</a></li>
-                                                  <li><a class="dropdown-item" href="#">Lorem </a></li>
-                                                  <li><a class="dropdown-item" href="#">Lorem ipsum </a></li>
-                                                  <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i><span class="ms-2">Lorem</span></a>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                        <!-- // -->
-                                        <button class data-bs-dismiss="modal" aria-label="Close">
-                                             <i class="bi bi-x-lg"></i>
-                                        </button>
-                                   </div>
                               </div>
                          </div>
-                         <div class="border border-1 border-top-0 mt-12"></div>
-                         <div class="bg-violet py-5 px-3 h-100 overflow-auto d-flex flex-column align-items-start mobile-menu-tabs gap-20">
-                              <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsAbout" role="button" aria-expanded="false" aria-controls="menuTabsAbout">
-                                   Lorem ipsum d
-                              </a>
-                              <div class="collapse menu-tabs-collapse" id="menuTabsAbout">
-                                   <div class="d-flex flex-column align-items-start">
-                                        <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsAbout" role="button" aria-expanded="false" aria-controls="menuTabsAbout">
-                                             Lorem ipsum d
-                                        </a>
-                                        <div class="d-flex flex-column gap-12 mt-4">
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ip
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum dolor sit amet consectetu
-                                             </a>
-                                        </div>
-                                   </div>
-                              </div>
 
-                              <a class="menu-tabs-main-btn collapsed">
-                                   Lorem i
-                              </a>
+                         <a class="menu-tabs-main-btn collapsed">
+                              Lorem i
+                         </a>
 
-                              <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsPayment" role="button" aria-expanded="false" aria-controls="menuTabsPayment">
-                                   Lorem ipsum 
-                              </a>
-                              <div class="collapse menu-tabs-collapse" id="menuTabsPayment">
-                                   <div class="d-flex flex-column align-items-start">
-                                        <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsPayment" role="button" aria-expanded="false" aria-controls="menuTabsPayment">
+                         <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsPayment" role="button" aria-expanded="false" aria-controls="menuTabsPayment">
+                              Lorem ipsum 
+                         </a>
+                         <div class="collapse menu-tabs-collapse" id="menuTabsPayment">
+                              <div class="d-flex flex-column align-items-start">
+                                   <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsPayment" role="button" aria-expanded="false" aria-controls="menuTabsPayment">
+                                        Lorem ipsum 
+                                   </a>
+                                   <div class="d-flex flex-column gap-12 mt-4">
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
                                              Lorem ipsum 
                                         </a>
-                                        <div class="d-flex flex-column gap-12 mt-4">
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum 
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum do
-                                             </a>
-                                        </div>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum do
+                                        </a>
                                    </div>
                               </div>
+                         </div>
 
-                              <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsActivity" role="button" aria-expanded="false" aria-controls="menuTabsActivity">
-                                   Lorem ipsum dolor sit am
-                              </a>
-                              <div class="collapse menu-tabs-collapse w-100" id="menuTabsActivity">
-                                   <div class="d-flex flex-column align-items-start mobile-inner-menu-tab">
-                                        <a class="menu-tabs-sub-btn mb-4" data-bs-toggle="collapse" href="#menuTabsActivity" role="button" aria-expanded="false" aria-controls="menuTabsActivity">
-                                             Lorem ipsum dolor sit am
+                         <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsActivity" role="button" aria-expanded="false" aria-controls="menuTabsActivity">
+                              Lorem ipsum dolor sit am
+                         </a>
+                         <div class="collapse menu-tabs-collapse w-100" id="menuTabsActivity">
+                              <div class="d-flex flex-column align-items-start mobile-inner-menu-tab">
+                                   <a class="menu-tabs-sub-btn mb-4" data-bs-toggle="collapse" href="#menuTabsActivity" role="button" aria-expanded="false" aria-controls="menuTabsActivity">
+                                        Lorem ipsum dolor sit am
+                                   </a>
+
+                                   <div class="d-flex flex-column gap-20 w-100">
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner">
+                                             Lorem ip
                                         </a>
-
-                                        <div class="d-flex flex-column gap-20 w-100">
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner">
-                                                  Lorem ip
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner">
-                                                            Lorem ip
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner">
+                                                       Lorem ip
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit am
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit am
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet c
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor s
-                                                            </a>
-                                                       </div>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet c
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor s
+                                                       </a>
                                                   </div>
                                              </div>
+                                        </div>
 
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner2" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner2">
-                                                  Lorem ipsum dolor sit amet co
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner2">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner2" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner2">
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner2" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner2">
+                                             Lorem ipsum dolor sit amet co
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner2">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner2" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner2">
+                                                       Lorem ipsum dolor sit amet co
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ips
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem 
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum 
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner3" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner3">
+                                             Lore
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner3">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner3" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner3">
+                                                       Lore
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
                                                             Lorem ipsum dolor sit amet co
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ips
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem 
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum 
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner3" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner3">
-                                                  Lore
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner3">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner3" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner3">
-                                                            Lore
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure do
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitat
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner4" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner4">
-                                                  Lorem ipsum dolor
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner4">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner4" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner4">
-                                                            Lorem ipsum dolor
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exer
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipis
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing el
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitatio
-                                                            </a>
-                                                       </div>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                                       </a>
                                                   </div>
                                              </div>
+                                        </div>
 
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner5" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner5">
-                                                  Lorem ipsum dolor sit amet co
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner5">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner5" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner5">
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner4" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner4">
+                                             Lorem ipsum dolor
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner4">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner4" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner4">
+                                                       Lorem ipsum dolor
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipis
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing el
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exerci
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner5" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner5">
+                                             Lorem ipsum dolor sit amet co
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner5">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner5" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner5">
+                                                       Lorem ipsum dolor sit amet co
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
                                                             Lorem ipsum dolor sit amet co
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur 
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner6" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner6">
-                                                  Lorem ipsum dolor sit
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner6">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner6" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner6">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
                                                             Lorem ipsum dolor sit
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing
-                                                            </a>
-                                                            <a href="1c-bitrix.html" target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet co
-                                                            </a>
-                                                            <a href="bitrix24.html" target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ips
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-
-                                             <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner7" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner7">
-                                                  Lore
-                                             </a>
-                                             <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner7">
-                                                  <div class="d-flex flex-column align-items-start">
-                                                       <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner7" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner7">
-                                                            Lore
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur 
                                                        </a>
-                                                       <div class="d-flex flex-column gap-12 mt-4">
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ip
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor sit amet consectetu
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor
-                                                            </a>
-                                                            <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                                 Lorem ipsum dolor 
-                                                            </a>
-                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner6" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner6">
+                                             Lorem ipsum dolor sit
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner6">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner6" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner6">
+                                                       Lorem ipsum dolor sit
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                                       </a>
+                                                       <a href="1c-bitrix.html" target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet co
+                                                       </a>
+                                                       <a href="bitrix24.html" target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ips
+                                                       </a>
+                                                  </div>
+                                             </div>
+                                        </div>
+
+                                        <a class="menu-tabs-inner-main-btn menu-tabs-inner-main-btn-arrow collapsed" data-bs-toggle="collapse" href="#menuTabsAboutInner7" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner7">
+                                             Lore
+                                        </a>
+                                        <div class="collapse menu-tabs-collapse" id="menuTabsAboutInner7">
+                                             <div class="d-flex flex-column align-items-start">
+                                                  <a class="menu-tabs-inner-sub-btn" data-bs-toggle="collapse" href="#menuTabsAboutInner7" role="button" aria-expanded="false" aria-controls="menuTabsAboutInner7">
+                                                       Lore
+                                                  </a>
+                                                  <div class="d-flex flex-column gap-12 mt-4">
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ip
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor sit amet consectetu
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor
+                                                       </a>
+                                                       <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                                            Lorem ipsum dolor 
+                                                       </a>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>
+                         </div>
 
-                              <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsDocuments" role="button" aria-expanded="false" aria-controls="menuTabsDocuments">
-                                   Lorem ips
-                              </a>
-                              <div class="collapse menu-tabs-collapse" id="menuTabsDocuments">
-                                   <div class="d-flex flex-column align-items-start">
-                                        <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsDocuments" role="button" aria-expanded="false" aria-controls="menuTabsDocuments">
-                                             Lorem ips
+                         <a class="menu-tabs-main-btn collapsed menu-tabs-main-btn-arrow" data-bs-toggle="collapse" href="#menuTabsDocuments" role="button" aria-expanded="false" aria-controls="menuTabsDocuments">
+                              Lorem ips
+                         </a>
+                         <div class="collapse menu-tabs-collapse" id="menuTabsDocuments">
+                              <div class="d-flex flex-column align-items-start">
+                                   <a class="menu-tabs-sub-btn" data-bs-toggle="collapse" href="#menuTabsDocuments" role="button" aria-expanded="false" aria-controls="menuTabsDocuments">
+                                        Lorem ips
+                                   </a>
+                                   <div class="d-flex flex-column gap-12 mt-4">
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum 
                                         </a>
-                                        <div class="d-flex flex-column gap-12 mt-4">
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum 
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum do
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum do
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
-                                                  Lorem ipsum dolor sit
-                                             </a>
-                                             <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link d-flex flex-row align-items-center gap-1">
-                                                  <span>Lorem ipsum d</span>
-                                                  <i class="bi bi-arrow-up-right fs-14"></i>
-                                             </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum do
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum do
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link">
+                                             Lorem ipsum dolor sit
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="menu-tabs-link d-flex flex-row align-items-center gap-1">
+                                             <span>Lorem ipsum d</span>
+                                             <i class="bi bi-arrow-up-right fs-14"></i>
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <a class="menu-tabs-main-btn collapsed">
+                              Lorem ipsum
+                         </a>
+
+                         <a class="menu-tabs-main-btn collapsed">
+                              Lorem ip
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="modal fade modal-mobile-search" id="mobileSearch" tabindex="-1" aria-labelledby="mobileSearchLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen h-auto">
+               <div class="modal-content py-3">
+                    <div class="container  d-flex flex-row flex-nowrap">
+                         <!-- pe-3 -->
+                         <div class="search-block w-100">
+                              <form class="form-group d-flex flex-row align-items-center w-100">
+                                   <div class="floating-label-content w-100">
+                                        <input class="floating-input" type="text" placeholder>
+                                        <label class="floating-label">Lorem</label>
+                                   </div>
+                                   <div class="ms-2">
+                                        <button class="button-serach" type="submit"></button>
+                                   </div>
+                              </form>
+                         </div>
+                         <button class="ms-md-4 ms-3 fs-24 color-black" data-bs-dismiss="modal" aria-label="Close">
+                              <i class="bi bi-x-lg"></i>
+                         </button>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <main class="main">
+          <div class="container">
+               <nav class="breadcrumb">
+                    <a href="./main.html" target="_blank" rel="noopener noreferrer">
+                         Lorem i
+                    </a>
+                    <a href target="_blank" rel="noopener noreferrer">
+                         Lorem i
+                    </a>
+               </nav>
+          </div>
+          <div class="container">
+               <div class="row">
+                    <div class="col-12 d-lg-none d-block">
+                         <h2 class="h2 ff-exo fw-semibold fs-3 lh-normal text-uppercase">
+                              Lorem i
+                         </h2>
+                    </div>
+                    <div class="col-lg-3 d-flex my-2 pe-lg-5">
+                         <nav class="w-100 sidenav-profile">
+                              
+                              
+                              <a href="./profile-main.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem i</span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                              
+                              
+                              <a href="./profile-security.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem ipsum dolor sit amet consectetur</span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                              
+                              
+                              <a href="./profile-notification.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem ipsum</span>
+                                   </div>
+                                   <div class="sidenav-profile__notification sidenav-profile__notification-active">
+                                        <span>L</span>
+                                   </div>
+                              </a>
+                              
+                              
+                              <a href="./profile-order.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem </span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                              
+                              
+                              <a href="./profile-records.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem ipsum dolor sit amet </span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                              
+                              <a href="./profile-journals.html" target="_self" class="sidenav-profile__link sidenav-profile__link-active">
+                              
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem i</span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                              
+                              
+                              <a href="./profile-school.html" target="_self" class="sidenav-profile__link">
+                              
+                                   <div class="sidenav-profile__text">
+                                        <span>Lorem ipsum </span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+     
+                              <a class="sidenav-profile__link" data-bs-toggle="modal" data-bs-target="#exitModal">
+                                   <div class="sidenav-profile__text">
+                                        <i class="bi-box-arrow-left bi"></i>
+                                        <span>Lorem</span>
+                                   </div>
+                                   <div class="sidenav-profile__notification"></div>
+                              </a>
+                         </nav>
+
+                         <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered">
+                                   <div class="modal-content">
+                                        <div class="pb-0 modal-header">
+                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center gap-2 pt-0 text-center modal-body">
+                                             <div class="fs-64">
+                                                  <i class="bi-box-arrow-left bi"></i>
+                                             </div>
+                                             <div class>
+                                                  <b class="fs-20 lh-lg">
+                                                       Lorem ipsum dolor sit amet
+                                                  </b>
+                                             </div>
+                                             <div class>
+                                                  <p class="mb-0">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div class="justify-content-center modal-footer">
+                                             <div class="d-flex flex-column gap-3 w-100">
+                                                  <a href target="_blank" class="px-3 px-lg-4 w-100 btn-default">
+                                                       Lorem
+                                                  </a>
+                                                  <a href target="_blank" class="px-3 px-lg-4 w-100 btn-empty" data-bs-dismiss="modal">
+                                                       Lorem ip
+                                                  </a>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
-
-                              <a class="menu-tabs-main-btn collapsed">
-                                   Lorem ipsum
-                              </a>
-
-                              <a class="menu-tabs-main-btn collapsed">
-                                   Lorem ip
-                              </a>
                          </div>
+
                     </div>
-               </div>
-          </div>
-          <div class="modal fade modal-mobile-search" id="mobileSearch" tabindex="-1" aria-labelledby="mobileSearchLabel" aria-hidden="true">
-               <div class="modal-dialog modal-fullscreen h-auto">
-                    <div class="modal-content py-3">
-                         <div class="container  d-flex flex-row flex-nowrap">
-                              <!-- pe-3 -->
-                              <div class="search-block w-100">
-                                   <form class="form-group d-flex flex-row align-items-center w-100">
-                                        <div class="floating-label-content w-100">
-                                             <input class="floating-input" type="text" placeholder>
-                                             <label class="floating-label">Lorem</label>
-                                        </div>
-                                        <div class="ms-2">
-                                             <button class="button-serach" type="submit"></button>
-                                        </div>
-                                   </form>
+                    <div class="col-lg-9 d-flex my-2">
+                         <div class="w-100">
+                              <div class="d-lg-block d-none">
+                                   <h2 class="h2 ff-exo fw-semibold fs-3 lh-normal text-uppercase">
+                                        Lorem i
+                                   </h2>
                               </div>
-                              <button class="ms-md-4 ms-3 fs-24 color-black" data-bs-dismiss="modal" aria-label="Close">
-                                   <i class="bi bi-x-lg"></i>
-                              </button>
-                         </div>
-                    </div>
-               </div>
-          </div>
-          <main class="main">
-               <div class="container">
-                    <nav class="breadcrumb">
-                         <a href="./main.html" target="_blank" rel="noopener noreferrer"> Lorem i </a>
-                         <a href target="_blank" rel="noopener noreferrer"> Lorem i </a>
-                    </nav>
-               </div>
-               <div class="container">
-                    <div class="row">
-                         <div class="d-block col-12 d-lg-none">
-                              <h2 class="text-uppercase h2 ff-exo fw-semibold fs-3 lh-normal">Lorem i</h2>
-                         </div>
-                         <div class="d-flex my-2 pe-lg-5 col-lg-3">
-                              <div class="d-flex flex-column">
-                                   <nav class="w-100 sidenav-profile">
-                                        <a href="./profile-main.html" target="_self" class="sidenav-profile__link">
-                                             <div class="sidenav-profile__text">
-                                                  <span>Lorem i</span>
+                              <div class="mt-32">
+                                   <form action>
+                                        <div class="row">
+                                             <div class="col-xl-4 col-md-6 d-flex my-xl-0 my-2">
+                                                  <div class="form-date form-input w-100">
+                                                       <label for="inputDateForm1">Lo</label>
+                                                       <input type="date" name id="inputDateForm1" class="form-control">
+                                                       <span class="input-label-error">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incid</span>
+                                                  </div>
                                              </div>
-                                             <div class="sidenav-profile__notification"></div>
-                                        </a>
-                                        <a href="./profile-security.html" target="_self" class="sidenav-profile__link">
-                                             <div class="sidenav-profile__text">
-                                                  <span>Lorem ipsum dolor sit amet consectetur</span>
+                                             <div class="col-xl-4 col-md-6 d-flex my-xl-0 my-2">
+                                                  <div class="form-date form-input w-100">
+                                                       <label for="inputDateForm2">Lo</label>
+                                                       <input type="date" name id="inputDateForm2" class="form-control">
+                                                       <span class="input-label-error">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incid</span>
+                                                  </div>
                                              </div>
-                                             <div class="sidenav-profile__notification"></div>
-                                        </a>
-                                        <a href="./profile-notification.html" target="_self" class="sidenav-profile__link">
-                                             <div class="sidenav-profile__text">
-                                                  <span>Lorem ipsum</span>
+                                             <div class="col-xl-4 col-md-6 d-flex my-xl-0 my-2">
+                                                  <div class="floating-label-content w-100">
+                                                       <input class="floating-input" type="text" placeholder required>
+                                                       <label class="floating-label">
+                                                            <span>Lorem ipsum dolor</span>
+                                                       </label>
+                                                  </div>
                                              </div>
                                              <div class="sidenav-profile__notification sidenav-profile__notification-active">
                                                   <span>L</span>
                                              </div>
-                                        </a>
+                                        
                                         <a href="./profile-order.html" target="_self" class="sidenav-profile__link">
                                              <div class="sidenav-profile__text">
                                                   <span>Lorem </span>
@@ -919,81 +1051,35 @@
                                              <div class="sidenav-profile__notification"></div>
                                         </a>
 
-                                        <a class="sidenav-profile__link" data-bs-toggle="modal" data-bs-target="#exitModal">
-                                             <div class="sidenav-profile__text">
-                                                  <i class="bi-box-arrow-left bi"></i>
-                                                  <span>Lorem</span>
-                                             </div>
-                                             <div class="sidenav-profile__notification"></div>
-                                        </a>
-                                   </nav>
-                                   <div class="mt-3 p-3 p-lg-4 border-1-5-taxes-green border-20">
-                                        <div class="d-flex flex-column align-items-center justify-content-center gap-4" bis_skin_checked="1">
-                                             <div class="d-flex flex-column flex-xl-row gap-1">
-                                                  <div class="d-flex flex-row flex-xl-column align-items-start gap-2" bis_skin_checked="1">
-                                                       <img src="./img/svg/editors/star-check.svg" width="48" height="48" alt>
-                                                       <img src="./img/png/editors/pdf-file.png" width="44" height="44" alt>
-                                                  </div>
-                                                  <div bis_skin_checked="1">
-                                                       <p class="mb-0">
-                                                            Lorem ipsum dolor sit amet conse<span class="fw-semibold">
-                                                                 Lorem ipsum dolor sit amet consectetur </span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-                                                       </p>
-                                                  </div>
-                                             </div>
-                                             <div class="d-flex flex-column flex-shrink-0 gap-3 mobile-w-100" bis_skin_checked="1">
-                                                  <a href="bel-taxes.html" class="w-100 btn-default btn-default-green">Lorem ipsum dolor</a>
-                                                  <button data-bs-target="#requestSubscription" data-bs-toggle="modal" class="w-100 btn-empty btn-empty-green">
-                                                       Lorem ipsum dolo
-                                                  </button>
-                                             </div>
+                              <div class="mt-40 border-1-5-taxes-green p-32 border-20">
+                                   <div class="d-flex gap-4 align-items-center flex-wrap flex-md-nowrap justify-content-center" bis_skin_checked="1">
+                                        <div class="d-flex gap-2 align-items-center" bis_skin_checked="1">
+                                             <img src="./img/svg/editors/star-check.svg" width="48" height="48" alt>
+                                             <img src="./img/png/editors/pdf-file.png" width="44" height="44" alt>
                                         </div>
-                                   </div>
-
-                                   <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                             <div class="modal-content">
-                                                  <div class="pb-0 modal-header">
-                                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                  </div>
-                                                  <div class="d-flex flex-column justify-content-center gap-2 pt-0 text-center modal-body">
-                                                       <div class="fs-64">
-                                                            <i class="bi-box-arrow-left bi"></i>
-                                                       </div>
-                                                       <div class>
-                                                            <b class="fs-20 lh-lg"> Lorem ipsum dolor sit amet </b>
-                                                       </div>
-                                                       <div class>
-                                                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                                                       </div>
-                                                  </div>
-                                                  <div class="justify-content-center modal-footer">
-                                                       <div class="d-flex flex-column gap-3 w-100">
-                                                            <a href target="_blank" class="px-3 px-lg-4 w-100 btn-default"> Lorem </a>
-                                                            <a href target="_blank" class="px-3 px-lg-4 w-100 btn-empty" data-bs-dismiss="modal">
-                                                                 Lorem ip
-                                                            </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
+                                        <div bis_skin_checked="1">
+                                             <p class="mb-0">Lorem ipsum dolor sit amet conse<span class="fw-semibold"> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab</span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim 
+                                             </p>
+                                        </div>
+                                        <div class="d-flex flex-column gap-3 flex-shrink-0 mobile-w-100" bis_skin_checked="1">
+                                             <a href="bel-taxes.html" class="btn-default btn-default-green w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm</a>
+                                             <button data-bs-target="#requestSubscription" data-bs-toggle="modal" class="btn-empty btn-empty-green w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eius</button>
                                         </div>
                                    </div>
                               </div>
-                         </div>
-                         <div class="d-flex my-2 col-lg-9">
-                              <div class="w-100">
-                                   <div class="d-lg-block d-none">
-                                        <h2 class="text-uppercase h2 ff-exo fw-semibold fs-3 lh-normal">Lorem i</h2>
-                                   </div>
-                                   <div class="mt-32">
-                                        <form action>
-                                             <div class="row">
-                                                  <div class="d-flex my-2 my-xl-0 col-xl-4 col-md-6">
-                                                       <div class="w-100 form-date form-input">
-                                                            <label for="inputDateForm1">Lo</label>
-                                                            <input type="date" name id="inputDateForm1" class="form-control">
-                                                            <span class="input-label-error">Lorem ipsum dolor sit </span>
-                                                       </div>
+
+                              <div class="mt-40">
+                                   <div class="row">
+                                        <div class="col-12 col-sm-6 col-xl-4 d-flex my-3">
+                                             <div class="journal-card journal-card--preview d-flex flex-column p-3 gap-3 w-100">
+                                                  <div class="journal-card__img">
+                                                       <img src="./img/png/journal-card/journal-img.png" alt>
+                                                       <button data-bs-toggle="modal" data-bs-target="#magazine-modal-1" class="journal-card__preview-btn">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5E60CE" class="bi bi-eye" viewbox="0 0 16 16">
+                                                                 <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                                                 <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                                            </svg>
+                                                       </button>
                                                   </div>
                                                   <div class="d-flex my-2 my-xl-0 col-xl-4 col-md-6">
                                                        <div class="w-100 form-date form-input">
@@ -1010,16 +1096,21 @@
                                                             </label>
                                                        </div>
                                                   </div>
-                                             </div>
-                                             <div class="mt-4 row">
-                                                  <div class="my-2 my-lg-0 col-lg-3">
-                                                       <a href target="_blank" class="w-100 btn-default"> Lorem ips </a>
+                                                  <div class="d-flex flex-row flex-nowrap gap-lg-3 gap-2">
+                                                       <a href class="btn-default w-100 pdf-opener" data-pdf-url="nb.pdf">
+                                                            Lorem ipsum d
+                                                       </a>
+                                                       <a href class="btn-empty btn-round">
+                                                            <i class="bi bi-download"></i>
+                                                       </a>
                                                   </div>
-                                                  <div class="my-2 my-lg-0 col-lg-3">
-                                                       <a href target="_blank" class="w-100 btn-empty"> Lorem ip </a>
+                                                  <div class>
+                                                       <a href="./profile-journals-inner.html" class="btn-empty w-100">
+                                                            Lorem ipsum 
+                                                       </a>
                                                   </div>
                                              </div>
-                                        </form>
+                                        </div></div></div></div></form>
                                    </div>
 
                                    <div class="mt-40 p-32 border-1-5-taxes-green border-20">
@@ -1041,141 +1132,125 @@
                                              </div>
                                         </div>
                                    </div>
-
-                                   <div class="mt-40">
-                                        <div class="row">
-                                             <div class="d-flex my-3 col-12 col-sm-6 col-xl-4">
-                                                  <div class="d-flex flex-column gap-3 p-3 w-100 journal-card journal-card--preview">
-                                                       <div class="journal-card__img">
-                                                            <img src="./img/png/journal-card/journal-img.png" alt>
-                                                            <button data-bs-toggle="modal" data-bs-target="#magazine-modal-1" class="journal-card__preview-btn">
-                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#5E60CE" class="bi bi-eye" viewbox="0 0 16 16">
-                                                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
-                                                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
-                                                                 </svg>
-                                                            </button>
-                                                       </div>
-                                                       <div class>
-                                                            <div class="journal-card__title">
-                                                                 <span>Lorem ipsum dolor sit a</span>
-                                                            </div>
-                                                            <div class="mt-2 journal-card__date"></div>
-                                                       </div>
-                                                       <div class="d-flex flex-row flex-nowrap gap-2 gap-lg-3">
-                                                            <a href class="w-100 btn-default pdf-opener" data-pdf-url="nb.pdf"> Lorem ipsum d </a>
-                                                            <a href class="btn-empty btn-round">
-                                                                 <i class="bi bi-download"></i>
-                                                            </a>
-                                                       </div>
-                                                       <div class>
-                                                            <a href="./profile-journals-inner.html" class="w-100 btn-empty"> Lorem ipsum  </a>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="mt-40">
-                                        <div class="d-flex justify-content-center">
-                                             <nav aria-label="Page navigation">
-                                                  <ul class="pagination">
-                                                       <li class="page-item disabled"><a class="page-link" href="#">Lorem</a></li>
-                                                       
-                                                       <li class="page-item"><a class="page-link" href="#">L</a></li>
-                                                       
-                                                       <li class="page-item"><a class="page-link" href="#">L</a></li>
-                                                       
-                                                       <li class="page-item"><a class="page-link" href="#">L</a></li>
-                                                       
-                                                       <li class="page-item"><a class="page-link" href="#">L</a></li>
+                              </div>
+                              <div class="mt-40">
+                                   <div class="d-flex justify-content-center">
+                                        <nav aria-label="Page navigation">
+                                             <ul class="pagination">
+                                                  <li class="page-item disabled"><a class="page-link" href="#">Lorem</a></li>
+                                                   <li class="page-item"><a class="page-link" href="#">L</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">L</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">L</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">L</a></li>
                                                        
                                                        <li class="page-item"><a class="page-link" href="#">Lorem </a></li>
-                                                  </ul>
-                                             </nav>
+                                             </ul>
+                                        </nav>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          
+     </main>
+     <div class="modal modal-large fade magazine-modal" id="magazine-modal-1" tabindex="-1" aria-labelledby="magazine-modal-label" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+               <div class="modal-content p-0 m-0">
+                    <div class="modal-header">
+                         <p class="d-none d-md-block color-white fst-italic mb-1 fs-20 ms-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et </p>
+                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex flex-column flex-md-row justify-content-center align-items-center">
+                         <i class="d-none d-lg-block align-self-start pe-0 pe-lg-3 bi bi-arrow-left color-white fs-34 left-arrow"></i>
+                         <p class="d-block d-md-none color-white fst-italic mb-1 fs-18">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et </p>
+                         <div id="magazine-1" class="magazine-container">
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-01.png" alt></div>
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-02.png" alt></div>
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-03.png" alt></div>
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-04.png" alt></div>
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-05.png" alt></div>
+                              <div class="page"><img src="./img/magazine/NB_17_2025 (1)-06.png" alt></div>
+                         </div>
+                         <i class="d-none d-lg-block align-self-start ps-0 ps-lg-3 bi bi-arrow-right color-white fs-34 right-arrow"></i>
+
+                    </div>
+               </div>
+          </div>
+
+     <div class="modal modal-large fade" id="requestSubscription" tabindex="-1" aria-labelledby="requestSubscriptionModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content mt-92">
+                    <div class="modal-header d-flex flex-column gap-2">
+                         <div class="d-flex justify-content-between align-items-center w-100">
+                              <p class="fs-20 fw-semibold mb-0 ff-exo">Lorem ipsum dolo</p>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                    </div>
+                    <div class="modal-body">
+                         <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="ip-pane" role="tabpanel" aria-labelledby="ip" tabindex="0">
+                                   <form class="pending-check-block d-flex flex-column gap-3 pb-3 mt-4" action>
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="text" placeholder required>
+                                             <label class="floating-label">
+                                                  <span>Lorem </span><span class="color-red-attention">L</span>
+                                             </label>
                                         </div>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </main>
-          <div class="modal modal-large fade magazine-modal" id="magazine-modal-1" tabindex="-1" aria-labelledby="magazine-modal-label" aria-hidden="true">
-               <div class="modal-dialog modal-fullscreen">
-                    <div class="m-0 p-0 modal-content">
-                         <div class="modal-header">
-                              <p class="d-md-block ms-auto mb-1 fst-italic d-none color-white fs-20">Lorem ipsum dolor sit amet consectetur a</p>
-                              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                         </div>
-                         <div class="d-flex flex-column flex-md-row align-items-center justify-content-center modal-body">
-                              <i class="d-lg-block bi-arrow-left left-arrow align-self-start pe-0 pe-lg-3 d-none bi color-white fs-34"></i>
-                              <p class="d-block mb-1 fst-italic d-md-none color-white fs-18">Lorem ipsum dolor sit amet consectetur a</p>
-                              <div id="magazine-1" class="magazine-container">
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-01.png" alt></div>
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-02.png" alt></div>
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-03.png" alt></div>
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-04.png" alt></div>
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-05.png" alt></div>
-                                   <div class="page"><img src="./img/magazine/NB_17_2025 (1)-06.png" alt></div>
-                              </div>
-                              <i class="d-lg-block bi-arrow-right right-arrow align-self-start ps-0 ps-lg-3 d-none bi color-white fs-34"></i>
-                         </div>
-                    </div>
-               </div>
-          </div>
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="text" placeholder pattern="[A-Za-z0-9]{9}" required>
+                                             <label class="floating-label"> <span>Lor</span><span class="color-red-attention">L</span> </label>
+                                        </div>
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="email" placeholder pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" autocomplete="email" required>
+                                             <label class="floating-label"> <span>Lorem </span><span class="color-red-attention">L</span> </label>
+                                        </div>
+                                        <div class="floating-label-content w-100">
+                                             <input class="tel-with-mask floating-input" type="tel" placeholder autocomplete="tel" required>
+                                             <label class="floating-label tel-with-mask">
+                                                  <span>Lorem i</span><span class="color-red-attention">L</span> </label>
+                                        </div>
+                                        <div class="floating-label-content w-100">
+                                             <textarea class="floating-input border-20" name id placeholder style="height: 100px; resize: none"></textarea>
+                                             <label class="floating-label">
+                                                  <span>Lorem ipsum</span>
+                                             </label>
+                                        </div>
+                                        <hr class="border-color-gray-stroke my-0">
 
-          <div class="modal modal-large fade" id="requestSubscription" tabindex="-1" aria-labelledby="requestSubscriptionModalLabel" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                    <div class="mt-92 modal-content">
-                         <div class="d-flex flex-column gap-2 modal-header">
-                              <div class="d-flex align-items-center justify-content-between w-100">
-                                   <p class="mb-0 fs-20 fw-semibold ff-exo">Lorem ipsum dolo</p>
-                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                         </div>
-                         <div class="modal-body">
-                              <div class="tab-content" id="myTabContent">
-                                   <div class="tab-pane fade show active" id="ip-pane" role="tabpanel" aria-labelledby="ip" tabindex="0">
-                                        <form class="pending-check-block d-flex flex-column gap-3 mt-4 pb-3" action>
-                                             <div class="floating-label-content w-100">
-                                                  <input class="floating-input" type="text" placeholder required>
-                                                  <label class="floating-label"> <span>Lorem </span><span class="color-red-attention">L</span> </label>
-                                             </div>
-                                             <div class="floating-label-content w-100">
-                                                  <input class="floating-input" type="text" placeholder pattern="[A-Za-z0-9]{9}" required>
-                                                  <label class="floating-label"> <span>Lor</span><span class="color-red-attention">L</span> </label>
-                                             </div>
-                                             <div class="floating-label-content w-100">
-                                                  <input class="floating-input" type="email" placeholder pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" autocomplete="email" required>
-                                                  <label class="floating-label"> <span>Lorem </span><span class="color-red-attention">L</span> </label>
-                                             </div>
-                                             <div class="floating-label-content w-100">
-                                                  <input class="floating-input tel-with-mask" type="tel" placeholder autocomplete="tel" required>
-                                                  <label class="floating-label tel-with-mask">
-                                                       <span>Lorem i</span><span class="color-red-attention">L</span>
-                                                  </label>
-                                             </div>
-                                             <div class="floating-label-content w-100">
-                                                  <textarea class="floating-input border-20" name id placeholder style="height: 100px; resize: none"></textarea>
-                                                  <label class="floating-label">
-                                                       <span>Lorem ipsum</span>
-                                                  </label>
-                                             </div>
-                                             <hr class="my-0 border-color-gray-stroke">
-
-                                             <button class="mx-auto btn-default delete-agree-btn" id="sendRequestSubscription">Lorem ipsum dolo</button>
-                                        </form>
-                                   </div>
+                                        <button class="btn-default mx-auto delete-agree-btn" id="sendRequestSubscription">
+                                             Lorem ipsum dolo
+                                        </button>
+                                   </form>
                               </div>
                          </div>
                     </div>
                </div>
           </div>
-          <script>
-               document.querySelectorAll('.pdf-opener').forEach((btn) => {
-                    btn.addEventListener('click', function (e) {
-                         e.preventDefault();
-                         const pdfUrl = encodeURIComponent(this.dataset.pdfUrl);
-                         window.open('./pdfjs/web/viewer.html?file=' + encodeURIComponent(`pdf/${pdfUrl}`), '_blank');
-                    });
+     </div>
+     <div class="modal modal-large fade" id="journalWithoutPDF" tabindex="-1" aria-labelledby="journalWithoutPDFLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content mt-92">
+                    <div class="modal-header d-flex flex-column gap-2">
+                         <div class="d-flex justify-content-between align-items-center w-100">
+                              <p class="fs-20 fw-semibold mb-0 ff-exo">Lorem ipsum dolo</p>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+
+                    </div>
+                    <div class="modal-body">
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut la <span class="fw-semibold">Lorem ipsu</span>L</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed</p>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <script>
+          document.querySelectorAll('.pdf-opener').forEach(btn => {
+               btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const pdfUrl = encodeURIComponent(this.dataset.pdfUrl);
+                    window.open('./pdfjs/web/viewer.html?file=' + encodeURIComponent(`pdf/${pdfUrl}`), '_blank');
                });
           </script>
           <div class="position-relative">
@@ -1378,5 +1453,5 @@
           <script src="./js/page-flip.browser.js"></script>
           <script src="./js/page-flip-settings.js"></script>
           <script src="js/script.js"></script>
-     </body>
+     </div></body>
 </html>
