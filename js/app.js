@@ -18,21 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //reduce char max length in options
-const allSelects = document.querySelectorAll('select');
-if (allSelects) {
-     allSelects.forEach((select) => {
-          select.addEventListener('focus', function () {
-               const options = this.options;
-               const maxLength = 30;
+document.querySelectorAll('select').forEach((select) => {
+     select.addEventListener('focus', function () {
+          const options = this.options;
+          const maxLength = 30;
 
-               for (let i = 0; i < options.length; i++) {
-                    if (options[i].text.length > maxLength) {
-                         options[i].text = options[i].text.substring(0, maxLength) + '...';
-                    }
+          for (let i = 0; i < options.length; i++) {
+               if (options[i].text.length > maxLength) {
+                    options[i].text = options[i].text.substring(0, maxLength) + '...';
                }
-          });
+          }
      });
-}
+});
 
 document.addEventListener('DOMContentLoaded', function () {
      const switches = document.querySelectorAll('.switch-input');

@@ -18,21 +18,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //reduce char max length in options
-const allSelects = document.querySelectorAll('select');
-if (allSelects) {
-     allSelects.forEach((select) => {
-          select.addEventListener('focus', function () {
-               const options = this.options;
-               const maxLength = 30;
+document.querySelectorAll('select').forEach((select) => {
+     select.addEventListener('focus', function () {
+          const options = this.options;
+          const maxLength = 30;
 
-               for (let i = 0; i < options.length; i++) {
-                    if (options[i].text.length > maxLength) {
-                         options[i].text = options[i].text.substring(0, maxLength) + '...';
-                    }
+          for (let i = 0; i < options.length; i++) {
+               if (options[i].text.length > maxLength) {
+                    options[i].text = options[i].text.substring(0, maxLength) + '...';
                }
-          });
+          }
      });
-}
+});
 
 document.addEventListener('DOMContentLoaded', function () {
      const switches = document.querySelectorAll('.switch-input');
@@ -271,38 +268,6 @@ pendingCheckContainer.forEach((container) => {
 })
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-	const radioGroupsSideNav = document.querySelectorAll('.side-nav-step .radio-group-step');
-	const radioGroupsModal = document.querySelectorAll('.modal .radio-group-step');
-
-	function toggleGroupProcess(radioGroups) {
-		for (let i = 1; i < radioGroups.length; i++) {
-			toggleGroupDisabled(radioGroups[i], true);
-		}
-
-		radioGroups.forEach((group, index) => {
-			const radios = group.querySelectorAll("input[type='radio']");
-			radios.forEach((radio) => {
-				radio.addEventListener('change', () => {
-					if (radio.checked && index < radioGroups.length - 1) {
-						toggleGroupDisabled(radioGroups[index + 1], false);
-					}
-				});
-			});
-		});
-	}
-
-	function toggleGroupDisabled(group, isDisabled) {
-		const radios = group.querySelectorAll("input[type='radio']");
-		radios.forEach((radio) => {
-			radio.disabled = isDisabled;
-		});
-	}
-
-	toggleGroupProcess(radioGroupsSideNav);
-	toggleGroupProcess(radioGroupsModal);
-});
-
 document.addEventListener('DOMContentLoaded', function () {
      const newPasswordInput = document.getElementById('new-pass');
      const confirmPasswordInput = document.getElementById('current-pass');
@@ -403,15 +368,6 @@ if (phoneInputs) {
                               },
                          },
                     });
-               }
-          });
-     });
-
-     phoneInputs.forEach((input) => {
-          input.addEventListener('blur', function () {
-               if (mask && !input.value) {
-                    mask.destroy();
-                    mask = null;
                }
           });
      });

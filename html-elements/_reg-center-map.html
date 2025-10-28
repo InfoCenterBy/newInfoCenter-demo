@@ -1,41 +1,52 @@
 <div class="container">
-     
-     <!-- <div class="map-cards"></div> -->
+
      <script src="https://api-maps.yandex.ru/2.1/?apikey=3a8f6499-f9fb-4b9d-b9c5-562eae830b24&lang=ru_RU"></script>
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
      <div id="app">
           <div class="row">
                <div class="col-lg-9 d-flex my-2 order-lg-1 order-2">
                     <div class="d-flex flex-row flex-lg-wrap gap-3 nav-radio overflow-auto flex-nowrap align-items-start" id="mapRegion">
-                         <!-- nav-radio__elem-active -->
                          <button class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty nav-radio__elem-all" v-if="activeTab == 1">
-                              <span>Lor</span>
+                              <span>Все</span>
                          </button>
                          <template v-if="activeTab == 2">
-                              <button class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty nav-radio__elem-all" @click="filterTable('')" :class="[filteredTerms == '' ? 'nav-radio__elem-active' : '']">
-                                   <span>Lor</span>
+                              <button
+                                   class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty nav-radio__elem-all"
+                                   @click="filterTable('')"
+                                   :class="[filteredTerms == '' ? 'nav-radio__elem-active' : '']">
+                                   <span>Все</span>
                               </button>
-                              <button v-for="item in uniqueCities" class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty" @click="filterTable(item)" :class="[filteredTerms == item ? 'nav-radio__elem-active' : '']">
-                                   <span>Lorem ip</span>
+                              <button
+                                   v-for="item in uniqueCities"
+                                   class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty"
+                                   @click="filterTable(item)"
+                                   :class="[filteredTerms == item ? 'nav-radio__elem-active' : '']">
+                                   <span>{{item}}</span>
                               </button>
-                              <!-- -->
                          </template>
                     </div>
                </div>
                <div class="col-lg-3 d-flex justify-content-lg-end my-2 order-lg-2 order-1">
                     <div class="d-flex flex-row flex-lg-wrap gap-3 nav-radio flex-nowrap align-items-start justify-content-end">
-                         <button class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty" :class="[activeTab == 1 ? 'nav-radio__elem-active' : '']" @click="changeTab(1)">
-                              <span>Lorem ip</span>
+                         <button
+                              class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty"
+                              :class="[activeTab == 1 ? 'nav-radio__elem-active' : '']"
+                              @click="changeTab(1)">
+                              <span>На карте</span>
                          </button>
-                         <button class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty" :class="[activeTab == 2 ? 'nav-radio__elem-active' : '']" @click="changeTab(2)" v-if="isLargeScreen">
-                              <span>Lorem i</span>
+                         <button
+                              class="nav-radio__elem nav-radio__elem-lg nav-radio__elem-empty"
+                              :class="[activeTab == 2 ? 'nav-radio__elem-active' : '']"
+                              @click="changeTab(2)"
+                              v-if="isLargeScreen">
+                              <span>Таблица</span>
                          </button>
                     </div>
                </div>
           </div>
           <div v-if="activeTab == 1">
                <div class="map-cards-wrapper">
-                    <div class id="mapCards">
+                    <div class="" id="mapCards">
                          <div class="map-cards"></div>
                     </div>
                </div>
@@ -46,32 +57,34 @@
                     <thead>
                          <tr class="bg-gray-bg-illustr">
                               <td colspan="2" class="px-2 py-3">
-                                   <strong>Lorem ip</strong>
+                                   <strong>Контакты</strong>
                               </td>
                               <td colspan="2" class="px-2 py-3">
-                                   <strong>Lorem ipsum </strong>
+                                   <strong>Режим работы</strong>
                               </td>
                               <td colspan="3" class="px-2 py-3">
-                                   <strong>Lorem </strong>
+                                   <strong>Статус</strong>
                               </td>
                               <td colspan="2" class="px-2 py-3">
-                                   <strong>Lorem ipsum</strong>
+                                   <strong>Комментарий</strong>
                               </td>
                          </tr>
                     </thead>
                     <tbody>
                          <tr v-for="item in filteredTableItems" class="border-bottom">
                               <td colspan="2" class="px-2 py-3">
-                                   Lorem ipsum dolor sit amet consectetur ad <br>
-                                   <span v-if="item.contacts.tel">Lorem ipsum dolor sit amet</span> <br>
-                                   <span v-if="item.contacts.fax">Lorem ipsum dolor sit amet </span> <br>
-                                   <span v-if="item.contacts.email">Lorem ipsum dolor sit amet con</span> <br>
+                                   {{item.contacts?.adress}} ({{item.name}}) <br />
+                                   <span v-if="item.contacts.tel">тел: {{item.contacts.tel}}</span> <br />
+                                   <span v-if="item.contacts.fax">факс: {{item.contacts.fax}}</span> <br />
+                                   <span v-if="item.contacts.email">email: {{item.contacts.email}}</span> <br />
                               </td>
                               <td colspan="2" class="px-2 py-3">
                                    <span v-if="item.workTime != 0" v-html="item.workTime"></span>
                               </td>
                               <td colspan="3" class="px-2 py-3" v-if="item.status.text != 0">
-                                   <div class="map-cards-item__status text-center" :class="[item.status.active ? 'map-cards-item__status-active' : 'map-cards-item__status-disabled']">
+                                   <div
+                                        class="map-cards-item__status text-center"
+                                        :class="[item.status.active ? 'map-cards-item__status-active' : 'map-cards-item__status-disabled']">
                                         <span class="text-wrap text-center" v-html="item.status.text"></span>
                                    </div>
                               </td>
@@ -432,126 +445,4 @@
                mounted() {},
           }).mount('#app');
      </script>
-     <!-- <script type="text/javascript">
-          // ymaps.ready(function () {
-          //      // Указывается идентификатор HTML-элемента.
-          //      var moscow_map = new ymaps.Map("contact_map", {
-          //           center: [53.902735, 27.555696],
-          //           zoom: 12
-          //      });
-          //      // Ссылка на элемент.
-          //      // var piter_map = new ymaps.Map(document.getElementsByTagName('p')[2], {
-          //      //      center: [59.94, 30.32],
-          //      //      zoom: 9
-          //      // });
-          // });
-          var groups = [
-                    {
-                         name: "Минск",
-                         style: "islands#violetGovernmentIcon",
-                         items: [
-                              {
-                                   center: [53.91373, 27.574237],
-                                   // name: "Минск, проспект Машерова, 7"
-                                   name: "ИМНС по Центральному району",
-                                   contacts:{
-                                        adress: 'Минск, проспект Машерова, 7',
-                                        tel: '',
-                                        fax: '',
-                                        email:'',
-                                   },
-                                   workTime:{},
-                                   status:{
-                                        active: true,
-                                        text: ''
-                                   }
-                              },
-                              {
-                                   center: [53.897191, 27.494987],
-                                   name: "ИМНС по Фрунзенскому району №2"
-                              },
-                         ]
-                    },
-               ]
-          ymaps.ready(init);
-          function init() {
-               
-               // Создание экземпляра карты.
-               var myMap = new ymaps.Map('contact_map', {
-                    center: [53.902735, 27.555696],
-                    zoom: 12
-               }),
-                    // Контейнер для меню.
-                    menu = $('<div class="map-region"></div>');
-                    menuCards = $('<div class="map-cards"></div>')
-
-               for (var i = 0, l = groups.length; i < l; i++) {
-                    createMenuGroup(groups[i]);
-               }
-
-               function createMenuGroup(group) {
-                    // Пункт меню.
-                    var menuItem = $('<div class=""><span>' + group.name + '</span></div>'),
-                         // Коллекция для геообъектов группы.
-                         collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
-                         // Контейнер для подменю.
-                         submenu = $('<div class="map-cards-submenu"></div>');
-
-                    // Добавляем коллекцию на карту.
-                    myMap.geoObjects.add(collection);
-                    // Добавляем подменю.
-                    menuItem
-                         // .append(submenu)
-                         // Добавляем пункт в меню.
-                         .appendTo(menu)
-                         // По клику удаляем/добавляем коллекцию на карту и скрываем/отображаем подменю.
-                         .find('span')
-                         .bind('click', function () {
-                              if (collection.getParent()) {
-                                   myMap.geoObjects.remove(collection);
-                                   submenu.hide();
-                                   menuItem.toggleClass('active')
-                              } else {
-                                   myMap.geoObjects.add(collection);
-                                   submenu.show();
-                                   menuItem.toggleClass('active')
-                              }
-                         });
-                    submenu.append(submenu)
-                    .appendTo(menuCards)
-                    for (var j = 0, m = group.items.length; j < m; j++) {
-                         createSubMenu(group.items[j], collection, submenu);
-                    }
-               }
-
-               function createSubMenu(item, collection, submenu) {
-                    // Пункт подменю.
-                    var submenuItem = $('<div class="map-cards__item"><span>' + item.name + '</span></div>'),
-                         // Создаем метку.
-                         placemark = new ymaps.Placemark(item.center, { balloonContent: item.name });
-
-                    // Добавляем метку в коллекцию.
-                    collection.add(placemark);
-                    // Добавляем пункт в подменю.
-                    submenuItem
-                         .appendTo(submenu)
-                         // При клике по пункту подменю открываем/закрываем баллун у метки.
-                         .find('span')
-                         .bind('click', function () {
-                              if (!placemark.balloon.isOpen()) {
-                                   placemark.balloon.open();
-                              } else {
-                                   placemark.balloon.close();
-                              }
-                              return false;
-                         });
-               }
-
-               // Добавляем меню в тэг BODY.
-               menu.appendTo($('body #contact_map'));
-               menuCards.appendTo($('body #contact_map'));
-               // Выставляем масштаб карты чтобы были видны все группы.
-               myMap.setBounds(myMap.geoObjects.getBounds());
-          }
-     </script> -->
 </div>
