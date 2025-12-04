@@ -1,41 +1,41 @@
 <div class="ecp-history" id="app">
      <div class="container mt-0">
           <button class="btn-default" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasHistory" aria-controls="offcanvasHistory">
-               Lorem ipsum dolor 
+               Отобразить историю
           </button>
           <div class="mt-5">
-               <h3 class="h3 ff-exo">Lorem ipsum dolor </h3>
+               <h3 class="h3 ff-exo">Загруженные данные</h3>
           </div>
-          <div class>
-               <div class>
+          <div class="">
+               <div class="">
                     <div class="table-default accent-table">
                          <table>
                               <thead>
                                    <tr>
-                                        <th>L</th>
-                                        <th>Lorem ipsum </th>
-                                        <th>Lorem ipsu</th>
-                                        <th>Lorem ips</th>
-                                        <th>Lorem ipsum </th>
-                                        <th>Lore</th>
-                                        <th>Lorem ipsum do</th>
-                                        <th>Lorem ipsum do</th>
-                                        <th>Lorem ipsum do</th>
-                                        <th>Lorem i</th>
+                                        <th>№</th>
+                                        <th>Наименование</th>
+                                        <th>Количество</th>
+                                        <th>Стоимость</th>
+                                        <th>Сумма скидки</th>
+                                        <th>GTIN</th>
+                                        <th>Код маркировки</th>
+                                        <th>Тип маркировки</th>
+                                        <th>Сумма надбавки</th>
+                                        <th>Код УКЗ</th>
                                    </tr>
                               </thead>
                               <tbody>
                                    <tr v-for="(position, index) in selectedPosition" :key="index">
-                                        <td>Lorem ipsum d</td>
-                                        <td>Lorem ipsum dolor </td>
-                                        <td>Lorem ipsum dolor sit amet</td>
-                                        <td>Lorem ipsum dolor si</td>
-                                        <td>Lorem ipsum dolor sit </td>
-                                        <td>Lorem ipsum dolor</td>
-                                        <td>Lorem ipsum dolor sit ame</td>
-                                        <td>Lorem ipsum dolor sit ame</td>
-                                        <td>Lorem ipsum dolor sit a</td>
-                                        <td>Lorem ipsum dolor sit</td>
+                                        <td>{{index + 1}}</td>
+                                        <td>{{position?.name}}</td>
+                                        <td>{{position?.productCount}}</td>
+                                        <td>{{position?.amount}}</td>
+                                        <td>{{position?.discount}}</td>
+                                        <td>{{position?.ean}}</td>
+                                        <td>{{position?.markingCode}}</td>
+                                        <td>{{position?.markingType}}</td>
+                                        <td>{{position?.surcharge}}</td>
+                                        <td>{{position?.ukzCode}}</td>
                                    </tr>
                               </tbody>
                          </table>
@@ -46,13 +46,17 @@
 
      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasHistory" aria-labelledby="offcanvasHistoryLabel">
           <div class="offcanvas-header">
-               <h5 class="h5 ff-exo" id="offcanvasHistoryLabel">Lorem ipsum dolor sit a</h5>
+               <h5 class="h5 ff-exo" id="offcanvasHistoryLabel">Дата последних загрузок</h5>
                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
                <ol class="list-group list-group-numbered gap-2">
-                    <li v-for="(position, index) in historyData" :key="index" class="list-group-item d-flex flex-row flex-nowrap btn-list" :class="[index == selectedPosition.index ? 'active' : '']">
-                         <button class="w-100 text-start" @click="selectPosition(index)">Lorem ipsum dolor</button>
+                    <li
+                         v-for="(position, index) in historyData"
+                         :key="index"
+                         class="list-group-item d-flex flex-row flex-nowrap btn-list"
+                         :class="[index == selectedPosition.index ? 'active' : '']">
+                         <button class="w-100 text-start" @click="selectPosition(index)">{{position.date}}</button>
                     </li>
                </ol>
           </div>
