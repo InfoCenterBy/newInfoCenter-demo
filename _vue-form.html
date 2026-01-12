@@ -1,4 +1,4 @@
-<div class>
+<div class="">
      <script src="./js/vue.js"></script>
      <script src="./js/vue-datepicker.js"></script>
      <script src="./js/imask.js"></script>
@@ -57,24 +57,19 @@
                     /* --dp-range-between-dates-text-color: var(--dp-hover-text-color, #212121); */
                     /* --dp-range-between-border-color: var(--dp-hover-color, #f3f3f3); */
                }
-
                .dp__input {
                     background-color: transparent !important;
                }
-
                .dp__input[disabled] {
                     cursor: not-allowed;
                }
-
                .dp__input_icons {
                     padding: 0.375rem 0 0.375rem 0;
                }
-
                .dp--year-select:hover,
                .dp__month_year_select:hover {
                     color: var(--color-black) !important;
                }
-
                .dp__inner_nav:hover {
                     background: transparent;
                }
@@ -86,16 +81,18 @@
                     <div class="modal-content">
                          <form @submit.prevent="onSubmit">
                               <div class="modal-header">
-                                   <h1 class="modal-title fs-5" id="choiceFormLabel">Lorem ipsum dolor sit </h1>
+                                   <h1 class="modal-title fs-5" id="choiceFormLabel">Предварительная запись</h1>
                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                   <div class>
+                                   <div class="">
                                         <div class="d-flex flex-column gap-2">
                                              <p class="mb-0">
-                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem i
+                                                  При необходимости получения более одной услуги по Предварительной записи (код активации) необходимо получить
+                                                  дополнительное время (дополнительную Предварительную запись — рекомендуем последовательно) для возможности
+                                                  получения остальных услуг.
                                              </p>
-                                             <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim ve</p>
+                                             <p class="mb-0">При получении первой услуги сообщите регистратору о наличии у вас записи на другие услуги.</p>
                                         </div>
                                         <div class="d-flex flex-column gap-3 mt-4">
                                              <div class="attention-block d-flex flex-row gap-3">
@@ -104,7 +101,8 @@
                                                   </div>
                                                   <div class="d-flex flex-column">
                                                        <p class="mb-0">
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat 
+                                                            Записаться в РЦ для получения услуги издания или продления срока действия сертификата открытого
+                                                            ключа ГосСУОК (ЭЦП) можно с 24-го числа текущего месяца на следующий месяц.
                                                        </p>
                                                   </div>
                                              </div>
@@ -114,15 +112,17 @@
                                                   </div>
                                                   <div class="d-flex flex-column gap-2">
                                                        <div class="attention-block__title">
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nos
-                                                            <a href="tel:+375(17)269-19-19" class="link-activity">Lorem ipsum dolor </a>L
+                                                            Предварительная запись в РЦ по адресу: г. Минск, пр-т Машерова, 25 ведется только по телефону
+                                                            <a href="tel:+375(17)269-19-19" class="link-activity">+375(17) 269-19-19</a>.
                                                        </div>
                                                        <div class="d-flex flex-column gap-1">
                                                             <div class="attention-block__text">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat 
+                                                                 На октябрь 2024 г.&nbsp;предварительная запись в&nbsp;РЦ&nbsp;по&nbsp;адресу г.&nbsp;Минск,
+                                                                 пр-т Машерова, д. 25&nbsp;произведена и&nbsp;больше не&nbsp;осуществляется
                                                             </div>
                                                             <div class="attention-block__text">
-                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident su
+                                                                 Записаться в РЦ&nbsp;для получения услуги издания или продления срока действия сертификата
+                                                                 открытого ключа ГосСУОК (ЭЦП) можно с&nbsp;24-го числа текущего месяца на следующий месяц.
                                                             </div>
                                                        </div>
                                                   </div>
@@ -131,94 +131,160 @@
                                    </div>
                                    <div class="mt-4">
                                         <div class="d-flex flex-column gap-3">
-                                             <!-- ФИО -->
                                              <div class="floating-label-content w-100" :class="{ 'invalid': errors.name && touched.name }">
-                                                  <input v-model="form.name" @input="touched.name = true" @blur="validateField('name')" id="name" class="floating-input" type="text" placeholder required autocomplete="name">
-                                                  <label class="floating-label" for="name"> <span>Lor</span><span class="color-red-attention">L</span> </label>
-                                                  <span class="floating-label-error" v-if="errors.name && touched.name">Lorem ipsum dolor sit </span>
+                                                  <input
+                                                       v-model="form.name"
+                                                       @input="touched.name = true"
+                                                       @blur="validateField('name')"
+                                                       id="name"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       autocomplete="name" />
+                                                  <label class="floating-label" for="name"> <span>ФИО</span><span class="color-red-attention">*</span> </label>
+                                                  <span class="floating-label-error" v-if="errors.name && touched.name">Данные введены неверно</span>
                                              </div>
 
-                                             <!-- Email -->
                                              <div class="floating-label-content w-100" :class="{ 'invalid': errors.email && touched.email }">
-                                                  <input v-model="form.email" @input="touched.email = true" @blur="validateField('email')" class="floating-input" type="text" placeholder required autocomplete="email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+                                                  <input
+                                                       v-model="form.email"
+                                                       @input="touched.email = true"
+                                                       @blur="validateField('email')"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       autocomplete="email"
+                                                       id="email"
+                                                       pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" />
                                                   <label class="floating-label" for="email">
-                                                       <span>Lorem ipsum dolor</span><span class="color-red-attention">L</span>
+                                                       <span>Электронная почта</span><span class="color-red-attention">*</span>
                                                   </label>
-                                                  <span class="floating-label-error" v-if="errors.email && touched.email">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor </span>
+                                                  <span class="floating-label-error" v-if="errors.email && touched.email">Данные введены неверно</span>
                                              </div>
 
-                                             <!-- Телефон -->
                                              <div class="floating-label-content w-100" :class="{ 'invalid': errors.phone && touched.phone }">
-                                                  <input v-model="form.phone" @input="onPhoneInput" class="floating-input tel-with-mask" inputmode="numeric" type="text" placeholder required id="phone" @focus="telMask($event.target)" @blur="onPhoneBlur" autocomplete="tel">
+                                                  <input
+                                                       v-model="form.phone"
+                                                       @input="onPhoneInput"
+                                                       class="floating-input tel-with-mask"
+                                                       inputmode="numeric"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       id="phone"
+                                                       @focus="telMask($event.target)"
+                                                       @blur="onPhoneBlur"
+                                                       autocomplete="tel" />
                                                   <label class="floating-label" for="phone">
-                                                       <span>Lorem i</span><span class="color-red-attention">L</span>
+                                                       <span>Телефон</span><span class="color-red-attention">*</span>
                                                   </label>
-                                                  <span class="floating-label-error" v-if="errors.phone && touched.phone">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor </span>
+                                                  <span class="floating-label-error" v-if="errors.phone && touched.phone">Данные введены неверно</span>
                                              </div>
 
-                                             <!-- УНП -->
                                              <div class="floating-label-content w-100" :class="{ 'invalid': errors.unp && touched.unp }">
-                                                  <input v-model="form.unp" @input="touched.unp = true" @blur="validateField('unp')" id="unp" class="floating-input" type="text" placeholder required pattern="^[А-Яа-яA-Za-z0-9]{9}$">
-                                                  <label class="floating-label" for="unp"> <span>Lor</span><span class="color-red-attention">L</span> </label>
-                                                  <span class="floating-label-error" v-if="errors.unp && touched.unp">Lorem ipsum dolor sit </span>
+                                                  <input
+                                                       v-model="form.unp"
+                                                       @input="touched.unp = true"
+                                                       @blur="validateField('unp')"
+                                                       id="unp"
+                                                       class="floating-input"
+                                                       type="text"
+                                                       placeholder=""
+                                                       required
+                                                       pattern="^[А-Яа-яA-Za-z0-9]{9}$" />
+                                                  <label class="floating-label" for="unp"> <span>УНП</span><span class="color-red-attention">*</span> </label>
+                                                  <span class="floating-label-error" v-if="errors.unp && touched.unp">Данные введены неверно</span>
                                              </div>
 
-                                             <!-- Выбор РЦ -->
                                              <div class="form-input" :class="{ 'invalid': errors.center && touched.center }">
-                                                  <select v-model="form.center" @change="onCenterChange" @blur="validateField('center')" class="form-select" aria-label="Center Select" required>
-                                                       <option selected disabled value="Выберите РЦ">Lorem ipsum 
-                                                       </option>
-                                                       <option v-for="center in centers" :key="center.id" :value="center.id">Lorem ipsum dolor si</option>
+                                                  <select
+                                                       v-model="form.center"
+                                                       @change="onCenterChange"
+                                                       @blur="validateField('center')"
+                                                       class="form-select"
+                                                       aria-label="Center Select"
+                                                       required>
+                                                       <option selected disabled value="Выберите РЦ">Выберите РЦ*</option>
+                                                       <option v-for="center in centers" :key="center.id" :value="center.id">{{ center.address }}</option>
                                                   </select>
-                                                  <span class="input-label-error" v-if="errors.center && touched.center">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor </span>
+                                                  <span class="input-label-error" v-if="errors.center && touched.center">Данные введены неверно</span>
                                              </div>
-                                             <!-- Выбор даты -->
                                              <div class="floating-label-content w-100" :class="{ 'invalid': errors.date && touched.date }" style="z-index: 3">
-                                                  <div class="floating-input d-flex align-items-center justify-content-center w-100" :class="{ 'disabled': !form.center || form.center === 'Выберите РЦ' }">
-                                                       <vue-date-picker locale="Ru" :min-date="new Date()" :disabled-dates="disabledDates" format="yyyy-MM-dd" model-type="yyyy-MM-dd" id="date" v-model="form.date" @update:model-value="onDateChange" @closed="onDatePickerClosed" cancel-text="Закрыть" select-text="Выбрать" :disabled="!form.center || form.center === 'Выберите РЦ'" :enable-time-picker="false"></vue-date-picker>
+                                                  <div
+                                                       class="floating-input d-flex align-items-center justify-content-center w-100"
+                                                       :class="{ 'disabled': !form.center || form.center === 'Выберите РЦ' }">
+                                                       <vue-date-picker
+                                                            locale="Ru"
+                                                            :min-date="new Date()"
+                                                            :disabled-dates="disabledDates"
+                                                            format="yyyy-MM-dd"
+                                                            model-type="yyyy-MM-dd"
+                                                            id="date"
+                                                            v-model="form.date"
+                                                            @update:model-value="onDateChange"
+                                                            @closed="onDatePickerClosed"
+                                                            cancel-text="Закрыть"
+                                                            select-text="Выбрать"
+                                                            :disabled="!form.center || form.center === 'Выберите РЦ'"
+                                                            :enable-time-picker="false"></vue-date-picker>
                                                   </div>
-                                                  <label class="floating-label" for="date" :style="{ 'background': !form.center || form.center === 'Выберите РЦ' ? 'var(--color-transparent)' : 'var(--color-white)'  }">
-                                                       <span>Lorem ipsum d</span><span class="color-red-attention">L</span>
+                                                  <label
+                                                       class="floating-label"
+                                                       for="date"
+                                                       :style="{ 'background': !form.center || form.center === 'Выберите РЦ' ? 'var(--color-transparent)' : 'var(--color-white)'  }">
+                                                       <span>Выберите дату</span><span class="color-red-attention">*</span>
                                                   </label>
-                                                  <span class="floating-label-error" v-if="errors.date && touched.date">Lorem ipsum dolor sit </span>
+                                                  <span class="floating-label-error" v-if="errors.date && touched.date">Данные введены неверно</span>
                                                   <div class="field-hint" v-if="!form.center || form.center === 'Выберите РЦ'">
-                                                       Lorem ipsum dolor sit amet consectetur
+                                                       Сначала выберите регистрационный центр
                                                   </div>
                                              </div>
 
-                                             <!-- Выбор времени -->
                                              <div class="form-input" :class="{ 'invalid': errors.time && touched.time }">
-                                                  <select v-model="form.time" @change="onTimeChange" @blur="validateField('time')" class="form-select" aria-label="Default select example" required :disabled="!form.date || form.date === '' || !form.center || form.center === 'Выберите РЦ'">
-                                                       <option selected disabled value>Lorem ipsum dol</option>
-                                                       <option v-for="time in filteredTimes" :key="time" :value="time">
-                                                            Lorem ipsu</option>
+                                                  <select
+                                                       v-model="form.time"
+                                                       @change="onTimeChange"
+                                                       @blur="validateField('time')"
+                                                       class="form-select"
+                                                       aria-label="Default select example"
+                                                       required
+                                                       :disabled="!form.date || form.date === '' || !form.center || form.center === 'Выберите РЦ'">
+                                                       <option selected disabled value="">Выберите время*</option>
+                                                       <option v-for="time in filteredTimes" :key="time" :value="time">{{ time }}</option>
                                                   </select>
-                                                  <span class="input-label-error" v-if="errors.time && touched.time">Lorem ipsum dolor sit </span>
+                                                  <span class="input-label-error" v-if="errors.time && touched.time">Данные введены неверно</span>
                                                   <div class="field-hint" v-if="!form.center || form.center === 'Выберите РЦ'">
-                                                       Lorem ipsum dolor sit amet consectetur
+                                                       Сначала выберите регистрационный центр
                                                   </div>
-                                                  <div class="field-hint" v-else-if="!form.date || form.date === ''">
-                                                       Lorem ipsum dolor sit</div>
-                                                  <div class="field-hint" v-else-if="filteredTimes.length === 0">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labor</div>
+                                                  <div class="field-hint" v-else-if="!form.date || form.date === ''">Сначала выберите дату</div>
+                                                  <div class="field-hint" v-else-if="filteredTimes.length === 0">Нет доступного времени для выбранной даты</div>
                                              </div>
 
-                                             <!-- Согласие -->
                                              <div class="floating-label-content form-check" :class="{ 'invalid': errors.agreement }">
-                                                  <div class>
-                                                       <input v-model="form.agreement" @change="validateField('agreement')" type="checkbox" class="form-check-input" id="agreement" required>
+                                                  <div class="">
+                                                       <input
+                                                            v-model="form.agreement"
+                                                            @change="validateField('agreement')"
+                                                            type="checkbox"
+                                                            class="form-check-input"
+                                                            id="agreement"
+                                                            required />
                                                        <label class="form-check-label fs-16" for="agreement">
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua U
-                                                            <a href target="_blank" rel="noopener noreferrer" class="link-activity">
-                                                                 Lorem ipsum dolor sit amet consectetur </a>L
+                                                            Даю согласие на обработку персональных данных в соответствии с
+                                                            <a href="" target="_blank" rel="noopener noreferrer" class="link-activity">
+                                                                 политикой обработки персональных данных</a
+                                                            >.
                                                        </label>
                                                   </div>
-                                                  <span class="floating-label-error" v-if="errors.agreement">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor in</span>
+                                                  <span class="floating-label-error" v-if="errors.agreement">Необходимо ваше согласие</span>
                                              </div>
                                         </div>
                                    </div>
                               </div>
                               <div class="justify-content-center modal-footer">
-                                   <button type="submit" class="btn-default" :disabled="!isFormValid">Lorem ipsum dolor sit amet consectetur adipisicing elit </button>
+                                   <button type="submit" class="btn-default" :disabled="!isFormValid">Записаться в РЦ</button>
                               </div>
                          </form>
                     </div>
@@ -246,7 +312,7 @@
                                    address: 'РЦ 1 (ул. Примерная, 1)',
                                    dates: [
                                         {
-                                             date: '2025-12-20',
+                                             date: '2025-08-20',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: false },
@@ -257,7 +323,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-25',
+                                             date: '2025-08-25',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: true },
@@ -268,7 +334,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-23',
+                                             date: '2025-08-23',
                                              times: [
                                                   { time: '09:00', available: false },
                                                   { time: '10:00', available: true },
@@ -279,7 +345,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-21',
+                                             date: '2025-08-21',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: true },
@@ -296,7 +362,7 @@
                                    address: 'РЦ 2 (ул. Тестовая, 5)',
                                    dates: [
                                         {
-                                             date: '2025-12-20',
+                                             date: '2025-08-20',
                                              times: [
                                                   { time: '10:00', available: true },
                                                   { time: '11:00', available: true },
@@ -305,7 +371,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-25',
+                                             date: '2025-08-25',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: false },
@@ -315,7 +381,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-23',
+                                             date: '2025-08-23',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: true },
@@ -331,7 +397,7 @@
                                    address: 'РЦ 3 (пр-т Машерова, 25)',
                                    dates: [
                                         {
-                                             date: '2025-12-20',
+                                             date: '2025-08-20',
                                              times: [
                                                   { time: '09:00', available: true },
                                                   { time: '10:00', available: true },
@@ -339,7 +405,7 @@
                                              ],
                                         },
                                         {
-                                             date: '2025-12-25',
+                                             date: '2025-08-25',
                                              times: [
                                                   { time: '14:00', available: true },
                                                   { time: '15:00', available: true },
@@ -617,7 +683,7 @@
                          immediate: false,
                     },
                },
-               mounted() { },
+               mounted() {},
           }).mount('#app');
      </script>
 </div>
