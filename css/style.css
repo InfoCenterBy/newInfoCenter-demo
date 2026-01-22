@@ -6915,52 +6915,6 @@ nav.breadcrumb a:last-child {
   margin-bottom: 0;
 }
 
-.counter {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: normal;
-  font-style: normal;
-}
-.counter p {
-  color: var(--color-white);
-}
-
-.timer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.timer__number {
-  border-radius: 8px;
-  font-family: "Roboto";
-  background-color: var(--color-white);
-  padding: 0.5px 8px;
-  color: var(--color-mns-green);
-  font-size: 2.75rem;
-  font-weight: 500;
-  line-height: 130%;
-}
-.timer__title {
-  color: var(--color-white);
-  font-family: "Exo 2";
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0 1.25rem 0 0.625rem;
-}
-.timer__title:last-of-type {
-  margin-right: 0;
-}
-
-.timer-line {
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-white);
-  margin-top: 22px;
-}
-
 html {
   height: auto;
   scroll-behavior: smooth;
