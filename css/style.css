@@ -334,6 +334,13 @@
   }
 }
 @layer component {
+  @media screen and (min-width: 992px) {
+    .text-lg-nowrap {
+      white-space: nowrap;
+    }
+  }
+}
+@layer component {
   .h2-title {
     font-size: 28px;
     font-family: "Exo 2";
