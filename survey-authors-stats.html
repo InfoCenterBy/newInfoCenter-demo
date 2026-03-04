@@ -16,11 +16,12 @@
 
      <link rel="stylesheet" @@style-path />
      <link rel="stylesheet" href="css/style.css" />
-     <title>Онлайн-школа</title>
+     <title>Статистика</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <body>
-     <header class="header">
+  <header class="header">
      <div class="header-container w-100">
           <div class="bg-gray-bg-illustr d-lg-block d-none">
                <div class="container">
@@ -867,266 +868,400 @@
           </div>
      </div>
 </div>
-     <main class="main">
-          <div class="container">
-               <nav class="breadcrumb">
-                    <a href="./main.html" target="_blank" rel="noopener noreferrer">
-                         Главная
-                    </a>
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                         Онлайн-школа
-                    </a>
-               </nav>
-          </div>
-          <div class="container">
-               <div class="row">
-                    <div class="col-12 d-lg-none d-block">
-                         <h2 class="h2 ff-exo fw-semibold fs-3 lh-normal text-uppercase">
-                              Онлайн-школа
-                         </h2>
-                    </div>
-                    <div class="col-lg-3 d-flex my-2 pe-lg-5">
-                         <nav class="w-100 sidenav-profile">
+  <main class="main main-container">
+    <div class="container">
+      <nav class="mb-4 breadcrumb">
+        <a href="main.html">Главная</a>
+        <a href="editors.html">Редакция</a>
+        <a href="bel-taxes.html">Налоги Беларуси</a>
+        <a>Статистика по журналам</a>
+      </nav>
 
+      <h2 class="h2-title">Статистика по журналам</h2>
 
-               <a href="./profile-main.html" target="_self" class="sidenav-profile__link">
+      <div class="filters">
+        <div class="form-input">
+          <label for="authorSelect">Выберите автора</label>
+          <select class="form-select" id="authorSelect">
+            <option value="">Выберите автора</option>
+          </select>
+        </div>
+      </div>
 
-               <div class="sidenav-profile__text">
-               <span>Профиль</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+      <div class="stats" id="statsContainer" style="display: none;">
+        <div class="stat-item">
+          <span class="stat-label">Всего статей</span>
+          <span class="stat-value" id="totalArticles">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Средняя оценка</span>
+          <span class="stat-value" id="avgRating">0.0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">В соавторстве</span>
+          <span class="stat-value" id="coauthoredCount">0 <small>статей</small></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Сольные статьи</span>
+          <span class="stat-value" id="soloCount">0 <small>статей</small></span>
+        </div>
+      </div>
 
+      <div class="chart-container">
+        <canvas id="articlesChart"></canvas>
+        <div class="no-data" id="noDataMessage">Выберите автора для отображения статей</div>
+      </div>
 
-               <a href="./profile-security.html" target="_self" class="sidenav-profile__link">
+      <div class="articles-list" id="articlesListContainer" style="display: none;">
+        <h3>Статьи автора</h3>
+        <div class="articles-grid" id="articlesGrid">
+        </div>
+      </div>
+    </div>
 
-               <div class="sidenav-profile__text">
-               <span>Безопасность и&nbsp;конфиденциальность</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+    <script>
+      // Обновленные данные с учетом соавторства
+      const articlesData = [
+        {
+          id_magazine: 101,
+          magazine_name: "Вестник экономики",
+          id_article: 1001,
+          article_name: "Налоговая реформа 2024: основные изменения",
+          score_magazine: 4.5,
+          score_article: 8.4,
+          authors: ["Иванов", "Петров"], // Несколько авторов
+          category: "налоги",
+          subcategory: "ндс",
+          ownership: "государственная",
+          activity: "оптовая торговля"
+        },
+        {
+          id_magazine: 101,
+          magazine_name: "Вестник экономики",
+          id_article: 1002,
+          article_name: "Оптимизация бюджетных расходов в регионах",
+          score_magazine: 4.5,
+          score_article: 8.1,
+          authors: ["Петров"], // Один автор
+          category: "не налоги",
+          subcategory: "бюджет",
+          ownership: "бюджетная",
+          activity: "услуги"
+        },
+        {
+          id_magazine: 102,
+          magazine_name: "Финансовый журнал",
+          id_article: 2001,
+          article_name: "Цифровизация государственных услуг",
+          score_magazine: 4.8,
+          score_article: 9.2,
+          authors: ["Смирнова", "Иванов"], // Несколько авторов
+          category: "не налоги",
+          subcategory: "госзакупки",
+          ownership: "государственная",
+          activity: "наука"
+        },
+        {
+          id_magazine: 103,
+          magazine_name: "Бизнес и право",
+          id_article: 3001,
+          article_name: "НДС для малого бизнеса: изменения 2024",
+          score_magazine: 4.2,
+          score_article: 7.8,
+          authors: ["Иванов"], // Один автор
+          category: "налоги",
+          subcategory: "налог на прибыль",
+          ownership: "частная",
+          activity: "розничная торговля"
+        },
+        {
+          id_magazine: 104,
+          magazine_name: "Муниципальный вестник",
+          id_article: 4001,
+          article_name: "Эффективность муниципальных закупок",
+          score_magazine: 4.6,
+          score_article: 8.5,
+          authors: ["Сидоров", "Петров", "Иванов"], // Три автора
+          category: "финансы",
+          subcategory: "бюджет",
+          ownership: "муниципальная",
+          activity: "производство"
+        },
+        {
+          id_magazine: 102,
+          magazine_name: "Финансовый журнал",
+          id_article: 2002,
+          article_name: "Правовые аспекты ведения бизнеса",
+          score_magazine: 4.8,
+          score_article: 8.9,
+          authors: ["Петров", "Смирнова"], // Несколько авторов
+          category: "право",
+          subcategory: "госзакупки",
+          ownership: "частная",
+          activity: "услуги"
+        },
+        {
+          id_magazine: 105,
+          magazine_name: "Экономист",
+          id_article: 5001,
+          article_name: "Налог на прибыль: международный опыт",
+          score_magazine: 4.3,
+          score_article: 7.5,
+          authors: ["Смирнова"], // Один автор
+          category: "экономика",
+          subcategory: "налог на прибыль",
+          ownership: "частная",
+          activity: "производство"
+        },
+        {
+          id_magazine: 103,
+          magazine_name: "Бизнес и право",
+          id_article: 3002,
+          article_name: "Судебная практика по налоговым спорам",
+          score_magazine: 4.2,
+          score_article: 8.2,
+          authors: ["Иванов", "Сидоров"], // Несколько авторов
+          category: "право",
+          subcategory: "налог на прибыль",
+          ownership: "частная",
+          activity: "услуги"
+        },
+        {
+          id_magazine: 106,
+          magazine_name: "Наука и инновации",
+          id_article: 6001,
+          article_name: "Инновации в бюджетной сфере",
+          score_magazine: 4.7,
+          score_article: 8.7,
+          authors: ["Сидоров"], // Один автор
+          category: "не налоги",
+          subcategory: "бюджет",
+          ownership: "бюджетная",
+          activity: "наука"
+        }
+      ];
 
+      let chart = null;
 
-               <a href="./profile-notification.html" target="_self" class="sidenav-profile__link">
+      // Функция для получения уникальных авторов
+      function getUniqueAuthors() {
+        const authorsSet = new Set();
+        articlesData.forEach(article => {
+          article.authors.forEach(author => authorsSet.add(author));
+        });
+        return Array.from(authorsSet).sort();
+      }
 
-               <div class="sidenav-profile__text">
-               <span>Уведомления</span>
-          </div>
-          <div class="sidenav-profile__notification sidenav-profile__notification-active">
-               <span>1</span>
-          </div>
-     </a>
+      // Заполнение select авторами
+      function populateAuthorSelect() {
+        const select = document.getElementById('authorSelect');
+        const authors = getUniqueAuthors();
 
+        authors.forEach(author => {
+          const option = document.createElement('option');
+          option.value = author;
+          option.textContent = author;
+          select.appendChild(option);
+        });
+      }
 
-               <a href="./profile-order.html" target="_self" class="sidenav-profile__link">
+      // Получение статей конкретного автора
+      function getArticlesByAuthor(authorName) {
+        return articlesData.filter(article =>
+          article.authors.includes(authorName)
+        );
+      }
 
-               <div class="sidenav-profile__text">
-               <span>Заказы</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+      // Создание/обновление графика
+      function updateChart(articles) {
+        const ctx = document.getElementById('articlesChart').getContext('2d');
+        const noDataMessage = document.getElementById('noDataMessage');
 
+        if (chart) {
+          chart.destroy();
+        }
 
-               <a href="./profile-records.html" target="_self" class="sidenav-profile__link">
+        if (!articles || articles.length === 0) {
+          noDataMessage.style.display = 'block';
+          return;
+        }
 
-               <div class="sidenav-profile__text">
-               <span>Предварительные записи в РЦ</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+        noDataMessage.style.display = 'none';
 
+        // Сортируем статьи по оценке
+        const sortedArticles = [...articles].sort((a, b) => b.score_article - a.score_article);
 
-               <a href="./profile-journals.html" target="_self" class="sidenav-profile__link">
+        // Генерируем пастельные цвета
+        const colors = sortedArticles.map((_, index) => {
+          const hue = (index * 137) % 360;
+          return `hsla(${hue}, 60%, 80%, 0.7)`;
+        });
 
-               <div class="sidenav-profile__text">
-               <span>Журналы</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+        const borderColors = sortedArticles.map((_, index) => {
+          const hue = (index * 137) % 360;
+          return `hsla(${hue}, 80%, 50%, 0.9)`;
+        });
 
-          <a href="./profile-school.html" target="_self" class="sidenav-profile__link sidenav-profile__link-active">
+        chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: sortedArticles.map(() => ''),
+            datasets: [{
+              label: 'Оценка статьи',
+              data: sortedArticles.map(a => a.score_article),
+              backgroundColor: colors,
+              borderColor: borderColors,
+              borderWidth: 2,
+              borderRadius: 8,
+              barPercentage: 0.7
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                  generateLabels: function (chart) {
+                    return sortedArticles.map((article, index) => ({
+                      text: `${article.article_name} (${article.score_article.toFixed(1)}) - ${article.magazine_name}`,
+                      fillStyle: colors[index],
+                      strokeStyle: borderColors[index],
+                      lineWidth: 2,
+                      hidden: false,
+                      index: index
+                    }));
+                  },
+                  font: { size: 11 },
+                  boxWidth: 20,
+                  padding: 15,
+                  usePointStyle: true,
+                  pointStyle: 'rectRounded'
+                }
+              },
+              tooltip: {
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                borderColor: borderColors[0],
+                borderWidth: 2,
+                callbacks: {
+                  title: function (context) {
+                    return sortedArticles[context[0].dataIndex].article_name;
+                  },
+                  label: function (context) {
+                    const article = sortedArticles[context.dataIndex];
+                    return [
+                      `Оценка: ${context.raw.toFixed(1)}`,
+                      `Журнал: ${article.magazine_name}`,
+                      `Соавторы: ${article.authors.filter(a => a !== document.getElementById('authorSelect').value).join(', ') || 'нет'}`,
+                      `Категория: ${article.category}`
+                    ];
+                  }
+                }
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 10,
+                grid: { color: 'rgba(0,0,0,0.05)' },
+                title: {
+                  display: true,
+                  text: 'Оценка статьи',
+                  color: '#666'
+                },
+                ticks: { stepSize: 1 }
+              },
+              x: {
+                grid: { display: false },
+                ticks: { display: false }
+              }
+            }
+          }
+        });
+      }
 
+      // Обновление статистики
+      function updateStats(articles, authorName) {
+        const statsContainer = document.getElementById('statsContainer');
+        const articlesListContainer = document.getElementById('articlesListContainer');
 
-                    <div class="sidenav-profile__text">
-               <span>Онлайн-школа</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
+        if (!articles || articles.length === 0) {
+          statsContainer.style.display = 'none';
+          articlesListContainer.style.display = 'none';
+          return;
+        }
 
-          <a class="sidenav-profile__link" data-bs-toggle="modal" data-bs-target="#exitModal">
-          <div class="sidenav-profile__text">
-               <i class="bi-box-arrow-left bi"></i>
-               <span>Выйти</span>
-          </div>
-          <div class="sidenav-profile__notification"></div>
-     </a>
-</nav>
+        statsContainer.style.display = 'flex';
+        articlesListContainer.style.display = 'block';
 
-<div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-               <div class="pb-0 modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="d-flex flex-column justify-content-center gap-2 pt-0 text-center modal-body">
-                    <div class="fs-64">
-                         <i class="bi-box-arrow-left bi"></i>
-                    </div>
-                    <div class="">
-                         <b class="fs-20 lh-lg">
-                              Выйти из личного кабинета?
-                         </b>
-                    </div>
-                    <div class="">
-                         <p class="mb-0">
-                              Вы действительно хотите выйти из личного кабинета?
-                         </p>
-                    </div>
-               </div>
-               <div class="justify-content-center modal-footer">
-                    <div class="d-flex flex-column gap-3 w-100">
-                         <a href="" target="_blank" class="px-3 px-lg-4 w-100 btn-default">
-                              Выйти
-                         </a>
-                         <a href="" target="_blank" class="px-3 px-lg-4 w-100 btn-empty" data-bs-dismiss="modal">
-                              Отменить
-                         </a>
-                    </div>
-               </div>
-          </div>
-     </div>
-</div>
+        // Общая статистика
+        document.getElementById('totalArticles').textContent = articles.length;
 
-                    </div>
-                    <div class="col-lg-9 d-flex my-2">
-                         <div class="w-100">
-                              <div class="d-lg-block d-none">
-                                   <h2 class="h2 ff-exo fw-semibold fs-3 lh-normal text-uppercase">
-                                        Онлайн-школа
-                                   </h2>
+        const avgRating = articles.reduce((sum, a) => sum + a.score_article, 0) / articles.length;
+        document.getElementById('avgRating').textContent = avgRating.toFixed(1);
+
+        // Статистика по соавторству
+        const coauthored = articles.filter(a => a.authors.length > 1).length;
+        const solo = articles.filter(a => a.authors.length === 1).length;
+
+        document.getElementById('coauthoredCount').textContent = coauthored;
+        document.getElementById('soloCount').textContent = solo;
+
+        // Список статей
+        const articlesGrid = document.getElementById('articlesGrid');
+        articlesGrid.innerHTML = articles.map(article => {
+          const otherAuthors = article.authors.filter(a => a !== authorName);
+
+          return `
+                          <div class="article-card">
+                              <div class="article-title">${article.article_name}</div>
+                              <div class="article-meta">
+                                  <span class="article-journal">${article.magazine_name}</span>
+                                  <span class="article-rating">${article.score_article.toFixed(1)}</span>
                               </div>
-                              <div class="mt-32">
-                                   <div class="">
-     <div class="d-flex flex-column gap-4">
+                              <div style="font-size: 12px; color: #666;">
+                                  ${article.category} / ${article.subcategory}
+                              </div>
+                              ${otherAuthors.length > 0 ? `
+                                  <div class="coauthors">
+                                      Соавторы: ${otherAuthors.join(', ')}
+                                  </div>
+                              ` : ''}
+                          </div>
+                      `;
+        }).join('');
+      }
 
-                          <a href="" target="_blank"
-               class="school-card d-flex flex-row flex-lg-nowrap flex-wrap gap-4">
-                    <div class="school-card__img">
-                         <img src="./img/png/school/school-img.png" alt="">
-                         <span>2024</span>
-                    </div>
-                    <div class=" w-100">
-                         <div class="school-card__header d-flex flex-row gap-1 justify-content-between align-items-start">
-                              <div class="school-card__title">
-                                   Курс «О налогах и не только для ИП простыми словами» (Практика применения 2024 года)
-                              </div>
-                              <div class="school-card__arrow">
-                                   <i class="bi bi-arrow-up-right"></i>
-                              </div>
-                         </div>
-                         <div class="school-card__text mt-3">
-                              <p>
-                                   За 9 уроков поможем разобраться в основах налогообложения для ИП, объясним порядок учета доходов и
-                                   расходов,
-                                   научим
-                                   заполнять книги учета и налоговые декларации.
-                              </p>
-                         </div>
-                    </div>
-               </a>
-                
-               <a href="" target="_blank"
-               class="school-card d-flex flex-row flex-lg-nowrap flex-wrap gap-4">
-                    <div class="school-card__img">
-                         <img src="./img/png/school/school-img.png" alt="">
-                         <span>2024</span>
-                    </div>
-                    <div class=" w-100">
-                         <div class="school-card__header d-flex flex-row gap-1 justify-content-between align-items-start">
-                              <div class="school-card__title">
-                                   Курс «О налогах и не только для ИП простыми словами» (Практика применения 2024 года)
-                              </div>
-                              <div class="school-card__arrow">
-                                   <i class="bi bi-arrow-up-right"></i>
-                              </div>
-                         </div>
-                         <div class="school-card__text mt-3">
-                              <p>
-                                   За 9 уроков поможем разобраться в основах налогообложения для ИП, объясним порядок учета доходов и
-                                   расходов,
-                                   научим
-                                   заполнять книги учета и налоговые декларации.
-                              </p>
-                         </div>
-                    </div>
-               </a>
-                
-               <a href="" target="_blank"
-               class="school-card d-flex flex-row flex-lg-nowrap flex-wrap gap-4">
-                    <div class="school-card__img">
-                         <img src="./img/png/school/school-img.png" alt="">
-                         <span>2024</span>
-                    </div>
-                    <div class=" w-100">
-                         <div class="school-card__header d-flex flex-row gap-1 justify-content-between align-items-start">
-                              <div class="school-card__title">
-                                   Курс «О налогах и не только для ИП простыми словами» (Практика применения 2024 года)
-                              </div>
-                              <div class="school-card__arrow">
-                                   <i class="bi bi-arrow-up-right"></i>
-                              </div>
-                         </div>
-                         <div class="school-card__text mt-3">
-                              <p>
-                                   За 9 уроков поможем разобраться в основах налогообложения для ИП, объясним порядок учета доходов и
-                                   расходов,
-                                   научим
-                                   заполнять книги учета и налоговые декларации.
-                              </p>
-                         </div>
-                    </div>
-               </a>
-               
-     </div>
-</div>
-                              </div>
-                              <div class="mt-40"></div>
-                              <div class="w-100">
-                                   <div class="d-flex flex-column gap-3 justify-content-center text-center">
-                                        <div class="">
-                                             <img src="./img/png/school/school-img.png" alt="контент отсутсвует" class="object-fit-contain">
-                                        </div>
-                                        <p class="mb-0 ff-exo fs-20 fw-semibold">
-                                             У вас пока нет приобретенных курсов
-                                        </p>
-                                   </div>
-                                   <div class="mt-40"></div>
-                                   <div class="bg-gray-bg-illustr p-lg-4 p-3 border-20">
-                                        <div class="">
-                                             <span class="ff-exo fs-20 fw-semibold">Приобретайте онлайн-школу «О налогах и не только для ИП простыми
-                                                  словами»</span>
-                                        </div>
-                                        <div class="mt-3 d-flex flex-column gap-2 ff-roboto fs-16">
-                                             <p class="mb-0">
-                                                  За 9 уроков поможем разобраться в основах налогообложения для ИП, объясним порядок учета доходов и
-                                                  расходов, научим
-                                                  заполнять книги учета, налоговые декларации и многое другое.
-                                             </p>
-                                             <p class="mb-0">
-                                                  Изучайте видеоуроки, отрабатывайте на практике и проходите тесты для контроля.
-                                             </p>
-                                        </div>
-                                        <a href="" target="_blank" class="btn-default mt-3">
-                                             Узнать подробнее
-                                        </a>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </div>
-     </main>
-<div class="position-relative">
+      // Обработчик изменения выбора автора
+      document.getElementById('authorSelect').addEventListener('change', function (e) {
+        const authorName = e.target.value;
+
+        if (!authorName) {
+          if (chart) {
+            chart.destroy();
+            chart = null;
+          }
+          document.getElementById('noDataMessage').style.display = 'block';
+          document.getElementById('statsContainer').style.display = 'none';
+          document.getElementById('articlesListContainer').style.display = 'none';
+          return;
+        }
+
+        const authorArticles = getArticlesByAuthor(authorName);
+
+        updateChart(authorArticles);
+        updateStats(authorArticles, authorName);
+      });
+
+      // Инициализация при загрузке страницы
+      document.addEventListener('DOMContentLoaded', function () {
+        populateAuthorSelect();
+      });
+    </script>
+  </main>
+  <div class="position-relative">
      <button class="btn-up" id="btnUp">
           <i class="bi bi-arrow-up"></i>
           <svg class="btn-up-progress" width="42" height="42" viewBox="0 0 42 42">
@@ -1354,8 +1489,8 @@
                </div>
           </div>
      </div>
-</footer>
-<script src="js/script.js"></script>
+</footer> <script src="js/script.js"></script>
+
 </body>
 
 </html>
