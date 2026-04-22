@@ -1027,7 +1027,18 @@
                                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
                               </p>
                          </div>
+
                          <div class="order-lg-3 order-2">
+                              <div class="attention-block d-flex flex-row align-items-center gap-3 mb-4">
+                                   <div class="attention-block__icon">
+                                        <i class="bi bi-exclamation-triangle"></i>
+                                   </div>
+                                   <div class="d-flex flex-column gap-2">
+                                        <div class="attention-block__title">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                                        </div>
+                                   </div>
+                              </div>
                               <div class="row">
                                    <div class="col-lg-8 d-flex my-lg-2">
                                         <div class="p-lg-4 p-3 w-100 bg-white border-20">
@@ -1046,7 +1057,7 @@
                                                             </label>
                                                        </div>
                                                        <div class="floating-label-content w-100">
-                                                            <input class="floating-input" type="text" placeholder required>
+                                                            <input class="floating-input tel-with-mask" type="tel" placeholder required>
                                                             <label class="floating-label">
                                                                  <span>Lorem i</span><span class="color-red-attention">L</span>
                                                             </label>
@@ -2103,6 +2114,30 @@
                </div>
           </div>
      </div>
+     <div class="modal fade" id="testMode" tabindex="-1" aria-labelledby="testModeLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pt-0">
+                         <div class="mb-2 text-center">
+                              <i class="bi bi-exclamation-triangle fs-64 color-red-attention lh-sm"></i>
+                         </div>
+                         <div class="color-black text-center">
+                              <h4 class="h4 ff-exo fw-semibold fs-20 lh-normal mb-2">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+                              </h4>
+                         </div>
+                         <div class="d-flex flex-column gap-3 mt-4">
+                              <a type="button" class="btn-empty w-100" data-bs-dismiss="modal">
+                                   Lorem i
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
      <div class="position-relative">
      <button class="btn-up" id="btnUp">
           <i class="bi bi-arrow-up"></i>
@@ -2299,7 +2334,14 @@
                </div>
           </div>
      </footer>
+     <script src="./js/imask.js"></script>
      <script src="js/script.js"></script>
+     <script>
+          document.addEventListener('DOMContentLoaded', function () {
+               const testModeModal = new bootstrap.Modal(document.querySelector('#testMode'));
+               testModeModal.show();
+          });
+     </script>
 </body>
 
 </html>

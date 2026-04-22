@@ -20,6 +20,8 @@
           <script src="./js/imask.js"></script>
       
           <script src="./js/swiper-bundle.min.js"></script>
+      
+          <script src="./js/counter.js"></script>
      
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -885,24 +887,46 @@
                     <div class="main-banner">
                          <div class="row">
                               <div class="col-xl-6 my-2">
+                                   <p class="color-yellow ff-exo fs-24 fw-semibold">Lorem ipsum dolor sit am</p>
                                    <div class="main-banner-title color-white">
                                         Lorem ipsum do <br> Lorem ipsum dolor sit amet consectetur adipisicing eli
                                    </div>
                                    <div class="mt-3">
                                         <p class="color-white">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi 
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute i
                                         </p>
                                    </div>
-                                   <a href="#registration" target="_blank" class="btn-default btn-default-yellow mt-20">
-                                        Lorem ipsum dolor 
-                                   </a>
+
                               </div>
+
                               <div class="col-xl-6 my-2">
                                    <div class="d-flex flex-column gap-4">
                                         <img src="./img/png/events/mns-conf-banner-2.png" alt class="main-banner-img">
                                         <img src="./img/png/events/mns-conf-banner.png" alt class="main-banner-img d-lg-block d-none">
                                    </div>
                               </div>
+                              <div class="d-flex justify-content-between gap-4 flex-wrap flex-lg-nowrap row-gap-3 align-items-center mt-32">
+                                   <a href="#registration" target="_blank" class="btn-default btn-default-yellow mt-20">
+                                        Lorem ipsum dolor 
+                                   </a>
+                                   <div class="timer-line">
+
+                                   </div>
+                                   <div class="counter">
+                                        <p class="mb-2">
+                                             Lorem ipsum dolor sit am
+                                        </p>
+                                        <div class="timer">
+                                             <span id="timerDay" class="timer__number">Lo</span>
+                                             <span class="timer__title">Lor</span>
+                                             <span id="timerHours" class="timer__number">Lo</span>
+                                             <span class="timer__title">L</span>
+                                             <span id="timerMin" class="timer__number">Lo</span>
+                                             <span class="timer__title">Lor</span>
+                                        </div>
+                                   </div>
+                              </div>
+
                          </div>
                     </div>
                </div>
@@ -1113,98 +1137,320 @@
                                    </div>
                               </div>
                          </div>
-                         <div class="border-20 bg-gray-bg-illustr py-3 px-4 d-flex flex-column gap-3">
-                              <div class="row row-gap-3 align-items-start justify-content-between">
-                                   <div class="col-md-2 d-flex">
-                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
-                                             Lorem ipsum
-                                        </h4>
-                                   </div>
-                                   <div class="col-md-10 d-flex">
-                                        <div class="d-flex flex-column gap-3">
-                                             <div class="d-flex flex-column gap-2">
-                                                  <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod 
-                                                  </h5>
-                                                  <div class="d-flex flex-column gap-1 ff-roboto ">
-                                                       <span class="color-mns-green fw-semibold">
-                                                            Lorem ipsum dolor sit amet
-                                                       </span>
-                                                       <span class>
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n
-                                                       </span>
+
+                         <div class="row row-gap-3 row-cols-1 row-cols-lg-2">
+                              <!--ЛЕВАЯ КОЛОНКА-->
+                              <div class="col d-flex">
+                                   <div class="border-20 bg-gray-bg-illustr py-3 px-4 d-flex flex-column gap-3">
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adi
+                                                            </h5>
+                                                       </div>
                                                   </div>
                                              </div>
-                         
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit amet
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excep
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exerci
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit ame
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco labor
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiu
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit ame
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure d
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-2 col-lg-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-10 col-lg-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                       </div>
+                                                  </div>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
-                              <div class="row row-gap-3 align-items-start justify-content-between">
-                                   <div class="col-md-2 d-flex">
-                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
-                                             Lorem ipsum
-                                        </h4>
-                                   </div>
-                                   <div class="col-md-10 d-flex">
-                                        <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
-                                             Lorem ipsum dolor
-                                        </h5>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="border-20 bg-gray-bg-illustr py-3 px-4 d-flex flex-column gap-3">
-                              <div class="row row-gap-3 align-items-start justify-content-between">
-                                   <div class="col-md-2 d-flex">
-                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
-                                             Lorem ipsum
-                                        </h4>
-                                   </div>
-                                   <div class="col-md-10 d-flex">
-                                        <div class="d-flex flex-column gap-3">
-                                             <div class="d-flex flex-column gap-2">
-                                                  <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
-                                                       Lorem ipsum dolor sit amet 
-                                                  </h5>
-                                                  <div class="d-flex flex-column gap-1 ff-roboto ">
-                                                       <span class="color-mns-green fw-semibold">
-                                                            Lorem ipsum dolor sit amet 
-                                                       </span>
-                                                       <span class>
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation
-                                                       </span>
+
+                              <!--ПРАВАЯ КОЛОНКА-->
+                              <div class="col d-flex">
+                                   <div class="border-20 bg-gray-bg-illustr border-1-color-mns-green py-3 px-4 d-flex flex-column gap-3">
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamc
+                                                            </h5>
+                                                       </div>
                                                   </div>
                                              </div>
-                         
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicin
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit amet 
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold"></span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exer
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eius
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit amet conse
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco labor
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum 
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod 
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold">
+                                                                      Lorem ipsum dolor sit amet con
+                                                                 </span>
+                                                                 <span class>
+                                                                      Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut 
+                                                                 </span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                        <div class="row row-gap-3 align-items-start justify-content-between">
+                                             <div class="col-md-3 d-flex">
+                                                  <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
+                                                       Lorem ipsum
+                                                  </h4>
+                                             </div>
+                                             <div class="col-md-9 d-flex">
+                                                  <div class="d-flex flex-column gap-3">
+                                                       <div class="d-flex flex-column gap-2">
+                                                            <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
+                                                                 Lorem ipsum dolor
+                                                            </h5>
+                                                            <div class="d-flex flex-column gap-1 ff-roboto ">
+                                                                 <span class="color-mns-green fw-semibold"></span>
+                                                                 <span class></span>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
                                         </div>
                                    </div>
                               </div>
-                              <div class="row row-gap-3 align-items-start justify-content-between">
-                                   <div class="col-md-2 d-flex">
-                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
-                                             Lorem ipsum
-                                        </h4>
-                                   </div>
-                                   <div class="col-md-10 d-flex">
-                                        <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
-                                             Lorem ipsum dolor
-                                        </h5>
-                                   </div>
-                              </div>
                          </div>
-                         <div class="border-20 bg-gray-bg-illustr py-3 px-4">
-                              <div class="row row-gap-3 align-items-start justify-content-between">
-                                   <div class="col-md-2 d-flex">
-                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green fs-20 lh-normal">
-                                             Lorem ipsum
-                                        </h4>
-                                   </div>
-                                   <div class="col-md-10 d-flex">
-                                        <h5 class="mb-0 ff-exo fw-semibold fs-18 d-block">
-                                             Lorem ipsum dol
-                                        </h5>
-                                   </div>
-                              </div>
-                         </div>
+
+                         <!--СВЕРНУТАЯ ЧАСТЬ-->
                          <div class="collapse" id="collapseConfPorgramm">
                               <div class="d-flex flex-column gap-3">
                                    <div class="border-20 bg-gray-bg-illustr py-3 px-4">
@@ -1223,687 +1469,686 @@
                                    </div>
                               </div>
                          </div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center mt-32">
-                         <button class="btn-default btn-default-yellow collapsed btn-collapse-programm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConfPorgramm" aria-expanded="false" aria-controls="collapseConfPorgramm" data-btn-text-collapsed="Читать полностью" data-btn-text-show="Свернуть">
-                         </button>
+                         <div class="col-12 d-flex justify-content-center mt-32">
+                              <button class="btn-default btn-default-yellow collapsed btn-collapse-programm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConfPorgramm" aria-expanded="false" aria-controls="collapseConfPorgramm" data-btn-text-collapsed="Читать полностью" data-btn-text-show="Свернуть">
+                              </button>
+                         </div>
                     </div>
                </div>
-          </div>
-          <div class="container mt-80" id="registration">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum
-               </div>
-               <div class="row row-gap-3 mt-32">
-                    <div class="col-lg-4 d-flex">
-                         <div class="border-20 overflow-hidden border-1-color-gray-stroke w-100 h-100 pb-5">
-                              <div class="bg-yellow d-flex justify-content-center px-4 py-3">
-                                   <h3 class="color-black ff-exo fs-24 mb-0 text-uppercase fw-semibold">
-                                        Lorem ipsum do
-                                   </h3>
-                              </div>
-                              <div class="mt-20 px-4 d-flex flex-column justify-content-between h-90">
-                                   <div class>
-                                        <h4 class="ff-exo fw-semibold mb-0 fs-20 d-block">
-                                             Lorem ipsum dolor sit amet cons
-                                        </h4>
-                                        <div class="mt-20">
-                                             <ul class="check-list check-list-yellow">
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor si
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempo
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsu
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do 
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet conse
-                                                  </li>
-                                             </ul>
+               <div class="container mt-80" id="registration">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum
+                    </div>
+                    <div class="row row-gap-3 mt-32">
+                         <div class="col-lg-4 d-flex">
+                              <div class="border-20 overflow-hidden border-1-color-gray-stroke w-100 h-100 pb-5">
+                                   <div class="bg-yellow d-flex justify-content-center px-4 py-3">
+                                        <h3 class="color-black ff-exo fs-24 mb-0 text-uppercase fw-semibold">
+                                             Lorem ipsum do
+                                        </h3>
+                                   </div>
+                                   <div class="mt-20 px-4 d-flex flex-column justify-content-between h-90">
+                                        <div class>
+                                             <h4 class="ff-exo fw-semibold mb-0 fs-20 d-block">
+                                                  Lorem ipsum dolor sit amet cons
+                                             </h4>
+                                             <div class="mt-20">
+                                                  <ul class="check-list check-list-yellow">
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor si
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempo
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ulla
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsu
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do 
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet conse
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                        <div class>
+                                             <div class="mt-4 d-flex flex-column gap-2 text-center">
+                                                  <h1 class="mb-0 ff-exo fw-semibold text-uppercase color-yellow">
+                                                       Lorem ipsum 
+                                                  </h1>
+                                                  <p class="mb-0 color-gray-txt">
+                                                       Lorem ipsum dolor sit amet consectetur
+                                                  </p>
+                                             </div>
+                                             <div class="mt-4">
+                                                  <a href target="_blank" class="btn-default btn-default-yellow w-100">
+                                                       Lorem ipsum dolor 
+                                                  </a>
+                                             </div>
                                         </div>
                                    </div>
-                                   <div class>
-                                        <div class="mt-4 d-flex flex-column gap-2 text-center">
-                                             <h1 class="mb-0 ff-exo fw-semibold text-uppercase color-yellow">
-                                                  Lorem ipsum 
-                                             </h1>
-                                             <p class="mb-0 color-gray-txt">
-                                                  Lorem ipsum dolor sit amet consectetur
+                              </div>
+                         </div>
+                         <div class="col-lg-4 d-flex">
+                              <div class="border-20 overflow-hidden border-1-color-gray-stroke w-100 h-100 pb-5">
+                                   <div class="bg-mns-green d-flex justify-content-center px-4 py-3">
+                                        <h3 class="color-white ff-exo fs-24 mb-0 text-uppercase fw-semibold">
+                                             Lorem ipsum do
+                                        </h3>
+                                   </div>
+                                   <div class="mt-20 px-4 d-flex flex-column justify-content-between h-90">
+                                        <div class>
+                                             <h4 class="ff-exo fw-semibold mb-0 fs-20 d-block">
+                                                  Lorem ipsum dolor sit amet cons
+                                             </h4>
+                                             <div class="mt-20">
+                                                  <ul class="check-list check-list-green">
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exe
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor si
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labo
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ulla
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit sed do 
+                                                       </li>
+                                                       <li>
+                                                            Lorem ipsum dolor sit amet conse
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                        <div class>
+                                             <div class="mt-4 d-flex flex-column gap-2 text-center">
+                                                  <h1 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green">
+                                                       Lorem ipsum 
+                                                  </h1>
+                                                  <p class="mb-0 color-gray-txt">
+                                                       Lorem ipsum dolor sit amet consectetur
+                                                  </p>
+                                             </div>
+                                             <div class="mt-4">
+                                                  <a href target="_blank" class="btn-default btn-default-green w-100">
+                                                       Lorem ipsum dolor 
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-4 d-flex">
+                              <div class="d-flex flex-column gap-4">
+                                   <div class="border-20 bg-info-light d-flex flex-row gap-12 align-items-start p-3 h-100">
+                                        <div class="color-info fs-24">
+                                             <i class="bi bi-info-circle"></i>
+                                        </div>
+                                        <div class>
+                                             <h4 class="d-block ff-exo fs-20 text-uppercase fw-semibold mb-0">
+                                                  Lorem ips
+                                             </h4>
+                                             <p class="mb-0 mt-2">
+                                                  <span class="fw-semibold">Lorem ipsum dolor si</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com <span class="fw-semibold">Lorem ipsum dolor sit amet consectetur adipisic</span>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et d <span class="fw-semibold">Lorem ipsum do</span>Lorem  <span class="fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididun</span>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui
                                              </p>
                                         </div>
-                                        <div class="mt-4">
-                                             <a href target="_blank" class="btn-default btn-default-yellow w-100">
-                                                  Lorem ipsum dolor 
-                                             </a>
-                                        </div>
                                    </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col-lg-4 d-flex">
-                         <div class="border-20 overflow-hidden border-1-color-gray-stroke w-100 h-100 pb-5">
-                              <div class="bg-mns-green d-flex justify-content-center px-4 py-3">
-                                   <h3 class="color-white ff-exo fs-24 mb-0 text-uppercase fw-semibold">
-                                        Lorem ipsum do
-                                   </h3>
-                              </div>
-                              <div class="mt-20 px-4 d-flex flex-column justify-content-between h-90">
-                                   <div class>
-                                        <h4 class="ff-exo fw-semibold mb-0 fs-20 d-block">
-                                             Lorem ipsum dolor sit amet cons
-                                        </h4>
-                                        <div class="mt-20">
-                                             <ul class="check-list check-list-green">
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor si
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labo
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do 
-                                                  </li>
-                                                  <li>
-                                                       Lorem ipsum dolor sit amet conse
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                   </div>
-                                   <div class>
-                                        <div class="mt-4 d-flex flex-column gap-2 text-center">
-                                             <h1 class="mb-0 ff-exo fw-semibold text-uppercase color-mns-green">
-                                                  Lorem ipsum 
-                                             </h1>
-                                             <p class="mb-0 color-gray-txt">
-                                                  Lorem ipsum dolor sit amet consectetur
+                                   <div class="border-20 bg-gray-bg-illustr p-4 d-flex flex-column gap-3">
+                                        <div class>
+                                             <h4 class="mb-0 ff-exo fw-semibold fs-20 text-uppercase">
+                                                  Lorem ipsum dolor sit 
+                                             </h4>
+                                             <p class="mb-0 ">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
                                              </p>
                                         </div>
-                                        <div class="mt-4">
-                                             <a href target="_blank" class="btn-default btn-default-green w-100">
-                                                  Lorem ipsum dolor 
-                                             </a>
+                                        <div class="d-flex justify-content-end">
+                                             <img src="./img/svg/events/landing-present.svg" alt>
                                         </div>
                                    </div>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-4 d-flex">
-                         <div class="d-flex flex-column gap-4">
-                              <div class="border-20 bg-info-light d-flex flex-row gap-12 align-items-start p-3 h-100">
-                                   <div class="color-info fs-24">
-                                        <i class="bi bi-info-circle"></i>
-                                   </div>
-                                   <div class>
-                                        <h4 class="d-block ff-exo fs-20 text-uppercase fw-semibold mb-0">
-                                             Lorem ips
+               </div>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem
+                    </div>
+                    <div class="mt-32">
+                         <p class="mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation
+                         </p>
+                    </div>
+                    <div class="row row-gap-4 mt-4">
+                         <div class="col-lg-6 d-flex">
+                              <div class="activity-block p-4 bg-mns-green">
+                                   <div class="d-flex flex-row gap-12 align-items-center">
+                                        <div class="activity-block-title__icon bg-yellow fs-24">
+                                             <i class="bi bi-book"></i>
+                                        </div>
+                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase fs-20 color-white">
+                                             Lorem ipsum dolor sit
                                         </h4>
-                                        <p class="mb-0 mt-2">
-                                             <span class="fw-semibold">Lorem ipsum dolor si</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip  <span class="fw-semibold">Lorem ipsum dolor sit amet consectetur adipisic</span> 
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore <span class="fw-semibold">Lorem ipsum do</span>Lorem  <span class="fw-semibold">Lorem ipsum dolor sit amet cons</span> 
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sun
-                                        </p>
+                                   </div>
+                                   <p class="mb-0 mt-3 color-white">
+                                        Lorem ipsum do <span class="fw-semibold">Lorem ipsum dolor sit am</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aut
+                                   </p>
+                                   <div class="mt-2">
+                                        <h5 class="ff-exo fw-semibold fs-18 mb-0 d-block color-white">
+                                             Lorem ipsum dolor sit amet conse
+                                        </h5>
+                                        <ol class="color-white mt-2 ps-3">
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="http://www.info-center.by" target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor </a>L
+                                             </li>
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
+                                             </li>
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor
+                                             </li>
+                                        </ol>
                                    </div>
                               </div>
-                              <div class="border-20 bg-gray-bg-illustr p-4 d-flex flex-column gap-3">
-                                   <div class>
-                                        <h4 class="mb-0 ff-exo fw-semibold fs-20 text-uppercase">
-                                             Lorem ipsum dolor sit 
+                         </div>
+                         <div class="col-lg-6 d-flex">
+                              <div class="activity-block p-4 bg-gray-bg-illustr">
+                                   <div class="d-flex flex-row gap-12 align-items-center">
+                                        <div class="activity-block-title__icon bg-white">
+                                             <img src="./img/svg/logo/padatak-logo.svg" alt>
+                                        </div>
+                                        <h4 class="mb-0 ff-exo fw-semibold text-uppercase fs-20">
+                                             Lorem ipsum dolor sit
                                         </h4>
-                                        <p class="mb-0 ">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
-                                        </p>
                                    </div>
-                                   <div class="d-flex justify-content-end">
-                                        <img src="./img/svg/events/landing-present.svg" alt>
+                                   <p class="mb-0 mt-3">
+                                        Lorem ipsum dolor sit amet consecte <span class="color-mns-green">Lorem ipsum dolor  <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
+                                   </p>
+                                   <div class="mt-2">
+                                        <h5 class="ff-exo fw-semibold fs-18 mb-0 d-block">
+                                             Lorem ipsum dolor sit amet conse
+                                        </h5>
+                                        <ol class="mt-2 ps-3">
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="http://www.info-center.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor </a>L
+                                             </li>
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
+                                             </li>
+                                             <li>
+                                                  <span class="fw-semibold">Lorem ipsum dolor sit amet consecte</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor <span class="color-mns-green">Lorem ipsum dolor 
+                                                       <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem
+                                             </li>
+                                             <li>
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing el <span class="color-mns-green">Lorem ipsum dolor 
+                                                       <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> <span class="fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut</span>L
+                                             </li>
+                                        </ol>
                                    </div>
                               </div>
                          </div>
-                    </div>
-               </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem
-               </div>
-               <div class="mt-32">
-                    <p class="mb-0">
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercit
-                    </p>
-               </div>
-               <div class="row row-gap-4 mt-4">
-                    <div class="col-lg-6 d-flex">
-                         <div class="activity-block p-4 bg-mns-green">
-                              <div class="d-flex flex-row gap-12 align-items-center">
-                                   <div class="activity-block-title__icon bg-yellow fs-24">
-                                        <i class="bi bi-book"></i>
-                                   </div>
-                                   <h4 class="mb-0 ff-exo fw-semibold text-uppercase fs-20 color-white">
-                                        Lorem ipsum dolor sit
-                                   </h4>
-                              </div>
-                              <p class="mb-0 mt-3 color-white">
-                                   Lorem ipsum do <span class="fw-semibold">Lorem ipsum dolor sit am</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam qui
-                              </p>
-                              <div class="mt-2">
-                                   <h5 class="ff-exo fw-semibold fs-18 mb-0 d-block color-white">
-                                        Lorem ipsum dolor sit amet conse
-                                   </h5>
-                                   <ol class="color-white mt-2 ps-3">
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="http://www.info-center.by" target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor </a>L
-                                        </li>
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
-                                        </li>
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor
-                                        </li>
-                                   </ol>
-                              </div>
+                         <div class="col-12 d-flex">
+                              <h4 class="mb-0 ff-exo fw-semibold fs-20">
+                                   Lorem ipsum dolor sit amet c
+                              </h4>
                          </div>
                     </div>
-                    <div class="col-lg-6 d-flex">
-                         <div class="activity-block p-4 bg-gray-bg-illustr">
-                              <div class="d-flex flex-row gap-12 align-items-center">
-                                   <div class="activity-block-title__icon bg-white">
-                                        <img src="./img/svg/logo/padatak-logo.svg" alt>
-                                   </div>
-                                   <h4 class="mb-0 ff-exo fw-semibold text-uppercase fs-20">
-                                        Lorem ipsum dolor sit
-                                   </h4>
-                              </div>
-                              <p class="mb-0 mt-3">
-                                   Lorem ipsum dolor sit amet consecte <span class="color-mns-green">Lorem ipsum dolor  <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> Lorem ipsum dolor sit amet consectetur adipisic
-                              </p>
-                              <div class="mt-2">
-                                   <h5 class="ff-exo fw-semibold fs-18 mb-0 d-block">
-                                        Lorem ipsum dolor sit amet conse
-                                   </h5>
-                                   <ol class="mt-2 ps-3">
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="http://www.info-center.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor </a>L
-                                        </li>
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
-                                        </li>
-                                        <li>
-                                             <span class="fw-semibold">Lorem ipsum dolor sit amet consecte</span> Lorem ipsum dolor sit amet consectetur adipisicing elit  <span class="color-mns-green">Lorem ipsum dolor 
-                                             <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Ex
-                                        </li>
-                                        <li>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing el <span class="color-mns-green">Lorem ipsum dolor 
-                                                  <a href="http://www.padatak.by" target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum </a></span> <span class="fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut</span>L
-                                        </li>
-                                   </ol>
-                              </div>
-                         </div>
+               </div>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ips
                     </div>
-                    <div class="col-12 d-flex">
-                         <h4 class="mb-0 ff-exo fw-semibold fs-20">
-                              Lorem ipsum dolor sit amet c
+                    <div class="mt-4">
+                         <h4 class="ff-exo fw-semibold fs-20">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor 
                          </h4>
                     </div>
-               </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ips
-               </div>
-               <div class="mt-4">
-                    <h4 class="ff-exo fw-semibold fs-20">
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor 
-                    </h4>
-               </div>
-               <p class="mb-0 mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e
-               </p>
-               <div class="row row-gap-4 mt-4">
-                    <div class="col-lg-6 d-flex">
-                         <div class="border-20 w-100 p-4 bg-gray-bg-illustr">
-                              <h4 class="d-block mb-0 ff-exo fw-semibold text-uppercase">
-                                   Lorem ipsum do
-                              </h4>
-                              <ul class="check-list check-list-green mt-3">
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing 
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
-                                   </li>
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-lg-6 d-flex">
-                         <div class="border-20 w-100 p-4 border-1-color-gray-stroke">
-                              <h4 class="d-block mb-0 ff-exo fw-semibold text-uppercase">
-                                   Lorem ipsum dolor sit a
-                              </h4>
-                              <ul class="check-list check-list-green mt-3">
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do ei
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
-                                   </li>
-                                   <li>
-                                        Lorem ipsum dolor sit amet consectetu
-                                   </li>
-                              </ul>
-                              <h5 class="d-block mb-0 ff-exo fw-semibold fs-18">
-                                   Lorem ipsum dolor sit amet consectetur adipisic <a href target="_blank" rel="noopener noreferrer" class="color-mns-green fw-semibold">Lorem</a>L
-                              </h5>
-                              <p class="mb-0 mt-3">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="tel:+375 (17) 269–19–75" class="color-mns-green">Lorem ipsum dolor s</a> Lorem ipsum dolor sit 
-                                   <a href="mailto:pr@info-center.by" class="color-mns-green">Lorem ipsum dolor</a>L
-                              </p>
-                         </div>
-                    </div>
-               </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum dolor sit am
-               </div>
-               <div class="row row-gap-4 mt-32 accordion" id="accordionLanding">
-                    <div class="col-lg-6 d-flex">
-                         <div class="d-flex flex-column gap-4">
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                             Lorem ipsum dolor sit amet consect
-                                        </button>
-                                   </h2>
-                                   <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dol <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipi
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
-                                        </button>
-                                   </h2>
-                                   <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur ad</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
-                                        </button>
-                                   </h2>
-                                   <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                             Lorem ipsum dolor sit amet consectetur adipisic
-                                        </button>
-                                   </h2>
-                                   <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                             Lorem ipsum dolor sit amet consec
-                                        </button>
-                                   </h2>
-                                   <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
+                    <p class="mb-0 mt-4">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e
+                    </p>
+                    <div class="row row-gap-4 mt-4">
+                         <div class="col-lg-6 d-flex">
+                              <div class="border-20 w-100 p-4 bg-gray-bg-illustr">
+                                   <h4 class="d-block mb-0 ff-exo fw-semibold text-uppercase">
+                                        Lorem ipsum do
+                                   </h4>
+                                   <ul class="check-list check-list-green mt-3">
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing 
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
+                                        </li>
+                                   </ul>
                               </div>
                          </div>
-                    </div>
-                    <div class="col-lg-6 d-flex">
-                         <div class="d-flex flex-column gap-4">
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit
-                                        </button>
-                                   </h2>
-                                   <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dol <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipi
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna a
-                                        </button>
-                                   </h2>
-                                   <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur ad</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiu
-                                        </button>
-                                   </h2>
-                                   <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-                                        </div>
-                                   </div>
-                              </div>
-                              <div class="accordion-item">
-                                   <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                         <div class="col-lg-6 d-flex">
+                              <div class="border-20 w-100 p-4 border-1-color-gray-stroke">
+                                   <h4 class="d-block mb-0 ff-exo fw-semibold text-uppercase">
+                                        Lorem ipsum dolor sit a
+                                   </h4>
+                                   <ul class="check-list check-list-green mt-3">
+                                        <li>
                                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do ei
-                                        </button>
-                                   </h2>
-                                   <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
-                                        <div class="accordion-body">
-                                             <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolo <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
+                                        </li>
+                                        <li>
+                                             Lorem ipsum dolor sit amet consectetu
+                                        </li>
+                                   </ul>
+                                   <h5 class="d-block mb-0 ff-exo fw-semibold fs-18">
+                                        Lorem ipsum dolor sit amet consectetur adipisic <a href target="_blank" rel="noopener noreferrer" class="color-mns-green fw-semibold">Lorem</a>L
+                                   </h5>
+                                   <p class="mb-0 mt-3">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo <a href="tel:+375 (17) 269–19–75" class="color-mns-green">Lorem ipsum dolor s</a> Lorem ipsum dolor sit 
+                                        <a href="mailto:pr@info-center.by" class="color-mns-green">Lorem ipsum dolor</a>L
+                                   </p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum dolor sit am
+                    </div>
+                    <div class="row row-gap-4 mt-32 accordion" id="accordionLanding">
+                         <div class="col-lg-6 d-flex">
+                              <div class="d-flex flex-column gap-4">
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                  Lorem ipsum dolor sit amet consect
+                                             </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut  <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipi
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
+                                             </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur ad</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
+                                             </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                  Lorem ipsum dolor sit amet consectetur adipisic
+                                             </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                  Lorem ipsum dolor sit amet consec
+                                             </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-6 d-flex">
+                              <div class="d-flex flex-column gap-4">
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit
+                                             </button>
+                                        </h2>
+                                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut  <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipi
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercita
+                                             </button>
+                                        </h2>
+                                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur ad</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiu
+                                             </button>
+                                        </h2>
+                                        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do ei
+                                             </button>
+                                        </h2>
+                                        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionLanding">
+                                             <div class="accordion-body">
+                                                  <strong>Lorem ipsum dolor sit amet consectetur a</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut e <code>Lorem ipsum dol</code>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
+                                             </div>
                                         </div>
                                    </div>
                               </div>
                          </div>
                     </div>
                </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum dolor
-               </div>
-               <div class="row row-gap-4 mt-32">
-                    <div class="col-lg-6 d-flex">
-                         <div class="border-20 w-100 p-4 bg-gray-bg-illustr">
-                              <h3 class="d-block ff-exo fs-24 fw-semibold text-uppercase">
-                                   Lorem ipsum dolor sit amet c
-                              </h3>
-                              <form action class="d-flex flex-column gap-3 mt-3">
-                                   <div class="floating-label-content w-100">
-                                        <input class="floating-input" type="text" placeholder="Имя" required autocomplete="given-name">
-                                        <span class="floating-label-error">Lorem ipsum dolor sit </span>
-                                   </div>
-                                   <div class="floating-label-content w-100">
-                                        <input class="floating-input" type="email" placeholder="E-mail" required autocomplete="email">
-                                        <span class="floating-label-error">Lorem ipsum dolor sit </span>
-                                   </div>
-                                   <div class>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum dolor
+                    </div>
+                    <div class="row row-gap-4 mt-32">
+                         <div class="col-lg-6 d-flex">
+                              <div class="border-20 w-100 p-4 bg-gray-bg-illustr">
+                                   <h3 class="d-block ff-exo fs-24 fw-semibold text-uppercase">
+                                        Lorem ipsum dolor sit amet c
+                                   </h3>
+                                   <form action class="d-flex flex-column gap-3 mt-3">
                                         <div class="floating-label-content w-100">
-                                             <input class="floating-input tel-with-mask" type="tel" placeholder="Телефон" required autocomplete="tel">
+                                             <input class="floating-input" type="text" placeholder="Имя" required autocomplete="given-name">
                                              <span class="floating-label-error">Lorem ipsum dolor sit </span>
                                         </div>
-                                   </div>
-                                   <div class="floating-label-content w-100">
-                                        <textarea class="floating-input textarea-resize-no pt-2" name id placeholder="Сообщение"></textarea>
-                                   </div>
-                                   <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label fs-16" for="exampleCheck1">
-                                             Lorem ipsum dolor sit <a href target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor s</a>
-                                        </label>
-                                   </div>
-                                   <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                        <label class="form-check-label fs-16" for="exampleCheck2">
-                                             Lorem ipsum dolor sit amet consectetur ad <a href target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor sit amet consecte</a>
-                                        </label>
-                                   </div>
-                                   <div class="w-100 d-flex justify-content-center">
-                                        <button class="btn-default btn-default-yellow">
-                                             Lorem ips
-                                        </button>
-                                   </div>
-                              </form>
-                         </div>
-                    </div>
-                    <div class="col-lg-6 d-flex">
-                         <div class="border-20 w-100 bg-mns-green p-4">
-                              <h3 class="d-block ff-exo fs-24 fw-semibold text-uppercase color-white">
-                                   Lorem ipsum dolor sit 
-                              </h3>
-                              <form action class="d-flex flex-column gap-3">
-                                   <div class="floating-label-content w-100">
-                                        <input class="floating-input" type="text" placeholder="Имя" required autocomplete="given-name">
-                                        <span class="floating-label-error">Lorem ipsum dolor sit </span>
-                                   </div>
-                                   <div class="floating-label-content w-100">
-                                        <input class="floating-input" type="email" placeholder="E-mail" required autocomplete="email">
-                                        <span class="floating-label-error">Lorem ipsum dolor sit </span>
-                                   </div>
-                                   <div class="row row-gap-3">
-                                        <div class="col-lg-6 d-flex">
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="email" placeholder="E-mail" required autocomplete="email">
+                                             <span class="floating-label-error">Lorem ipsum dolor sit </span>
+                                        </div>
+                                        <div class>
                                              <div class="floating-label-content w-100">
                                                   <input class="floating-input tel-with-mask" type="tel" placeholder="Телефон" required autocomplete="tel">
                                                   <span class="floating-label-error">Lorem ipsum dolor sit </span>
                                              </div>
                                         </div>
-                                        <div class="col-lg-6 d-flex">
-                                             <div class="form-input w-100">
-                                                  <select class="form-select" aria-label="Default select example">
-                                                       <option selected>Lorem ipsum dolo</option>
-                                                       <option value="1">Lor</option>
-                                                       <option value="2">Lor</option>
-                                                       <option value="3">Lorem</option>
-                                                  </select>
-                                                  <span class="input-label-error">Lorem ipsum dolor sit </span>
+                                        <div class="floating-label-content w-100">
+                                             <textarea class="floating-input textarea-resize-no pt-2" name id placeholder="Сообщение"></textarea>
+                                        </div>
+                                        <div class="form-check">
+                                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                             <label class="form-check-label fs-16" for="exampleCheck1">
+                                                  Lorem ipsum dolor sit <a href target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp</a>
+                                             </label>
+                                        </div>
+                                        <div class="form-check">
+                                             <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                             <label class="form-check-label fs-16" for="exampleCheck2">
+                                                  Lorem ipsum dolor sit amet consectetur ad <a href target="_blank" rel="noopener noreferrer" class="color-mns-green">Lorem ipsum dolor sit amet consecte</a>
+                                             </label>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-center">
+                                             <button class="btn-default btn-default-yellow">
+                                                  Lorem ips
+                                             </button>
+                                        </div>
+                                   </form>
+                              </div>
+                         </div>
+                         <div class="col-lg-6 d-flex">
+                              <div class="border-20 w-100 bg-mns-green p-4">
+                                   <h3 class="d-block ff-exo fs-24 fw-semibold text-uppercase color-white">
+                                        Lorem ipsum dolor sit 
+                                   </h3>
+                                   <form action class="d-flex flex-column gap-3">
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="text" placeholder="Имя" required autocomplete="given-name">
+                                             <span class="floating-label-error">Lorem ipsum dolor sit </span>
+                                        </div>
+                                        <div class="floating-label-content w-100">
+                                             <input class="floating-input" type="email" placeholder="E-mail" required autocomplete="email">
+                                             <span class="floating-label-error">Lorem ipsum dolor sit </span>
+                                        </div>
+                                        <div class="row row-gap-3">
+                                             <div class="col-lg-6 d-flex">
+                                                  <div class="floating-label-content w-100">
+                                                       <input class="floating-input tel-with-mask" type="tel" placeholder="Телефон" required autocomplete="tel">
+                                                       <span class="floating-label-error">Lorem ipsum dolor sit </span>
+                                                  </div>
+                                             </div>
+                                             <div class="col-lg-6 d-flex">
+                                                  <div class="form-input w-100">
+                                                       <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Lorem ipsum dolo</option>
+                                                            <option value="1">Lor</option>
+                                                            <option value="2">Lor</option>
+                                                            <option value="3">Lorem</option>
+                                                       </select>
+                                                       <span class="input-label-error">Lorem ipsum dolor sit </span>
+                                                  </div>
                                              </div>
                                         </div>
-                                   </div>
-                                   <div class="floating-label-content w-100">
-                                        <textarea class="floating-input textarea-resize-no pt-2" name id placeholder="Сообщение"></textarea>
-                                   </div>
-                                   <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck3">
-                                        <label class="form-check-label fs-16 color-white" for="exampleCheck3">
-                                             Lorem ipsum dolor sit <a href target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor s</a>
-                                        </label>
-                                   </div>
-                                   <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck4">
-                                        <label class="form-check-label fs-16 color-white" for="exampleCheck4">
-                                             Lorem ipsum dolor sit amet consectetur ad <a href target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu</a>
-                                        </label>
-                                   </div>
-                                   <div class="w-100 d-flex justify-content-center">
-                                        <button class="btn-default btn-default-yellow">
-                                             Lorem ips
-                                        </button>
-                                   </div>
-                              </form>
+                                        <div class="floating-label-content w-100">
+                                             <textarea class="floating-input textarea-resize-no pt-2" name id placeholder="Сообщение"></textarea>
+                                        </div>
+                                        <div class="form-check">
+                                             <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                             <label class="form-check-label fs-16 color-white" for="exampleCheck3">
+                                                  Lorem ipsum dolor sit <a href target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp</a>
+                                             </label>
+                                        </div>
+                                        <div class="form-check">
+                                             <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                             <label class="form-check-label fs-16 color-white" for="exampleCheck4">
+                                                  Lorem ipsum dolor sit amet consectetur ad <a href target="_blank" rel="noopener noreferrer" class="color-yellow">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut</a>
+                                             </label>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-center">
+                                             <button class="btn-default btn-default-yellow">
+                                                  Lorem ips
+                                             </button>
+                                        </div>
+                                   </form>
+                              </div>
                          </div>
                     </div>
                </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum dolor sit amet 
-               </div>
-               <div class="row row-gap-4 mt-32">
-                    <div class="col-lg-6 d-flex">
-                         <div class="w-100 border-20 bg-gray-bg-illustr p-4">
-                              <div class="d-flex flex-row gap-2 align-items-start">
-                                   <div class="fs-24 color-mns-green">
-                                        <i class="bi bi-geo-alt"></i>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum dolor sit amet 
+                    </div>
+                    <div class="row row-gap-4 mt-32">
+                         <div class="col-lg-6 d-flex">
+                              <div class="w-100 border-20 bg-gray-bg-illustr p-4">
+                                   <div class="d-flex flex-row gap-2 align-items-start">
+                                        <div class="fs-24 color-mns-green">
+                                             <i class="bi bi-geo-alt"></i>
+                                        </div>
+                                        <h4 class="ff-exo fw-semibold fs-20 color-mns-green text-uppercase">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tem
+                                        </h4>
                                    </div>
-                                   <h4 class="ff-exo fw-semibold fs-20 color-mns-green text-uppercase">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tem
-                                   </h4>
-                              </div>
-                              <div class="d-flex flex-row gap-2 mt-4 align-items-start">
-                                   <div class>
-                                        <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path d="M22.1667 3.5H5.83333C4.54467 3.5 3.5 4.54467 3.5 5.83333V22.1667C3.5 23.4553 4.54467 24.5 5.83333 24.5H22.1667C23.4553 24.5 24.5 23.4553 24.5 22.1667V5.83333C24.5 4.54467 23.4553 3.5 22.1667 3.5Z" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M9.33203 18.6693V9.33594L13.9987 14.0026L18.6654 9.33594V18.6693" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                                   <div class="d-flex flex-row gap-2 mt-4 align-items-start">
+                                        <div class>
+                                             <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M22.1667 3.5H5.83333C4.54467 3.5 3.5 4.54467 3.5 5.83333V22.1667C3.5 23.4553 4.54467 24.5 5.83333 24.5H22.1667C23.4553 24.5 24.5 23.4553 24.5 22.1667V5.83333C24.5 4.54467 23.4553 3.5 22.1667 3.5Z" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M9.33203 18.6693V9.33594L13.9987 14.0026L18.6654 9.33594V18.6693" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                             </svg>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit se
+                                        </p>
                                    </div>
-                                   <p class="mb-0">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit se
+                                   <div class="d-flex flex-row gap-2 mt-2 align-items-start">
+                                        <div class>
+                                             <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M4.66536 7L2.33203 8.16667" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M11.668 7H16.3346" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M25.6654 8.16667L23.332 7" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M21.0013 3.5H7.0013C5.71264 3.5 4.66797 4.54467 4.66797 5.83333V19.8333C4.66797 21.122 5.71264 22.1667 7.0013 22.1667H21.0013C22.29 22.1667 23.3346 21.122 23.3346 19.8333V5.83333C23.3346 4.54467 22.29 3.5 21.0013 3.5Z" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M4.66797 12.8359H23.3346" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M9.33203 17.5H9.3437" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M18.668 17.5H18.6796" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M7 22.1641V24.4974" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                  <path d="M21 24.4974V22.1641" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                             </svg>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
+                                        </p>
+                                   </div>
+                                   <p class="mt-3 mb-0">
+                                        <span class="fw-semibold color-mns-green">Lorem ipsum dolor si</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure d
                                    </p>
                               </div>
-                              <div class="d-flex flex-row gap-2 mt-2 align-items-start">
-                                   <div class>
-                                        <svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path d="M4.66536 7L2.33203 8.16667" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M11.668 7H16.3346" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M25.6654 8.16667L23.332 7" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M21.0013 3.5H7.0013C5.71264 3.5 4.66797 4.54467 4.66797 5.83333V19.8333C4.66797 21.122 5.71264 22.1667 7.0013 22.1667H21.0013C22.29 22.1667 23.3346 21.122 23.3346 19.8333V5.83333C23.3346 4.54467 22.29 3.5 21.0013 3.5Z" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M4.66797 12.8359H23.3346" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M9.33203 17.5H9.3437" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M18.668 17.5H18.6796" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M7 22.1641V24.4974" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                             <path d="M21 24.4974V22.1641" stroke="#00654D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                         </div>
+                         <div class="col-lg-6 d-flex">
+                              <div class="w-100 border-20 overflow-hidden">
+                                   <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affb5ed0bcda3048ce7492d866c16d36ed6977d86ecbac1367e41aed410a14435&amp;source=constructor" width="100%" height="450" frameborder="0">
+                                   </iframe>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum dolor sit am
+                    </div>
+                    <div class="row row-gap-4 mt-32">
+                         <div class="col-lg-7 d-flex">
+                              <div class="w-100 d-flex border-1-color-gray-stroke px-4 py-lg-5 py-4 border-20">
+                                   <div class="row row-gap-3">
+                                        <div class="col-md-6 col-sm-7 d-flex">
+                                             <img src="./img/png/events/logo-rup.png" alt class="w-100 object-fit-contain">
+                                        </div>
+                                        <div class="col-md-6 col-sm-7 d-flex">
+                                             <img src="./img/png/events/logo-tax.png" alt class="w-100 object-fit-contain">
+                                        </div>
                                    </div>
+                              </div>
+                         </div>
+                         <div class="col-lg-5 d-flex">
+                              <div class="w-100 bg-gray-bg-illustr p-4 border-20">
                                    <p class="mb-0">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor inc
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation
                                    </p>
-                              </div>
-                              <p class="mt-3 mb-0">
-                                   <span class="fw-semibold color-mns-green">Lorem ipsum dolor si</span> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud
-                              </p>
-                         </div>
-                    </div>
-                    <div class="col-lg-6 d-flex">
-                         <div class="w-100 border-20 overflow-hidden">
-                              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Affb5ed0bcda3048ce7492d866c16d36ed6977d86ecbac1367e41aed410a14435&amp;source=constructor" width="100%" height="450" frameborder="0">
-                              </iframe>
-                         </div>
-                    </div>
-               </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum dolor sit am
-               </div>
-               <div class="row row-gap-4 mt-32">
-                    <div class="col-lg-7 d-flex">
-                         <div class="w-100 d-flex border-1-color-gray-stroke px-4 py-lg-5 py-4 border-20">
-                              <div class="row row-gap-3">
-                                   <div class="col-md-6 col-sm-7 d-flex">
-                                        <img src="./img/png/events/logo-rup.png" alt class="w-100 object-fit-contain">
-                                   </div>
-                                   <div class="col-md-6 col-sm-7 d-flex">
-                                        <img src="./img/png/events/logo-tax.png" alt class="w-100 object-fit-contain">
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col-lg-5 d-flex">
-                         <div class="w-100 bg-gray-bg-illustr p-4 border-20">
-                              <p class="mb-0">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercit
-                              </p>
-                              <div class="row row-gap-3 col-xxl-10 col-12 mt-3">
-                                   <div class="col-xl-6 d-flex">
-                                        <a href="tel:+375 (25) 691–46–45" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
-                                             <i class="bi bi-phone fs-16"></i>
-                                             <span>
-                                                  Lorem ipsum dolor s
-                                             </span>
-                                        </a>
-                                   </div>
-                                   <div class="col-xl-6 d-flex">
-                                        <a href="tel:+375 (17) 269–19–40" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
-                                             <i class="bi bi-phone fs-16"></i>
-                                             <span>
-                                                  Lorem ipsum dolor s
-                                             </span>
-                                        </a>
-                                   </div>
-                                   <div class="col-xl-6 d-flex">
-                                        <a href="tel:+375 (17) 269–19–38" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
-                                             <i class="bi bi-phone fs-16"></i>
-                                             <span>
-                                                  Lorem ipsum dolor s
-                                             </span>
-                                        </a>
-                                   </div>
-                                   <div class="col-xl-6 d-flex">
-                                        <a href="tel:+375 (17) 269–19–79" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
-                                             <i class="bi bi-phone fs-16"></i>
-                                             <span>
-                                                  Lorem ipsum dolor s
-                                             </span>
-                                        </a>
+                                   <div class="row row-gap-3 col-xxl-10 col-12 mt-3">
+                                        <div class="col-xl-6 d-flex">
+                                             <a href="tel:+375 (25) 691–46–45" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
+                                                  <i class="bi bi-phone fs-16"></i>
+                                                  <span>
+                                                       Lorem ipsum dolor s
+                                                  </span>
+                                             </a>
+                                        </div>
+                                        <div class="col-xl-6 d-flex">
+                                             <a href="tel:+375 (17) 269–19–40" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
+                                                  <i class="bi bi-phone fs-16"></i>
+                                                  <span>
+                                                       Lorem ipsum dolor s
+                                                  </span>
+                                             </a>
+                                        </div>
+                                        <div class="col-xl-6 d-flex">
+                                             <a href="tel:+375 (17) 269–19–38" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
+                                                  <i class="bi bi-phone fs-16"></i>
+                                                  <span>
+                                                       Lorem ipsum dolor s
+                                                  </span>
+                                             </a>
+                                        </div>
+                                        <div class="col-xl-6 d-flex">
+                                             <a href="tel:+375 (17) 269–19–79" class="d-flex flex-row gap-2 color-mns-green ff-roboto">
+                                                  <i class="bi bi-phone fs-16"></i>
+                                                  <span>
+                                                       Lorem ipsum dolor s
+                                                  </span>
+                                             </a>
+                                        </div>
                                    </div>
                               </div>
                          </div>
                     </div>
                </div>
-          </div>
-          <div class="container mt-80">
-               <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
-                    Lorem ipsum 
-               </div>
-               <div class="mt-32">
-                    <div class="landing-conference slider-banner-sm d-flex flex-row align-items-center gap-2">
-                         <button class="swiper-button-prev-custom"></button>
-                         <div class="swiper">
-                              <div class="swiper-wrapper">
-                                   <div class="swiper-slide overflow-hidden border-20">
-                                        <img src="./img/png/skko/slider-banner-sm.png" alt>
-                                   </div>
-                                   <div class="swiper-slide overflow-hidden border-20">
-                                        <img src="./img/png/skko/slider-banner-sm.png" alt>
-                                   </div>
-                                   <div class="swiper-slide overflow-hidden border-20">
-                                        <img src="./img/png/skko/slider-banner-sm.png" alt>
-                                   </div>
-                                   <div class="swiper-slide overflow-hidden border-20">
-                                        <img src="./img/png/skko/slider-banner-sm.png" alt>
+               <div class="container mt-80">
+                    <div class="fs-28 ff-exo fw-semibold color-black text-uppercase">
+                         Lorem ipsum 
+                    </div>
+                    <div class="mt-32">
+                         <div class="landing-conference slider-banner-sm d-flex flex-row align-items-center gap-2">
+                              <button class="swiper-button-prev-custom"></button>
+                              <div class="swiper">
+                                   <div class="swiper-wrapper">
+                                        <div class="swiper-slide overflow-hidden border-20">
+                                             <img src="./img/png/skko/slider-banner-sm.png" alt>
+                                        </div>
+                                        <div class="swiper-slide overflow-hidden border-20">
+                                             <img src="./img/png/skko/slider-banner-sm.png" alt>
+                                        </div>
+                                        <div class="swiper-slide overflow-hidden border-20">
+                                             <img src="./img/png/skko/slider-banner-sm.png" alt>
+                                        </div>
+                                        <div class="swiper-slide overflow-hidden border-20">
+                                             <img src="./img/png/skko/slider-banner-sm.png" alt>
+                                        </div>
                                    </div>
                               </div>
+                              <button class="swiper-button-next-custom"></button>
                          </div>
-                         <button class="swiper-button-next-custom"></button>
                     </div>
                </div>
-          </div>
-     </main>
-<div class="position-relative">
+     </div></main>
+     <div class="position-relative">
      <button class="btn-up" id="btnUp">
           <i class="bi bi-arrow-up"></i>
           <!-- Добавляем SVG для анимации border -->
@@ -1913,193 +2158,193 @@
           </svg>
      </button>
 </div>
-<footer class="footer">
-     <div class="container">
-          <div class="row">
-               <div class="col-xl-3 d-flex flex-column">
-                    <a href target="_blank" class="footer-logo d-flex flex-row align-items-center">
-                         <picture>
-                              <source media="(min-width: 960px)" srcset="./img/png/logo/footer-logo-white.png">
-                              <img src="./img/svg/logo/footer-logo-white.svg" alt>
-                         </picture>
-                         <p class="mb-0">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nos
-                         </p>
-                    </a>
-                    <div class="mt-3">
-                         <div class>
-                              <div class="footer-title hover-no">Lorem ipsum dolor sit</div>
-                         </div>
-                         <div class="social-links d-flex flex-row gap-lg-3 gap-2 mt-3">
-                              <a href target="_blank" class="social-links__block">
-                                   <svg width="16.000000" height="16.000000" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <defs/>
-                                        <path id="instagram" d="M11.27 0L4.72 0C3.85 0 3.27 0.19 2.79 0.38C2.31 0.57 1.83 0.86 1.34 1.34C0.86 1.83 0.67 2.21 0.38 2.79C0.19 3.27 0.09 3.85 0 4.72L0 11.27C0 12.14 0.19 12.72 0.38 13.2C0.57 13.68 0.86 14.16 1.34 14.65C1.83 15.13 2.21 15.32 2.79 15.61C3.27 15.8 3.85 15.9 4.72 16L11.27 16C12.14 16 12.72 15.8 13.2 15.61C13.68 15.42 14.16 15.13 14.65 14.65C15.13 14.16 15.32 13.78 15.61 13.2C15.8 12.72 15.9 12.14 16 11.27L16 4.72C16 3.85 15.8 3.27 15.61 2.79C15.42 2.31 15.13 1.83 14.65 1.34C14.16 0.86 13.78 0.67 13.2 0.38C12.72 0.19 12.14 0.09 11.27 0ZM4.72 1.44L11.27 1.44C12.04 1.44 12.43 1.63 12.72 1.73C13.1 1.92 13.39 2.02 13.68 2.31C13.97 2.6 14.16 2.89 14.26 3.27C14.36 3.56 14.45 3.95 14.55 4.72L14.55 11.27C14.55 12.04 14.36 12.43 14.26 12.72C14.07 13.1 13.97 13.39 13.68 13.68C13.39 13.97 13.1 14.16 12.72 14.26C12.43 14.36 12.04 14.45 11.27 14.55L4.72 14.55C3.95 14.55 3.56 14.36 3.27 14.26C2.89 14.07 2.6 13.97 2.31 13.68C2.02 13.39 1.83 13.1 1.73 12.72C1.63 12.43 1.54 12.04 1.44 11.27L1.44 4.72C1.44 3.95 1.63 3.56 1.73 3.27C1.92 2.89 2.02 2.6 2.31 2.31C2.6 2.02 2.89 1.83 3.27 1.73C3.56 1.63 3.95 1.54 4.72 1.44ZM13.2 3.75C13.2 4.29 12.77 4.72 12.24 4.72C11.7 4.72 11.27 4.29 11.27 3.75C11.27 3.22 11.7 2.79 12.24 2.79C12.77 2.79 13.2 3.22 13.2 3.75ZM8 3.85C5.68 3.85 3.85 5.68 3.85 8C3.85 10.31 5.68 12.14 8 12.14C10.31 12.14 12.14 10.31 12.14 8C12.14 5.68 10.31 3.85 8 3.85ZM8 10.69C6.55 10.69 5.3 9.54 5.3 8C5.3 6.55 6.45 5.3 8 5.3C9.44 5.3 10.69 6.45 10.69 8C10.69 9.44 9.44 10.69 8 10.69Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="evenodd"/>
-                                   </svg>
-                                   <!-- <img src="./img/svg/social/instagram.svg" alt=""> -->
-                              </a>
-                              <a href target="_blank" class="social-links__block">
-                                   <svg width="9.600006" height="18.399902" viewbox="0 0 9.60001 18.3999" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <defs/>
-                                        <path id="Vector" d="M6.12 9.89L9.1 9.89L9.57 6.84L6.12 6.84L6.12 5.18C6.12 3.92 6.53 2.79 7.71 2.79L9.6 2.79L9.6 0.14C9.26 0.09 8.56 0 7.23 0C4.47 0 2.84 1.47 2.84 4.82L2.84 6.84L0 6.84L0 9.89L2.84 9.89L2.84 18.25C3.41 18.34 3.98 18.39 4.56 18.39C5.09 18.39 5.61 18.35 6.12 18.28L6.12 9.89Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                   </svg>
-                                   <!-- <img src="./img/svg/social/facebook.svg" alt=""> -->
-                              </a>
-                              <a href target="_blank" class="social-links__block">
-                                   <svg width="17.600006" height="11.200195" viewbox="0 0 17.6 11.2002" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <defs/>
-                                        <path id="Vector" d="M9.58 11.2C3.57 11.2 0.14 6.99 0 0L3.01 0C3.11 5.13 5.33 7.3 7.09 7.75L7.09 0L9.92 0L9.92 4.42C11.66 4.23 13.48 2.21 14.1 0L16.94 0C16.7 1.15 16.24 2.24 15.58 3.2C14.91 4.16 14.06 4.97 13.08 5.58C14.18 6.14 15.15 6.92 15.93 7.89C16.71 8.86 17.27 9.99 17.6 11.2L14.47 11.2C14.18 10.14 13.6 9.21 12.79 8.49C11.98 7.78 10.98 7.33 9.92 7.19L9.92 11.2L9.58 11.2Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                   </svg>
-                                   <!-- <img src="./img/svg/social/vk.svg" alt=""> -->
-                              </a>
-                              <a href target="_blank" class="social-links__block">
-                                   <svg width="15.200012" height="13.600098" viewbox="0 0 15.2 13.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <defs/>
-                                        <path id="Vector" d="M15.2 0.48L12.79 13.03C12.79 13.03 12.45 13.9 11.53 13.48L5.98 9.08L5.96 9.06C6.71 8.37 12.52 2.96 12.77 2.71C13.16 2.33 12.92 2.11 12.46 2.39L3.88 8.04L0.57 6.88C0.57 6.88 0.05 6.69 0 6.27C-0.05 5.86 0.59 5.63 0.59 5.63L14.09 0.15C14.09 0.15 15.2 -0.36 15.2 0.48Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
-                                   </svg>
-                                   <!-- <img src="./img/svg/social/telegram.svg" alt=""> -->
-                              </a>
-                              <a href target="_blank" class="social-links__block">
-                                   <svg width="17.600006" height="12.000000" viewbox="0 0 17.6 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <defs/>
-                                        <path id="Vector" d="M1.81 11.64C1.49 11.55 1.2 11.38 0.97 11.16C0.74 10.94 0.56 10.66 0.46 10.36C-0.13 8.79 -0.3 2.22 0.83 0.93C1.2 0.51 1.73 0.25 2.31 0.21C5.34 -0.11 14.71 -0.07 15.79 0.31C16.09 0.41 16.37 0.57 16.6 0.79C16.83 1 17.01 1.26 17.12 1.56C17.76 3.18 17.78 9.08 17.03 10.64C16.83 11.05 16.5 11.38 16.08 11.58C14.95 12.13 3.31 12.12 1.81 11.64ZM6.62 8.56L12.06 5.8L6.62 3.02L6.62 8.56Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="evenodd"/>
-                                   </svg>
-                                   <!-- <img src="./img/svg/social/youtube.svg" alt=""> -->
-                              </a>
+     <footer class="footer">
+          <div class="container">
+               <div class="row">
+                    <div class="col-xl-3 d-flex flex-column">
+                         <a href target="_blank" class="footer-logo d-flex flex-row align-items-center">
+                              <picture>
+                                   <source media="(min-width: 960px)" srcset="./img/png/logo/footer-logo-white.png">
+                                   <img src="./img/svg/logo/footer-logo-white.svg" alt>
+                              </picture>
+                              <p class="mb-0">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exerc
+                              </p>
+                         </a>
+                         <div class="mt-3">
+                              <div class>
+                                   <div class="footer-title hover-no">Lorem ipsum dolor sit</div>
+                              </div>
+                              <div class="social-links d-flex flex-row gap-lg-3 gap-2 mt-3">
+                                   <a href target="_blank" class="social-links__block">
+                                        <svg width="16.000000" height="16.000000" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                             <defs/>
+                                             <path id="instagram" d="M11.27 0L4.72 0C3.85 0 3.27 0.19 2.79 0.38C2.31 0.57 1.83 0.86 1.34 1.34C0.86 1.83 0.67 2.21 0.38 2.79C0.19 3.27 0.09 3.85 0 4.72L0 11.27C0 12.14 0.19 12.72 0.38 13.2C0.57 13.68 0.86 14.16 1.34 14.65C1.83 15.13 2.21 15.32 2.79 15.61C3.27 15.8 3.85 15.9 4.72 16L11.27 16C12.14 16 12.72 15.8 13.2 15.61C13.68 15.42 14.16 15.13 14.65 14.65C15.13 14.16 15.32 13.78 15.61 13.2C15.8 12.72 15.9 12.14 16 11.27L16 4.72C16 3.85 15.8 3.27 15.61 2.79C15.42 2.31 15.13 1.83 14.65 1.34C14.16 0.86 13.78 0.67 13.2 0.38C12.72 0.19 12.14 0.09 11.27 0ZM4.72 1.44L11.27 1.44C12.04 1.44 12.43 1.63 12.72 1.73C13.1 1.92 13.39 2.02 13.68 2.31C13.97 2.6 14.16 2.89 14.26 3.27C14.36 3.56 14.45 3.95 14.55 4.72L14.55 11.27C14.55 12.04 14.36 12.43 14.26 12.72C14.07 13.1 13.97 13.39 13.68 13.68C13.39 13.97 13.1 14.16 12.72 14.26C12.43 14.36 12.04 14.45 11.27 14.55L4.72 14.55C3.95 14.55 3.56 14.36 3.27 14.26C2.89 14.07 2.6 13.97 2.31 13.68C2.02 13.39 1.83 13.1 1.73 12.72C1.63 12.43 1.54 12.04 1.44 11.27L1.44 4.72C1.44 3.95 1.63 3.56 1.73 3.27C1.92 2.89 2.02 2.6 2.31 2.31C2.6 2.02 2.89 1.83 3.27 1.73C3.56 1.63 3.95 1.54 4.72 1.44ZM13.2 3.75C13.2 4.29 12.77 4.72 12.24 4.72C11.7 4.72 11.27 4.29 11.27 3.75C11.27 3.22 11.7 2.79 12.24 2.79C12.77 2.79 13.2 3.22 13.2 3.75ZM8 3.85C5.68 3.85 3.85 5.68 3.85 8C3.85 10.31 5.68 12.14 8 12.14C10.31 12.14 12.14 10.31 12.14 8C12.14 5.68 10.31 3.85 8 3.85ZM8 10.69C6.55 10.69 5.3 9.54 5.3 8C5.3 6.55 6.45 5.3 8 5.3C9.44 5.3 10.69 6.45 10.69 8C10.69 9.44 9.44 10.69 8 10.69Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                        <!-- <img src="./img/svg/social/instagram.svg" alt=""> -->
+                                   </a>
+                                   <a href target="_blank" class="social-links__block">
+                                        <svg width="9.600006" height="18.399902" viewbox="0 0 9.60001 18.3999" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                             <defs/>
+                                             <path id="Vector" d="M6.12 9.89L9.1 9.89L9.57 6.84L6.12 6.84L6.12 5.18C6.12 3.92 6.53 2.79 7.71 2.79L9.6 2.79L9.6 0.14C9.26 0.09 8.56 0 7.23 0C4.47 0 2.84 1.47 2.84 4.82L2.84 6.84L0 6.84L0 9.89L2.84 9.89L2.84 18.25C3.41 18.34 3.98 18.39 4.56 18.39C5.09 18.39 5.61 18.35 6.12 18.28L6.12 9.89Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                        </svg>
+                                        <!-- <img src="./img/svg/social/facebook.svg" alt=""> -->
+                                   </a>
+                                   <a href target="_blank" class="social-links__block">
+                                        <svg width="17.600006" height="11.200195" viewbox="0 0 17.6 11.2002" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                             <defs/>
+                                             <path id="Vector" d="M9.58 11.2C3.57 11.2 0.14 6.99 0 0L3.01 0C3.11 5.13 5.33 7.3 7.09 7.75L7.09 0L9.92 0L9.92 4.42C11.66 4.23 13.48 2.21 14.1 0L16.94 0C16.7 1.15 16.24 2.24 15.58 3.2C14.91 4.16 14.06 4.97 13.08 5.58C14.18 6.14 15.15 6.92 15.93 7.89C16.71 8.86 17.27 9.99 17.6 11.2L14.47 11.2C14.18 10.14 13.6 9.21 12.79 8.49C11.98 7.78 10.98 7.33 9.92 7.19L9.92 11.2L9.58 11.2Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                        </svg>
+                                        <!-- <img src="./img/svg/social/vk.svg" alt=""> -->
+                                   </a>
+                                   <a href target="_blank" class="social-links__block">
+                                        <svg width="15.200012" height="13.600098" viewbox="0 0 15.2 13.6001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                             <defs/>
+                                             <path id="Vector" d="M15.2 0.48L12.79 13.03C12.79 13.03 12.45 13.9 11.53 13.48L5.98 9.08L5.96 9.06C6.71 8.37 12.52 2.96 12.77 2.71C13.16 2.33 12.92 2.11 12.46 2.39L3.88 8.04L0.57 6.88C0.57 6.88 0.05 6.69 0 6.27C-0.05 5.86 0.59 5.63 0.59 5.63L14.09 0.15C14.09 0.15 15.2 -0.36 15.2 0.48Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                        </svg>
+                                        <!-- <img src="./img/svg/social/telegram.svg" alt=""> -->
+                                   </a>
+                                   <a href target="_blank" class="social-links__block">
+                                        <svg width="17.600006" height="12.000000" viewbox="0 0 17.6 12" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                             <defs/>
+                                             <path id="Vector" d="M1.81 11.64C1.49 11.55 1.2 11.38 0.97 11.16C0.74 10.94 0.56 10.66 0.46 10.36C-0.13 8.79 -0.3 2.22 0.83 0.93C1.2 0.51 1.73 0.25 2.31 0.21C5.34 -0.11 14.71 -0.07 15.79 0.31C16.09 0.41 16.37 0.57 16.6 0.79C16.83 1 17.01 1.26 17.12 1.56C17.76 3.18 17.78 9.08 17.03 10.64C16.83 11.05 16.5 11.38 16.08 11.58C14.95 12.13 3.31 12.12 1.81 11.64ZM6.62 8.56L12.06 5.8L6.62 3.02L6.62 8.56Z" fill="#5E60CE" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                        <!-- <img src="./img/svg/social/youtube.svg" alt=""> -->
+                                   </a>
+                              </div>
                          </div>
                     </div>
-               </div>
-               <div class="col-xl-6 col-sm-6 d-flex flex-column mt-xl-0 mt-4">
-                    <div class="mt-10">
-                         <a href target="_blank" class="footer-title">Lorem ipsum dolor sit am</a>
-                    </div>
-                    <div class="row mt-3">
-                         <div class="col-lg-6 d-flex flex-column gap-lg-3 gap-2 my-lg-0 my-1">
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lorem ip
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lorem ipsum dolor sit amet co
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lore
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lore
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lorem ipsum dolor
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lorem ipsum dolor sit amet co
-                              </a>
-                              <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                   Lorem ip
-                              </a>
-                              <a class="align-items-center gap-1 d-xl-none footer-link collapsed-more-btn-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFooterActivity" aria-expanded="false" aria-controls="collapseFooterActivity">
-                                   <span>Lor</span>
-                                   <i class="bi bi-chevron-down fs-12"></i>
-                              </a>
+                    <div class="col-xl-6 col-sm-6 d-flex flex-column mt-xl-0 mt-4">
+                         <div class="mt-10">
+                              <a href target="_blank" class="footer-title">Lorem ipsum dolor sit am</a>
                          </div>
-                         <div class="col-lg-6 collapse d-xl-block" id="collapseFooterActivity">
-                              <div class="d-flex flex-column gap-lg-3 gap-2 my-lg-0 my-1 ">
+                         <div class="row mt-3">
+                              <div class="col-lg-6 d-flex flex-column gap-lg-3 gap-2 my-lg-0 my-1">
                                    <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                        Lorem ipsum 
+                                        Lorem ip
                                    </a>
                                    <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                        Lorem ipsum dolor sit amet consectetu
+                                        Lorem ipsum dolor sit amet co
+                                   </a>
+                                   <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                        Lore
+                                   </a>
+                                   <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                        Lore
                                    </a>
                                    <a href target="_blank" rel="noopener noreferrer" class="footer-link">
                                         Lorem ipsum dolor
                                    </a>
                                    <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                        Lorem ipsum dolor sit
+                                        Lorem ipsum dolor sit amet co
                                    </a>
                                    <a href target="_blank" rel="noopener noreferrer" class="footer-link">
-                                        Lorem ipsum dolor 
+                                        Lorem ip
                                    </a>
-                                   <a class="d-flex align-items-center gap-1 d-xl-none footer-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFooterActivity" aria-expanded="false" aria-controls="collapseFooterActivity">
-                                        <span>Lorem ip</span>
-                                        <i class="bi bi-chevron-up fs-12"></i>
+                                   <a class="align-items-center gap-1 d-xl-none footer-link collapsed-more-btn-flex collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFooterActivity" aria-expanded="false" aria-controls="collapseFooterActivity">
+                                        <span>Lor</span>
+                                        <i class="bi bi-chevron-down fs-12"></i>
                                    </a>
                               </div>
-                         </div>
-                    </div>
-               </div>
-               <div class="col-xl-3 col-sm-6 d-flex flex-column mt-xl-0 mt-4">
-                    <div class="mt-10">
-                         <a href target="_blank" class="footer-title">Lorem ip</a>
-                    </div>
-                    <div class="d-flex flex-column mt-3 gap-lg-3 gap-2">
-                         <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
-                              <i class="bi bi-geo-alt"></i>
-                              <span>Lorem ipsum dolor sit amet consect</span>
-                         </a>
-                         <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
-                              <i class="bi bi-phone"></i>
-                              <span>Lorem ipsum dolor</span>
-                         </a>
-                         <div class="footer-link d-flex flex-row gap-2 hover-no">
-                              <i class="bi bi-calendar4"></i>
-                              <span>
-                                   Lorem ipsum dolor sit am <br>
-                                   Lorem ipsum dolor si
-                              </span>
-                         </div>
-                         <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
-                              <i class="bi bi-envelope"></i>
-                              <span>Lorem ipsum dolor sit amet consectetu</span>
-                         </a>
-                    </div>
-               </div>
-               <div class="col-9 ms-auto">
-                    <div class="mt-10 mt-4">
-                         <a href target="_blank" class="footer-title">Lorem ipsum dolor sit </a>
-                    </div>
-                    <div class="color-white mt-3">
-                         <p class="mb-2">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                         </p>
-                         <p class="mb-0">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco l
-                         </p>
-                    </div>
-               </div>
-               <div class="row justify-content-start row-gap-3 mt-4 align-items-center">
-                    <div class="col-12 col-lg-3">
-                         <span class="color-white ff-roboto fs-16 order-lg-1 order-2">Lorem ipsum dolor sit amet consectetur adipisicing elit </span>
-                    </div>
-                    <div class="col-12 col-lg-9 ps-3">
-                         <div class="d-flex flex-row align-items-center flex-wrap gap-3 order-lg-2 order-1">
-                              <span class="color-white ff-roboto fs-16">Lorem ipsum dolor s</span>
-                              <div class="d-flex flex-row flex-wrap gap-2">
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-1.png" alt>
-                                   </div>
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-2.png" alt>
-                                   </div>
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-4.png" alt>
-                                   </div>
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-5.png" alt>
-                                   </div>
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-6.png" alt>
-                                   </div>
-                                   <div class="parnter-block">
-                                        <img src="./img/png/pay-logos/pay-logo-7.png" alt>
+                              <div class="col-lg-6 collapse d-xl-block" id="collapseFooterActivity">
+                                   <div class="d-flex flex-column gap-lg-3 gap-2 my-lg-0 my-1 ">
+                                        <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                             Lorem ipsum 
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                             Lorem ipsum dolor sit amet consectetu
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                             Lorem ipsum dolor
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                             Lorem ipsum dolor sit
+                                        </a>
+                                        <a href target="_blank" rel="noopener noreferrer" class="footer-link">
+                                             Lorem ipsum dolor 
+                                        </a>
+                                        <a class="d-flex align-items-center gap-1 d-xl-none footer-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFooterActivity" aria-expanded="false" aria-controls="collapseFooterActivity">
+                                             <span>Lorem ip</span>
+                                             <i class="bi bi-chevron-up fs-12"></i>
+                                        </a>
                                    </div>
                               </div>
                          </div>
                     </div>
+                    <div class="col-xl-3 col-sm-6 d-flex flex-column mt-xl-0 mt-4">
+                         <div class="mt-10">
+                              <a href target="_blank" class="footer-title">Lorem ip</a>
+                         </div>
+                         <div class="d-flex flex-column mt-3 gap-lg-3 gap-2">
+                              <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
+                                   <i class="bi bi-geo-alt"></i>
+                                   <span>Lorem ipsum dolor sit amet consect</span>
+                              </a>
+                              <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
+                                   <i class="bi bi-phone"></i>
+                                   <span>Lorem ipsum dolor</span>
+                              </a>
+                              <div class="footer-link d-flex flex-row gap-2 hover-no">
+                                   <i class="bi bi-calendar4"></i>
+                                   <span>
+                                        Lorem ipsum dolor sit am <br>
+                                        Lorem ipsum dolor si
+                                   </span>
+                              </div>
+                              <a href target="_blank" rel="noopener noreferrer" class="footer-link d-flex flex-row gap-2 align-items-center">
+                                   <i class="bi bi-envelope"></i>
+                                   <span>Lorem ipsum dolor sit amet consectetu</span>
+                              </a>
+                         </div>
+                    </div>
+                    <div class="col-9 ms-auto">
+                         <div class="mt-10 mt-4">
+                              <a href target="_blank" class="footer-title">Lorem ipsum dolor sit </a>
+                         </div>
+                         <div class="color-white mt-3">
+                              <p class="mb-2">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm
+                              </p>
+                              <p class="mb-0">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nis
+                              </p>
+                         </div>
+                    </div>
+                    <div class="row justify-content-start row-gap-3 mt-4 align-items-center">
+                         <div class="col-12 col-lg-3">
+                              <span class="color-white ff-roboto fs-16 order-lg-1 order-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed d</span>
+                         </div>
+                         <div class="col-12 col-lg-9 ps-3">
+                              <div class="d-flex flex-row align-items-center flex-wrap gap-3 order-lg-2 order-1">
+                                   <span class="color-white ff-roboto fs-16">Lorem ipsum dolor s</span>
+                                   <div class="d-flex flex-row flex-wrap gap-2">
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-1.png" alt>
+                                        </div>
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-2.png" alt>
+                                        </div>
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-4.png" alt>
+                                        </div>
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-5.png" alt>
+                                        </div>
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-6.png" alt>
+                                        </div>
+                                        <div class="parnter-block">
+                                             <img src="./img/png/pay-logos/pay-logo-7.png" alt>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
 
+                    </div>
                </div>
           </div>
-     </div>
-</footer>
-<script src="js/script.js"></script>
+     </footer>
+     <script src="js/script.js"></script>
 </body>
-     
+
 </html>
