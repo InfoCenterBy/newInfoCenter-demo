@@ -23,7 +23,7 @@
 
      <link rel="stylesheet" @@style-path>
      <link rel="stylesheet" href="css/style.css">
-     <title>Задолженность СККО</title>
+     <title>Аналитическая платформа «Бiзнес-погляд» </title>
 </head>
 
 <body>
@@ -859,321 +859,605 @@
                </div>
           </div>
      </div>
-     <main class="main">
+     <style>
+          :root {
+               --color-blue-dark: #0A2540;
+               --color-blue-light: #F1F6F8;
+          }
+
+          .bg-blue-dark {
+               background-color: var(--color-blue-dark);
+          }
+
+          .bg-blue-light {
+               background-color: var(--color-blue-light);
+          }
+
+          .color-blue-dark {
+               color: var(--color-blue-dark);
+          }
+
+          .color-blue-light {
+               color: var(--color-blue-light);
+          }
+
+          .text-gradient-pink {
+               background: -webkit-linear-gradient(270deg, #A03BD8 0%, #F9013A 100%);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+          }
+
+          .fs-16-to-12 {
+               font-size: clamp(12px, 1.5vw, 16px);
+          }
+
+          .border-blue-light {
+               border-color: #E7ECF5 !important;
+          }
+     </style>
+     <main class="main main-container">
           <div class="container">
                <nav class="breadcrumb">
                     <a href="./main.html" target="_blank" rel="noopener noreferrer">
                          Lorem i
                     </a>
                     <a href target="_blank" rel="noopener noreferrer">
-                         Lorem ipsum dolor 
+                         Lorem ipsum dolor sit amet consectetur 
                     </a>
                </nav>
           </div>
-          <div class="mt-12 container">
-               <div class>
-                    <h2 class="text-uppercase h2 ff-exo fw-semibold fs-3 lh-normal">
-                         Lorem ipsum dolor 
-                    </h2>
-               </div>
-               <div class="row">
-                    <div class="d-flex mt-4 col-lg-6">
-                         <a href="#erip" class="link-anchor-block link-anchor-block-accent">
-                              <div class="d-flex flex-row align-items-center gap-12">
-                                   <div class="link-anchor-block__icon" style="width: 3rem; height: 3rem; min-width: 3rem; max-width: 3rem; display: grid; place-items: center;">
-                                        <i class="bi bi-file-earmark-check fs-24 lh-1"></i>
-                                   </div>
-                                   <div class="link-anchor-block__text">
-                                        <p>
-                                             Lorem ipsum dolor sit amet consect
+          <div class="container">
+               <div class="row-gap-4 row">
+                    <div class="d-flex col-xl-6">
+                         <div class="d-flex flex-column justify-content-between gap-3 bg-blue-light border-20 w-100 overflow-hidden">
+                              <div class="d-flex flex-column align-items-center justify-content-center pt-3 pt-lg-4">
+                                   <svg width="272" height="43" viewbox="0 0 272 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M74.7373 29.9902V13.4367H86.2576V16.4873H78.4119V20.07H81.2299C83.1748 20.07 84.7266 20.4917 85.8852 21.3351C87.0439 22.1707 87.6232 23.4043 87.6232 25.036C87.6232 26.0844 87.3667 26.979 86.8535 27.72C86.3487 28.4531 85.6163 29.0168 84.6562 29.4109C83.7045 29.7971 82.5582 29.9902 81.2175 29.9902H74.7373ZM78.4119 27.3653H80.8699C81.8217 27.3653 82.55 27.1682 83.0548 26.7741C83.5597 26.3721 83.812 25.7966 83.812 25.0478C83.812 24.3227 83.568 23.7511 83.0796 23.3334C82.5913 22.9077 81.9086 22.6949 81.0313 22.6949H78.4119V27.3653ZM90.1405 29.9902V13.4367H93.8151V29.9902H90.1405ZM102.477 30.3449C101.095 30.3449 99.8367 30.1873 98.7028 29.872C97.5773 29.5488 96.58 29.0759 95.711 28.4531L97.3372 25.71C97.9249 26.1986 98.6366 26.5849 99.4725 26.8687C100.308 27.1525 101.177 27.2944 102.079 27.2944C102.824 27.2944 103.466 27.1998 104.004 27.0106C104.55 26.8135 104.972 26.5456 105.27 26.2066C105.568 25.8598 105.717 25.4578 105.717 25.0005C105.717 24.299 105.456 23.7669 104.935 23.4043C104.422 23.0417 103.623 22.8604 102.539 22.8604H99.0628V20.1527H102.253C102.866 20.1527 103.391 20.0739 103.83 19.9163C104.269 19.7586 104.608 19.53 104.848 19.2305C105.088 18.931 105.208 18.5722 105.208 18.1545C105.208 17.7446 105.088 17.4017 104.848 17.1258C104.616 16.842 104.269 16.6292 103.805 16.4873C103.342 16.3375 102.771 16.2627 102.092 16.2627C101.306 16.2627 100.54 16.3888 99.7952 16.641C99.0504 16.8932 98.4215 17.2401 97.9083 17.6815L96.2324 15.1157C97.002 14.4693 97.9373 13.9688 99.038 13.6141C100.147 13.2594 101.33 13.082 102.588 13.082C103.888 13.082 105.005 13.2594 105.94 13.6141C106.876 13.9609 107.596 14.4615 108.1 15.1157C108.605 15.77 108.858 16.5544 108.858 17.4687C108.858 17.9653 108.746 18.4462 108.522 18.9112C108.299 19.3684 107.997 19.7823 107.616 20.1527C107.236 20.5232 106.818 20.811 106.362 21.0159C107.331 21.3312 108.1 21.8356 108.671 22.5293C109.251 23.223 109.536 24.0862 109.528 25.1188C109.528 26.1199 109.234 27.0145 108.647 27.8028C108.059 28.5911 107.236 29.2137 106.176 29.671C105.117 30.1203 103.884 30.3449 102.477 30.3449ZM112.024 29.9902V13.4367H115.699V19.7152H123.073V13.4367H126.747V29.9902H123.073V22.9195H115.699V29.9902H112.024ZM130.24 29.9902V13.4367H142.121V16.4873H133.915V20.0345H140.867V22.8604H133.915V26.9042H142.22V29.9902H130.24ZM153.08 30.3449C151.285 30.3449 149.703 29.9941 148.338 29.2926C146.972 28.5832 145.91 27.5861 145.147 26.3012C144.386 25.0085 144.005 23.491 144.005 21.749C144.005 20.4799 144.229 19.3171 144.676 18.2609C145.122 17.2047 145.756 16.2902 146.575 15.5178C147.394 14.7374 148.359 14.1383 149.467 13.7205C150.585 13.2949 151.806 13.082 153.13 13.082C154.537 13.082 155.729 13.2515 156.705 13.5905C157.682 13.9295 158.56 14.4063 159.337 15.0212L157.475 17.8944C156.97 17.4214 156.37 17.0667 155.674 16.8302C154.988 16.5937 154.222 16.4755 153.378 16.4755C152.518 16.4755 151.744 16.5976 151.056 16.842C150.379 17.0864 149.799 17.4371 149.318 17.8944C148.847 18.3437 148.483 18.8915 148.226 19.5379C147.978 20.1764 147.854 20.8976 147.854 21.7017C147.854 22.8052 148.077 23.7472 148.524 24.5276C148.98 25.3 149.625 25.8952 150.461 26.313C151.305 26.7307 152.31 26.9397 153.477 26.9397C154.289 26.9397 155.084 26.8214 155.861 26.5849C156.648 26.3485 157.388 25.9701 158.083 25.4498L159.771 28.394C158.952 28.9931 157.992 29.47 156.891 29.8247C155.791 30.1715 154.52 30.3449 153.08 30.3449ZM160.882 24.8232V21.8081H167.983V24.8232H160.882ZM170.703 29.9902V13.4367H185.426V29.9902H181.752V16.6292H174.378V29.9902H170.703ZM197.063 30.3449C195.739 30.3449 194.513 30.1282 193.389 29.6946C192.263 29.2532 191.286 28.6423 190.459 27.8619C189.631 27.0815 188.985 26.1672 188.522 25.1188C188.067 24.0703 187.839 22.9353 187.839 21.7135C187.839 20.4838 188.067 19.3448 188.522 18.2964C188.985 17.248 189.631 16.3336 190.459 15.5532C191.286 14.7729 192.263 14.1659 193.389 13.7323C194.513 13.2988 195.739 13.082 197.063 13.082C198.387 13.082 199.608 13.3028 200.725 13.7442C201.85 14.1856 202.827 14.8004 203.655 15.5887C204.491 16.377 205.14 17.2952 205.604 18.3437C206.067 19.3842 206.299 20.5074 206.299 21.7135C206.299 22.9353 206.067 24.0703 205.604 25.1188C205.14 26.1672 204.491 27.0815 203.655 27.8619C202.827 28.6423 201.85 29.2532 200.725 29.6946C199.608 30.1282 198.387 30.3449 197.063 30.3449ZM197.063 27.0579C197.833 27.0579 198.544 26.9317 199.198 26.6795C199.851 26.4273 200.422 26.0686 200.912 25.6036C201.399 25.1306 201.776 24.567 202.041 23.9127C202.314 23.2585 202.451 22.5254 202.451 21.7135C202.451 20.6336 202.215 19.6955 201.743 18.8994C201.272 18.0954 200.63 17.4726 199.819 17.0312C199.007 16.5898 198.089 16.3691 197.063 16.3691C196.301 16.3691 195.59 16.4952 194.928 16.7474C194.274 16.9996 193.703 17.3584 193.215 17.8234C192.734 18.2885 192.358 18.8521 192.085 19.5142C191.819 20.1685 191.688 20.9015 191.688 21.7135C191.688 22.7934 191.924 23.7354 192.395 24.5394C192.867 25.3355 193.508 25.9544 194.32 26.3958C195.13 26.8371 196.045 27.0579 197.063 27.0579ZM208.711 29.9902V13.4367H219.077V16.6292H212.386V29.9902H208.711ZM219.62 30.2976L218.366 27.0934C218.929 26.9278 219.405 26.7386 219.793 26.5258C220.191 26.3051 220.518 26.0095 220.774 25.639C221.04 25.2686 221.246 24.7798 221.395 24.1729C221.544 23.5659 221.648 22.7934 221.705 21.8554C221.764 20.9174 221.792 19.7664 221.792 18.4028V13.4367H234.566V29.9902H230.892V16.6292H225.28V18.2491C225.28 19.9517 225.223 21.4297 225.107 22.683C225 23.9285 224.817 24.9926 224.56 25.8755C224.305 26.7505 223.957 27.4797 223.518 28.0629C223.088 28.6384 222.549 29.1034 221.904 29.4581C221.267 29.8129 220.506 30.0927 219.62 30.2976ZM236.648 29.9902L241.527 23.1797C240.285 22.8565 239.312 22.3047 238.61 21.5243C237.914 20.736 237.567 19.7507 237.567 18.5683C237.567 17.4726 237.831 16.5425 238.361 15.7779C238.89 15.0132 239.644 14.4339 240.621 14.0398C241.596 13.6378 242.738 13.4367 244.047 13.4367H250.688V29.9902H247.014V23.6999H245.177L240.869 29.9902H236.648ZM244.171 20.874H247.014V16.3336H244.27C243.334 16.3336 242.598 16.5189 242.061 16.8893C241.531 17.252 241.266 17.8116 241.266 18.5683C241.266 19.333 241.514 19.9083 242.011 20.2946C242.508 20.6809 243.228 20.874 244.171 20.874ZM265.403 29.9902V16.6292H259.593V18.2491C259.593 20.1803 259.49 21.8356 259.283 23.2151C259.077 24.5867 258.745 25.7257 258.29 26.6322C257.843 27.5388 257.247 28.256 256.502 28.7842C255.757 29.3124 254.851 29.6985 253.783 29.9429L252.505 27.0224C253.233 26.8648 253.829 26.6243 254.292 26.3012C254.764 25.978 255.133 25.501 255.397 24.8705C255.663 24.232 255.844 23.3807 255.943 22.3165C256.051 21.2444 256.105 19.8887 256.105 18.2491V13.4367H269.078V29.9902H265.403ZM252.505 34.1759V27.0224L254.702 27.117L255.906 26.7859H271.871V34.1759H268.382V29.9902H255.993V34.1759H252.505Z" fill="#0A2540"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M54.5854 4.52626C39.0777 -5.08025 22.6329 0.655953 0 21.2472C24.2034 46.4172 48.71 47.1873 60.7358 36.455L59.8275 31.609C56.3439 35.6881 51.0321 38.2939 45.0811 38.2939C34.5884 38.2939 26.0823 30.1922 26.0823 20.1984C26.0823 10.2044 34.5884 2.10272 45.0811 2.10272C48.5438 2.10272 51.7899 2.98494 54.5854 4.52626Z" fill="#0A2540"/>
+                                        <path d="M45.3119 2.7959C45.6665 12.1227 53.5924 19.6061 63.4705 19.9409C53.5924 20.2756 45.6665 27.7591 45.3119 37.0859C44.9574 27.7591 37.0316 20.2756 27.1533 19.9409C37.0316 19.6061 44.9574 12.1227 45.3119 2.7959Z" fill="#0A2540"/>
+                                   </svg>
+                                   <div class="mt-10">
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur
                                         </p>
                                    </div>
-                              </div>
-                              <div class="ms-2 link-anchor-block__arrow">
-                                   <i class="bi bi-reply"></i>
-                              </div>
-                         </a>
-                    </div>
-                    <div class="d-flex mt-4 col-lg-6">
-                         <a href="#card" class="link-anchor-block link-anchor-block-accent">
-                              <div class="d-flex flex-row align-items-center gap-12">
-                                   <div class="link-anchor-block__icon" style="width: 3rem; height: 3rem; min-width: 3rem; max-width: 3rem; display: grid; place-items: center;">
-                                        <i class="bi bi-calendar-check fs-24 lh-1"></i>
-                                   </div>
-                                   <div class="link-anchor-block__text">
-                                        <p>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
-                                        </p>
-                                   </div>
-                              </div>
-                              <div class="ms-2 link-anchor-block__arrow">
-                                   <i class="bi bi-reply"></i>
-                              </div>
-                         </a>
-                    </div>
-                    <div class="d-flex mt-4 col-lg-6">
-                         <a href="#ipay" class="link-anchor-block link-anchor-block-accent">
-                              <div class="d-flex flex-row align-items-center gap-12">
-                                   <div class="link-anchor-block__icon" style="width: 3rem; height: 3rem; min-width: 3rem; max-width: 3rem; display: grid; place-items: center;">
-                                        <i class="bi bi-bank fs-24 lh-1"></i>
-                                   </div>
-                                   <div class="link-anchor-block__text">
-                                        <p>
-                                             Lorem ipsum dolor sit amet consectetur adipis
-                                        </p>
-                                   </div>
-                              </div>
-                              <div class="ms-2 link-anchor-block__arrow">
-                                   <i class="bi bi-reply"></i>
-                              </div>
-                         </a>
-                    </div>
-               </div>
-               <div class="mt-5">
-                    <div class="bg-gray-bg-illustr p-3 p-lg-5 border-30" id="erip">
-                         <div class="ff-roboto">
-                              <h4 class="d-block mb-0 text-uppercase h4 ff-exo color-black fw-semibold">
-                                   Lorem ipsum dolor sit amet consect
-                              </h4>
-                              <p class="mt-4 mb-0 fw-semibold">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                              </p>
-                              <div class="info-block align-items-center bg-info-light mt-4">
-                                   <div class="info-block__icon color-info">
-                                        <i class="bi bi-info-circle"></i>
-                                   </div>
-                                   <div class="info-block__text">
-                                        <p>
-                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tem
-                                        </p>
+                                   <div class="d-flex flex-row align-items-center justify-content-center gap-12 bg-white fs-16-to-12 mt-3 px-4 px-4 py-2 rounded-pill">
+                                        <p class="mb-0 text-gradient-pink">Lorem ip</p>
+                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <g clip-path="url(#clip0_16471_3434)">
+                                                  <path d="M8 0C8.1562 4.35194 11.6481 7.8438 16 8C11.6481 8.1562 8.1562 11.6481 8 16C7.8438 11.6481 4.35194 8.1562 0 8C4.35194 7.8438 7.8438 4.35194 8 0Z" fill="#EE01B5"/>
+                                             </g>
+                                             <g clip-path="url(#clip1_16471_3434)">
+                                                  <path d="M8 0C8.1562 4.35194 11.6481 7.8438 16 8C11.6481 8.1562 8.1562 11.6481 8 16C7.8438 11.6481 4.35194 8.1562 0 8C4.35194 7.8438 7.8438 4.35194 8 0Z" fill="#EE01B5"/>
+                                             </g>
+                                             <defs>
+                                                  <clippath id="clip0_16471_3434">
+                                                       <rect width="16" height="16" fill="white"/>
+                                                  </clippath>
+                                                  <clippath id="clip1_16471_3434">
+                                                       <rect width="16" height="16" fill="white"/>
+                                                  </clippath>
+                                             </defs>
+                                        </svg>
+                                        <p class="mb-0 text-gradient-pink">Lorem ip</p>
+                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <g clip-path="url(#clip0_16471_3434)">
+                                                  <path d="M8 0C8.1562 4.35194 11.6481 7.8438 16 8C11.6481 8.1562 8.1562 11.6481 8 16C7.8438 11.6481 4.35194 8.1562 0 8C4.35194 7.8438 7.8438 4.35194 8 0Z" fill="#EE01B5"/>
+                                             </g>
+                                             <g clip-path="url(#clip1_16471_3434)">
+                                                  <path d="M8 0C8.1562 4.35194 11.6481 7.8438 16 8C11.6481 8.1562 8.1562 11.6481 8 16C7.8438 11.6481 4.35194 8.1562 0 8C4.35194 7.8438 7.8438 4.35194 8 0Z" fill="#EE01B5"/>
+                                             </g>
+                                             <defs>
+                                                  <clippath id="clip0_16471_3434">
+                                                       <rect width="16" height="16" fill="white"/>
+                                                  </clippath>
+                                                  <clippath id="clip1_16471_3434">
+                                                       <rect width="16" height="16" fill="white"/>
+                                                  </clippath>
+                                             </defs>
+                                        </svg>
+                                        <p class="mb-0 text-gradient-pink">Lorem ipsum</p>
                                    </div>
                               </div>
-                              <p class="mt-4 fw-semibold fs-18 color-black">
-                                   Lorem ipsum dolor sit amet consect
-                              </p>
-                              <p class="mt-2 mb-0">Lorem ipsum dolor sit amet consect</p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 14px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit a
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 22px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 30px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor 
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 38px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit amet con
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 46px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span class="color-violet fw-semibold">
-                                        Lorem ipsum dolor sit a
-                                   </span>
-                              </p>
-                              <p class="mt-12 mb-0">Lorem ipsum d</p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolor sit amet consectet</p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolor s</p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolor sit amet conse <b>Lorem i</b></p>
+                              <div class>
+                                   <picture>
+                                        <source media="(min-width: 1200px)" type="image/png" srcset="./img/png/business-view/main-block-bg-x2.png">
+                                        <img src="./img/png/business-view/main-block-bg.png" alt="main-block-bg" class="w-100">
+                                   </picture>
+                              </div>
                          </div>
                     </div>
-                    <div class="mt-5 p-3 p-lg-5 border-1-color-gray-stroke border-30" id="card">
-                         <div class="ff-roboto">
-                              <h4 class="d-block mb-0 text-uppercase h4 ff-exo color-black fw-semibold">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
-                              </h4>
-                              <p class="mt-4 mb-0 ff-roboto">
-                                   Lorem ipsum dolor sit a <b>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut </b> L<span class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</span>Lo
-                              </p>
-                              <div class="mt-4">
-                                   <div class="info-block bg-info-light">
-                                        <div class="info-block__icon color-info">
-                                             <i class="bi bi-info-circle"></i>
-                                        </div>
-                                        <div class="info-block__text">
-                                             <p>
-                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehender <b>Lorem ips</b>L
-                                             </p>
-                                             <p class="mt-2">
-                                                  Lorem ipsum dolor sit amet consectetur ad <a href="https://infocenter.by/upload/iblock/5c8/uewldtec440m3ltynvawtadg6vxx6nzf/Schet-na-oplatu-_-usluga-informatsionnogo-obsluzhivaniya-polzovatelya-PK_6-mesyatsev_.pdf" target="_blank" rel="noopener noreferrer" class="color-dark-violet fw-semibold">Lorem </a>L
-                                             </p>
+                    <div class="d-flex col-xl-6">
+                         <div class="w-100">
+                              <div class="row-gap-4 row">
+                                   <div class="d-flex col-lg-6">
+                                        <div class="bg-blue-dark p-4 border-20 w-100 color-white">
+                                             <div class="d-flex flex-row align-items-center gap-12">
+                                                  <div class>
+                                                       <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M46.5858 13.4142C47.3668 12.6332 47.3668 11.3668 46.5858 10.5858L37.4142 1.41421C36.6332 0.633165 35.3668 0.633165 34.5858 1.41421L24 12L13.4142 1.41421C12.6332 0.633165 11.3668 0.633165 10.5858 1.41421L1.41421 10.5858C0.633165 11.3668 0.633165 12.6332 1.41421 13.4142L12 24L1.41421 34.5858C0.633165 35.3668 0.633165 36.6332 1.41421 37.4142L10.5858 46.5858C11.3668 47.3668 12.6332 47.3668 13.4142 46.5858L24 36L34.5858 46.5858C35.3668 47.3668 36.6332 47.3668 37.4142 46.5858L46.5858 37.4142C47.3668 36.6332 47.3668 35.3668 46.5858 34.5858L36 24L46.5858 13.4142ZM36 24L24 36L12 24L24 12L36 24Z" fill="url(#paint0_linear_16471_3456)"/>
+                                                            <defs>
+                                                                 <lineargradient id="paint0_linear_16471_3456" x1="-1.60335e-08" y1="24" x2="48" y2="24" gradientunits="userSpaceOnUse">
+                                                                      <stop stop-color="#43E97B"/>
+                                                                      <stop offset="1" stop-color="#38F9D7"/>
+                                                                 </lineargradient>
+                                                            </defs>
+                                                       </svg>
+                                                  </div>
+                                                  <div class>
+                                                       <p class="mb-0 text-uppercase fs-20 fw-semibold ff-exo">
+                                                            Lorem ipsum dolor si
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="mt-12">
+                                                  <p class="mb-0 ff-roboto">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing el
+                                                  </p>
+                                             </div>
                                         </div>
                                    </div>
-                              </div>
-                              <div class="mt-4">
-                                   <div class="info-block align-items-center bg-red-light">
-                                        <div class="info-block__icon color-red-attention">
-                                             <i class="bi bi-exclamation-triangle"></i>
+                                   <div class="d-flex col-lg-6">
+                                        <div class="bg-blue-light p-4 border-20 w-100">
+                                             <div class="d-flex flex-row align-items-center gap-12">
+                                                  <div class>
+                                                       <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM9.96875 10.4629C9.59927 10.4629 9.29857 10.7641 9.31445 11.1348C9.54144 16.3461 12.3936 20.8735 16.5762 23.4141C17.0541 23.7044 17.0541 24.445 16.5762 24.7354C12.3936 27.2759 9.54144 31.8033 9.31445 37.0146C9.29843 37.3854 9.59919 37.6865 9.96875 37.6865H16.1592C16.5288 37.6865 16.826 37.3845 16.8584 37.0146C17.197 33.153 20.4255 30.125 24.3584 30.125C28.2912 30.1251 31.5198 33.1531 31.8584 37.0146C31.8909 37.3845 32.1871 37.6864 32.5566 37.6865H38.748C39.1174 37.6863 39.4183 37.3853 39.4023 37.0146C39.1753 31.8033 36.3221 27.2759 32.1396 24.7354C31.6622 24.4449 31.6621 23.7045 32.1396 23.4141C36.3221 20.8735 39.1753 16.3461 39.4023 11.1348C39.4181 10.7642 39.1173 10.4631 38.748 10.4629H32.5566C32.1871 10.463 31.8909 10.765 31.8584 11.1348C31.5199 14.9965 28.2913 18.0253 24.3584 18.0254C20.4255 18.0254 17.197 14.9965 16.8584 11.1348C16.826 10.765 16.5288 10.4629 16.1592 10.4629H9.96875Z" fill="#D9D9D9"/>
+                                                            <path d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM9.96875 10.4629C9.59927 10.4629 9.29857 10.7641 9.31445 11.1348C9.54144 16.3461 12.3936 20.8735 16.5762 23.4141C17.0541 23.7044 17.0541 24.445 16.5762 24.7354C12.3936 27.2759 9.54144 31.8033 9.31445 37.0146C9.29843 37.3854 9.59919 37.6865 9.96875 37.6865H16.1592C16.5288 37.6865 16.826 37.3845 16.8584 37.0146C17.197 33.153 20.4255 30.125 24.3584 30.125C28.2912 30.1251 31.5198 33.1531 31.8584 37.0146C31.8909 37.3845 32.1871 37.6864 32.5566 37.6865H38.748C39.1174 37.6863 39.4183 37.3853 39.4023 37.0146C39.1753 31.8033 36.3221 27.2759 32.1396 24.7354C31.6622 24.4449 31.6621 23.7045 32.1396 23.4141C36.3221 20.8735 39.1753 16.3461 39.4023 11.1348C39.4181 10.7642 39.1173 10.4631 38.748 10.4629H32.5566C32.1871 10.463 31.8909 10.765 31.8584 11.1348C31.5199 14.9965 28.2913 18.0253 24.3584 18.0254C20.4255 18.0254 17.197 14.9965 16.8584 11.1348C16.826 10.765 16.5288 10.4629 16.1592 10.4629H9.96875Z" fill="url(#paint0_linear_16471_3462)"/>
+                                                            <defs>
+                                                                 <lineargradient id="paint0_linear_16471_3462" x1="0" y1="24" x2="55.8484" y2="24" gradientunits="userSpaceOnUse">
+                                                                      <stop stop-color="#F093FB"/>
+                                                                      <stop offset="1" stop-color="#F5576C"/>
+                                                                 </lineargradient>
+                                                            </defs>
+                                                       </svg>
+                                                  </div>
+                                                  <div class>
+                                                       <p class="mb-0 text-uppercase fs-20 fw-semibold ff-exo">
+                                                            Lorem ipsum dolor si
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="mt-12">
+                                                  <p class="mb-0 ff-roboto">
+                                                       Lorem ipsum dolor sit amet consectetu
+                                                  </p>
+                                             </div>
+                                             <div class="mt-12">
+                                                  <p class="mb-0 ff-exo fs-18 fw-semibold">
+                                                       Lorem ipsum do
+                                                  </p>
+                                             </div>
                                         </div>
-                                        <div class="info-block__text">
-                                             <p>
-                                                  Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam qu <a href="http://info-center.by" target="_blank" rel="noopener noreferrer" class="color-dark-violet fw-semibold">Lorem ipsum do</a>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididun
-                                        </p></div>
                                    </div>
-                              </div>
-                              <p class="mt-4 fw-semibold fs-20 color-black">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
-                              </p>
-                              <p class="mt-2 mb-0">Lorem ipsum dolor  <a href="http://info-center.by" target="_blank" rel="noopener noreferrer" class="fw-semibold color-dark-violet">Lorem ipsum do</a> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore m</p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 14px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit amet consectetur ad
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 22px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit am
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 30px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        <a href="https://info-center.by/services/skko/skko-algorithm/inner-check/" target="_blank" rel="noopener noreferrer" class="color-black">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad mini</a>
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 46px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span class="color-violet fw-semibold">
-                                        Lorem ipsum dolor sit amet
-                                   </span>
-                              </p>
-                              <p class="mt-12 mb-0 fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labo</p>
-                              <p class="mt-12 mb-0 fw-semibold">Lorem ipsum dolor sit amet</p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolor sit a <b>Lorem ipsum dolor sit amet con</b></p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolo <b>Lorem ipsum dolor s</b></p>
-                              <p class="mt-4 mt-40 fw-semibold fs-20 color-black">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
-                              </p>
-                              <p class="mt-2 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusm
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 14px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit a
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 22px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 30px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor 
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 38px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span>
-                                        Lorem ipsum dolor sit amet con
-                                   </span>
-                              </p>
-                              <p class="d-flex gap-2 mb-2" style="margin-left: 46px;">
-                                   <i class="bi-arrow-right bi"></i>
-                                   <span class="color-violet fw-semibold">
-                                        Lorem ipsum dolor sit amet co
-                                   </span>
-                              </p>
-                              <p class="mt-12 mb-0 fw-semibold">Lorem ipsum <b>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore e</b> <a href="http://info-center.by" target="_blank" rel="noopener noreferrer" class="fw-semibold color-dark-violet">Lorem ipsum do</a></p>
-                              <p class="mt-12 mb-0 fw-semibold">Lorem ipsum dolo <b>Lorem ipsum dolor sit amet cons</b>
-                              </p>
-                              <p class="mt-12 mb-0">Lorem ipsum dolor sit amet conse <b>Lorem i</b></p>
-                         </div>
-                    </div>
-                    <div class="bg-gray-bg-illustr mt-5 p-3 p-lg-5 border-30" id="ipay">
-                         <div class="ff-roboto">
-                              <h4 class="d-block mb-0 text-uppercase h4 ff-exo color-black fw-semibold">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad min
-                              </h4>
-                              <p class="mt-4 mb-0 fw-semibold ff-exo fs-18">
-                                   Lorem ipsum dolor sit amet consectetur adipi
-                              </p>
-                              <div class="table-default mt-3">
-                                   <table>
-                                        <tbody>
-                                             <tr>
-                                                  <td>
-                                                       <b>Lorem ipsum</b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam qu
-                                                  </td>
-                                             </tr>
-                                             <tr>
-                                                  <td>
-                                                       <b>Lor</b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ips
-                                                  </td>
-                                             </tr>
-                                             <tr>
-                                                  <td>
-                                                       <b>Lorem ipsum do</b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ipsum dolor sit amet consectet
-                                                  </td>
-                                             </tr>
-                                             <tr>
-                                                  <td>
-                                                       <b>
-                                                            Lorem ipsum dolor 
-                                                       </b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ipsum dolor sit ame
-                                                  </td>
-                                             </tr>
-                                             <tr>
-                                                  <td>
-                                                       <b>
-                                                            Lorem ips
-                                                       </b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ip
-                                                  </td>
-                                             </tr>
-                                             <tr>
-                                                  <td>
-                                                       <b>
+                                   <div class="d-flex col-lg-6">
+                                        <div class="bg-blue-light p-4 border-20 w-100">
+                                             <div class="d-flex flex-row align-items-center gap-12">
+                                                  <div class>
+                                                       <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_16471_3471)">
+                                                                 <g clip-path="url(#clip1_16471_3471)">
+                                                                      <mask id="mask0_16471_3471" style="mask-type:luminance" maskunits="userSpaceOnUse" x="3" y="0" width="42" height="48">
+                                                                           <path d="M44.4016 0H3.60156V48H44.4016V0Z" fill="white"/>
+                                                                      </mask>
+                                                                      <g mask="url(#mask0_16471_3471)">
+                                                                           <path d="M37.372 40.9697C33.376 44.9654 28.1161 47.4067 22.532 47.9044C21.3585 48.0089 20.4013 47.0438 20.4013 45.8657V24.0881C20.3779 28.5115 18.6106 32.7489 15.481 35.8785C12.8361 38.5233 9.40015 40.1953 5.72927 40.6638C4.56055 40.8129 3.60157 39.8438 3.60157 38.6657L3.60156 9.33234C3.60156 8.15412 4.56054 7.18506 5.72926 7.33422C9.40015 7.80282 12.8361 9.47472 15.481 12.1196C18.6106 15.2492 20.3779 19.4864 20.4013 23.9099V2.13234C20.4013 0.954131 21.3585 -0.0108518 22.532 0.0937068C28.1161 0.591224 33.376 3.03255 37.372 7.02846C41.8727 11.5293 44.4013 17.6338 44.4013 23.999C44.4013 30.3641 41.8727 36.4686 37.372 40.9697Z" fill="url(#paint0_linear_16471_3471)"/>
+                                                                      </g>
+                                                                 </g>
+                                                            </g>
+                                                            <defs>
+                                                                 <lineargradient id="paint0_linear_16471_3471" x1="3.60156" y1="23.999" x2="44.4013" y2="23.999" gradientunits="userSpaceOnUse">
+                                                                      <stop stop-color="#FA709A"/>
+                                                                      <stop offset="1" stop-color="#FEE140"/>
+                                                                 </lineargradient>
+                                                                 <clippath id="clip0_16471_3471">
+                                                                      <rect width="48" height="48" fill="white"/>
+                                                                 </clippath>
+                                                                 <clippath id="clip1_16471_3471">
+                                                                      <rect width="40.8" height="48" fill="white" transform="translate(3.60156)"/>
+                                                                 </clippath>
+                                                            </defs>
+                                                       </svg>
+                                                  </div>
+                                                  <div class>
+                                                       <p class="mb-0 text-uppercase fs-20 fw-semibold ff-exo">
+                                                            Lorem ipsum do
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="mt-12">
+                                                  <p class="mb-0 ff-roboto">
+                                                       Lorem ipsum dolor sit amet consectetur adipisi
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="d-flex col-lg-6">
+                                        <div class="bg-blue-dark p-4 border-20 w-100 color-white">
+                                             <div class="d-flex flex-row align-items-center gap-12">
+                                                  <div class>
+                                                       <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0_16471_3483)">
+                                                                 <g clip-path="url(#clip1_16471_3483)">
+                                                                      <g clip-path="url(#clip2_16471_3483)">
+                                                                           <mask id="mask0_16471_3483" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                                                                <path d="M48 0.296875H0V47.7043H48V0.296875Z" fill="white"/>
+                                                                           </mask>
+                                                                           <g mask="url(#mask0_16471_3483)">
+                                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 24.2669H48V41.845C48 45.3752 45.0834 48.3238 41.6733 47.3954C31.4882 44.6228 24 35.3181 24 24.2669ZM1.53864e-06 24.2669L0 41.845C-3.09008e-07 45.3752 2.91643 48.3238 6.32664 47.3954C16.5118 44.6226 24 35.3181 24 24.2669H1.53864e-06ZM24 0.296877L41.6 0.296878C45.1346 0.296878 48 3.15869 48 6.68888V24.2669C34.7451 24.2669 24 13.535 24 0.296877ZM24 0.296877L6.4 0.296875C2.86539 0.296875 3.38629e-06 3.15869 3.07727e-06 6.68888L1.53864e-06 24.2669C13.2547 24.2669 24 13.535 24 0.296877Z" fill="url(#paint0_linear_16471_3483)"/>
+                                                                           </g>
+                                                                      </g>
+                                                                 </g>
+                                                            </g>
+                                                            <defs>
+                                                                 <lineargradient id="paint0_linear_16471_3483" x1="0" y1="23.9326" x2="48" y2="23.9326" gradientunits="userSpaceOnUse">
+                                                                      <stop stop-color="#16D9E3"/>
+                                                                      <stop offset="0.47" stop-color="#30C7EC"/>
+                                                                      <stop offset="1" stop-color="#46AEF7"/>
+                                                                 </lineargradient>
+                                                                 <clippath id="clip0_16471_3483">
+                                                                      <rect width="48" height="48" fill="white"/>
+                                                                 </clippath>
+                                                                 <clippath id="clip1_16471_3483">
+                                                                      <rect width="48" height="48" fill="white"/>
+                                                                 </clippath>
+                                                                 <clippath id="clip2_16471_3483">
+                                                                      <rect width="48" height="47.4074" fill="white" transform="translate(0 0.296875)"/>
+                                                                 </clippath>
+                                                            </defs>
+                                                       </svg>
+                                                  </div>
+                                                  <div class>
+                                                       <p class="mb-0 text-uppercase fs-20 fw-semibold ff-exo">
                                                             Lorem ipsum
-                                                       </b>
-                                                  </td>
-                                                  <td>
-                                                       Lorem ipsum dolor sit amet cons
-                                                  </td>
-                                             </tr>
-                                        </tbody>
-                                   </table>
+                                                       </p>
+                                                  </div>
+                                             </div>
+                                             <div class="mt-12">
+                                                  <p class="mb-0 ff-roboto">
+                                                       Lorem ipsum dolor sit amet consectetur adipisicing el
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
-                              <p class="mt-4 mb-0">
-                                   <b>Lorem ipsum dolor </b>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore
-                              </p>
-                              <p class="mt-4 mb-0">
-                                   <b>Lorem ipsum dolor sit </b> Lorem ipsum dolor sit amet consectet<span class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad</span>L
-                              </p>
                          </div>
                     </div>
-
                </div>
           </div>
+          <div class="container">
+               <div class="bg-blue-light p-3 p-lg-4 p-xl-5 border-20 w-100">
+                    <div class="d-flex flex-row flex-wrap align-items-center gap-3">
+                         <div class>
+                              <svg width="48" height="40" viewbox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M41.2807 4.3568C29.5528 -3.23193 17.1163 1.29942 0 17.5656C18.304 37.4488 36.8373 38.0571 45.9319 29.5791L45.2451 25.751C42.6106 28.9733 38.5934 31.0317 34.093 31.0317C26.1578 31.0317 19.725 24.6318 19.725 16.7371C19.725 8.84227 26.1578 2.4423 34.093 2.4423C36.7116 2.4423 39.1665 3.13922 41.2807 4.3568Z" fill="#0A2540"/>
+                                   <path d="M34.2678 2.99219C34.5359 10.3599 40.5299 16.2715 48.0003 16.536C40.5299 16.8004 34.5359 22.712 34.2678 30.0798C33.9996 22.712 28.0056 16.8004 20.5352 16.536C28.0056 16.2715 33.9996 10.3599 34.2678 2.99219Z" fill="#0A2540"/>
+                              </svg>
+                         </div>
+                         <div class>
+                              <h3 class="mb-0 text-uppercase h3 fs-24 fw-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp
+                         </h3></div>
+                    </div>
+                    <div class="mt-4">
+                         <p class="mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con <b>Lorem ipsum dol</b>L
+                         </p>
+                         <p class="mt-3 mb-0">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad m
+                         </p>
+                    </div>
+               </div>
+          </div>
+          <div class="container">
+               <div class="justify-content-between row-gap-4 row">
+                    <div class="d-flex flex-column col-lg-6">
+                         <div class="d-flex flex-row align-items-center gap-3">
+                              <div class>
+                                   <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_16471_3581)">
+                                             <g clip-path="url(#clip1_16471_3581)">
+                                                  <g clip-path="url(#clip2_16471_3581)">
+                                                       <mask id="mask0_16471_3581" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                                            <path d="M48 0H0V48H48V0Z" fill="white"/>
+                                                       </mask>
+                                                       <g mask="url(#mask0_16471_3581)">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M48 24C48 10.7452 37.255 -5.79389e-07 24 0C10.7452 5.79387e-07 -5.74144e-07 10.7452 0 24C5.84632e-07 37.255 10.7452 48 24 48C37.255 48 48 37.255 48 24ZM27.5512 20.4486C29.524 22.4213 32.5195 22.8407 38.5106 23.6794L40.8 23.9999L38.5106 24.3204C32.5195 25.1592 29.524 25.5785 27.5515 27.5512C25.5787 29.524 25.1593 32.5195 24.3205 38.5106L24 40.8L23.6795 38.5106C22.8407 32.5195 22.4213 29.524 20.4487 27.5512C18.4759 25.5785 15.4804 25.1592 9.4893 24.3204L7.2 23.9999L9.48936 23.6794C15.4804 22.8407 18.4759 22.4213 20.4487 20.4486C22.4213 18.4759 22.8407 15.4804 23.6795 9.48924L24 7.2L24.3205 9.48924C25.1592 15.4804 25.5786 18.4759 27.5512 20.4486Z" fill="url(#paint0_linear_16471_3581)"/>
+                                                       </g>
+                                                  </g>
+                                             </g>
+                                        </g>
+                                        <defs>
+                                             <lineargradient id="paint0_linear_16471_3581" x1="0" y1="24" x2="48" y2="24" gradientunits="userSpaceOnUse">
+                                                  <stop stop-color="#F093FB"/>
+                                                  <stop offset="1" stop-color="#F5576C"/>
+                                             </lineargradient>
+                                             <clippath id="clip0_16471_3581">
+                                                  <rect width="48" height="48" fill="white"/>
+                                             </clippath>
+                                             <clippath id="clip1_16471_3581">
+                                                  <rect width="48" height="48" fill="white"/>
+                                             </clippath>
+                                             <clippath id="clip2_16471_3581">
+                                                  <rect width="48" height="48" fill="white"/>
+                                             </clippath>
+                                        </defs>
+                                   </svg>
+                              </div>
+                              <div class>
+                                   <h3 class="mb-0 text-uppercase h3 fs-24 color-blue-dark fw-semibold ff-exo">
+                                        Lorem ipsum dolor sit amet
+                                   </h3>
+                              </div>
+                         </div>
+                         <div class="d-flex flex-column gap-4 mt-32">
+                              <div class="d-flex align-items-center justify-content-start bg-white p-3 p-lg-4 border border-20 border-blue-light text-left">
+                                   <h4 class="mb-0 h4 ff-exo fw-semibold fs-20">
+                                        Lorem ipsum dolor sit amet consectetur adipis
+                                   </h4>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-start bg-blue-light p-3 p-lg-4 border-20 text-left">
+                                   <h4 class="mb-0 h4 ff-exo fw-semibold fs-20">
+                                        Lorem ipsum dolor sit amet consectetur adipi
+                                   </h4>
+                              </div>
+                              <div class="d-flex align-items-center justify-content-start bg-white p-3 p-lg-4 border border-20 border-blue-light text-left">
+                                   <h4 class="mb-0 h4 ff-exo fw-semibold fs-20">
+                                        Lorem ipsum dolor sit amet consecte
+                                   </h4>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center col-lg-5">
+                         <picture>
+                              <source media="(min-width: 1200px)" type="image/png" srcset="./img/png/business-view/notebook-x2.png" class="d-block w-100">
+                              <img src="./img/png/business-view/notebook.png" alt class="w-100">
+                         </picture>
+                    </div>
+               </div>
+          </div>
+
+          <div class="container">
+               <div class="bg-blue-light p-3 p-lg-4 border-20 w-100">
+                    <div class="row-gap-3 row">
+                         <div class="d-flex col-lg-6">
+                              <div class="w-100">
+                                   <div class="d-flex flex-row align-items-center gap-3">
+                                        <div class>
+                                             <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <g clip-path="url(#clip0_16471_3505)">
+                                                       <g clip-path="url(#clip1_16471_3505)">
+                                                            <g clip-path="url(#clip2_16471_3505)">
+                                                                 <mask id="mask0_16471_3505" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                                                      <path d="M48 0H0V48H48V0Z" fill="white"/>
+                                                                 </mask>
+                                                                 <g mask="url(#mask0_16471_3505)">
+                                                                      <path d="M25.1992 48.0028C37.8965 47.3772 47.9992 36.8779 47.9992 24.0175C47.9992 20.0712 47.048 16.3471 45.3621 13.0625C38.6029 16.9673 35.2235 18.9197 32.6677 21.5511C29.6155 24.6934 27.3923 28.5462 26.1987 32.7625C25.1992 36.2929 25.1992 40.1961 25.1992 48.0028Z" fill="url(#paint0_linear_16471_3505)"/>
+                                                                      <path d="M22.8 48.0028C10.1027 47.3772 0 36.8779 0 24.0175C0 20.0712 0.951318 16.3471 2.637 13.0625C9.39624 16.9673 12.7758 18.9197 15.3317 21.5511C18.3839 24.6934 20.6069 28.5462 21.8006 32.7625C22.8 36.2929 22.8 40.1961 22.8 48.0028Z" fill="url(#paint1_linear_16471_3505)"/>
+                                                                      <path d="M3.83984 10.9811C10.5984 14.8855 13.9777 16.8377 17.534 17.7368C21.7786 18.8099 26.2233 18.8099 30.4679 17.7368C34.0241 16.8377 37.4036 14.8855 44.162 10.9811C39.8866 4.37282 32.454 0 24.001 0C15.5479 0 8.11548 4.37282 3.83984 10.9811Z" fill="url(#paint2_linear_16471_3505)"/>
+                                                                 </g>
+                                                            </g>
+                                                       </g>
+                                                  </g>
+                                                  <defs>
+                                                       <lineargradient id="paint0_linear_16471_3505" x1="-0.000779579" y1="24.0027" x2="47.9992" y2="24.0027" gradientunits="userSpaceOnUse">
+                                                            <stop stop-color="#4FACFE"/>
+                                                            <stop offset="1" stop-color="#00F2FE"/>
+                                                       </lineargradient>
+                                                       <lineargradient id="paint1_linear_16471_3505" x1="0" y1="24.0027" x2="48" y2="24.0027" gradientunits="userSpaceOnUse">
+                                                            <stop stop-color="#4FACFE"/>
+                                                            <stop offset="1" stop-color="#00F2FE"/>
+                                                       </lineargradient>
+                                                       <lineargradient id="paint2_linear_16471_3505" x1="0.000779748" y1="24.0001" x2="48.0008" y2="24.0001" gradientunits="userSpaceOnUse">
+                                                            <stop stop-color="#4FACFE"/>
+                                                            <stop offset="1" stop-color="#00F2FE"/>
+                                                       </lineargradient>
+                                                       <clippath id="clip0_16471_3505">
+                                                            <rect width="48" height="48" fill="white"/>
+                                                       </clippath>
+                                                       <clippath id="clip1_16471_3505">
+                                                            <rect width="48" height="48" fill="white"/>
+                                                       </clippath>
+                                                       <clippath id="clip2_16471_3505">
+                                                            <rect width="48" height="48" fill="white"/>
+                                                       </clippath>
+                                                  </defs>
+                                             </svg>
+                                        </div>
+                                        <div class>
+                                             <h3 class="mb-0 text-uppercase h3 fs-24 color-blue-dark fw-semibold ff-exo">
+                                                  Lorem ip
+                                             </h3>
+                                        </div>
+                                   </div>
+                                   <p class="mt-4 mb-0 ff-roboto">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiu
+                                   </p>
+                              </div>
+                         </div>
+                         <div class="d-flex col-lg-6">
+                              <div class="d-flex flex-row flex-wrap gap-3 w-100">
+                                   <div class="d-flex align-items-center justify-content-center bg-blue-dark px-4 py-12 rounded-pill text-center">
+                                        <h5 class="mb-0 ff-exo h5 fs-18 color-white fw-normal">
+                                             Lorem ipsum dolor sit ame
+                                        </h5>
+                                   </div>
+                                   <div class="d-flex align-items-center justify-content-center bg-white px-4 py-12 rounded-pill text-center">
+                                        <h5 class="mb-0 ff-exo h5 fs-18 color-blue-dark fw-normal">
+                                             Lorem ipsum dolor sit a
+                                        </h5>
+                                   </div>
+                                   <div class="d-flex align-items-center justify-content-center bg-blue-dark px-4 py-12 rounded-pill text-center">
+                                        <h5 class="mb-0 ff-exo h5 fs-18 color-white fw-normal">
+                                             Lorem ipsum dolor sit 
+                                        </h5>
+                                   </div>
+                                   <div class="d-flex align-items-center justify-content-center bg-white px-4 py-12 rounded-pill text-center">
+                                        <h5 class="mb-0 ff-exo h5 fs-18 color-blue-dark fw-normal">
+                                             Lorem ipsu
+                                        </h5>
+                                   </div>
+                                   <div class="d-flex align-items-center justify-content-center bg-blue-dark px-4 py-12 rounded-pill text-center">
+                                        <h5 class="mb-0 ff-exo h5 fs-18 color-white fw-normal">
+                                             Lorem ipsum dolor sit amet consectetur 
+                                        </h5>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="container">
+               <div class="row-gap-3 row">
+                    <div class="d-flex col-lg-6">
+                         <div class="bg-blue-dark p-3 p-lg-4 border-20 w-100 color-white">
+                              <div class="d-flex flex-row align-items-center gap-3">
+                                   <div class>
+                                        <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <g clip-path="url(#clip0_16471_3526)">
+                                                  <g clip-path="url(#clip1_16471_3526)">
+                                                       <mask id="mask0_16471_3526" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="2" width="48" height="44">
+                                                            <path d="M48 2.42969H0V45.5758H48V2.42969Z" fill="white"/>
+                                                       </mask>
+                                                       <g mask="url(#mask0_16471_3526)">
+                                                            <path d="M11.5949 25.0502C12.3567 24.59 12.3567 23.4154 11.5949 22.9552C4.92885 18.9288 0.382289 11.7546 0.0205209 3.49529C-0.0052258 2.90748 0.474792 2.42969 1.0639 2.42969H10.9306C11.5197 2.42969 11.9923 2.90827 12.0439 3.49437C12.5834 9.6148 17.729 14.4147 23.9972 14.4147C30.2655 14.4147 35.4111 9.6148 35.9505 3.49437C36.0023 2.90826 36.4748 2.42969 37.0639 2.42969H46.9306C47.5196 2.42969 47.9996 2.90748 47.974 3.49529C47.6122 11.7546 43.0655 18.9288 36.3996 22.9552C35.6378 23.4154 35.6378 24.59 36.3996 25.0502C43.0655 29.0766 47.6122 36.2509 47.974 44.5102C47.9996 45.098 47.5196 45.5758 46.9306 45.5758H37.0639C36.4748 45.5758 36.0023 45.0972 35.9505 44.511C35.4111 38.3906 30.2655 33.5907 23.9972 33.5907C17.729 33.5907 12.5834 38.3906 12.0439 44.511C11.9923 45.0972 11.5197 45.5758 10.9306 45.5758H1.0639C0.474792 45.5758 -0.0052258 45.098 0.0205209 44.5102C0.382289 36.2509 4.92885 29.0766 11.5949 25.0502Z" fill="url(#paint0_linear_16471_3526)"/>
+                                                       </g>
+                                                  </g>
+                                             </g>
+                                             <defs>
+                                                  <lineargradient id="paint0_linear_16471_3526" x1="0.0195312" y1="24.0027" x2="47.975" y2="24.0027" gradientunits="userSpaceOnUse">
+                                                       <stop stop-color="#43E97B"/>
+                                                       <stop offset="1" stop-color="#38F9D7"/>
+                                                  </lineargradient>
+                                                  <clippath id="clip0_16471_3526">
+                                                       <rect width="48" height="48" fill="white"/>
+                                                  </clippath>
+                                                  <clippath id="clip1_16471_3526">
+                                                       <rect width="48" height="43.1461" fill="white" transform="translate(0 2.42969)"/>
+                                                  </clippath>
+                                             </defs>
+                                        </svg>
+                                   </div>
+                                   <div class>
+                                        <h3 class="mb-0 text-uppercase h3 fs-24 fw-semibold ff-exo color-white">
+                                             Lorem ipsum dolo
+                                        </h3>
+                                   </div>
+                              </div>
+                              <div class="d-flex flex-column gap-3 mt-4">
+                                   <div class="d-flex flex-row align-items-lg-center align-items-start gap-3">
+                                        <div class>
+                                             <i class="bi-arrow-up-right bi fs-24"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum do
+                                        </p>
+                                   </div>
+                                   <div class="d-flex flex-row align-items-lg-center align-items-start gap-3">
+                                        <div class>
+                                             <i class="bi-arrow-up-right bi fs-24"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing
+                                        </p>
+                                   </div>
+                                   <div class="d-flex flex-row align-items-lg-center align-items-start gap-3">
+                                        <div class>
+                                             <i class="bi-arrow-up-right bi fs-24"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing
+                                        </p>
+                                   </div>
+                                   <div class="d-flex flex-row align-items-lg-center align-items-start gap-3">
+                                        <div class>
+                                             <i class="bi-arrow-up-right bi fs-24"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+                                        </p>
+                                   </div>
+                                   <div class="d-flex flex-row align-items-lg-center align-items-start gap-3">
+                                        <div class>
+                                             <i class="bi-arrow-up-right bi fs-24"></i>
+                                        </div>
+                                        <p class="mb-0">
+                                             Lorem 
+                                        </p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="d-flex col-lg-6">
+                         <div class="bg-blue-light p-3 p-lg-4 border-20 w-100">
+                              <div class="d-flex flex-row align-items-center gap-3">
+                                   <div class>
+                                        <svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <g clip-path="url(#clip0_16471_3558)">
+                                                  <g clip-path="url(#clip1_16471_3558)">
+                                                       <g clip-path="url(#clip2_16471_3558)">
+                                                            <mask id="mask0_16471_3558" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                                                                 <path d="M48 0H0V48H48V0Z" fill="white"/>
+                                                            </mask>
+                                                            <g mask="url(#mask0_16471_3558)">
+                                                                 <path d="M48 24C48 37.255 37.255 48 24 48C33.0133 48 40.32 40.6933 40.32 31.68C40.32 22.6667 33.0133 15.36 24 15.36C14.9867 15.36 7.68 22.6667 7.68 31.68C7.68 40.6933 14.9867 48 24 48C10.7452 48 0 37.255 0 24C0 10.7452 10.7452 0 24 0C37.255 0 48 10.7452 48 24Z" fill="url(#paint0_linear_16471_3558)"/>
+                                                                 <path d="M24.0006 48.0012C17.6382 48.0012 12.4805 42.8433 12.4805 36.4809C12.4805 30.1185 17.6381 24.9609 24.0005 24.9609C30.3629 24.9609 35.5205 30.1185 35.5205 36.4809C35.5205 42.8433 30.363 48.0012 24.0006 48.0012Z" fill="url(#paint1_linear_16471_3558)"/>
+                                                            </g>
+                                                       </g>
+                                                  </g>
+                                             </g>
+                                             <defs>
+                                                  <lineargradient id="paint0_linear_16471_3558" x1="0" y1="24" x2="48" y2="24" gradientunits="userSpaceOnUse">
+                                                       <stop stop-color="#89F7FE"/>
+                                                       <stop offset="1" stop-color="#66A6FF"/>
+                                                  </lineargradient>
+                                                  <lineargradient id="paint1_linear_16471_3558" x1="0.000589629" y1="24.0012" x2="48.0006" y2="24.0012" gradientunits="userSpaceOnUse">
+                                                       <stop stop-color="#89F7FE"/>
+                                                       <stop offset="1" stop-color="#66A6FF"/>
+                                                  </lineargradient>
+                                                  <clippath id="clip0_16471_3558">
+                                                       <rect width="48" height="48" fill="white"/>
+                                                  </clippath>
+                                                  <clippath id="clip1_16471_3558">
+                                                       <rect width="48" height="48" fill="white"/>
+                                                  </clippath>
+                                                  <clippath id="clip2_16471_3558">
+                                                       <rect width="48" height="48" fill="white"/>
+                                                  </clippath>
+                                             </defs>
+                                        </svg>
+                                   </div>
+                                   <div class>
+                                        <h3 class="mb-0 text-uppercase h3 fs-24 fw-semibold ff-exo color-blue-dark">
+                                             Lorem ipsum dolor sit amet consectetur adipisicing e
+                                        </h3>
+                                   </div>
+                              </div>
+                              <div class="mt-4">
+                                   <p class="mb-0">
+                                        Lorem ipsum dolor sit amet consec
+                                   </p>
+                              </div>
+                              <div class="d-flex flex-row flex-wrap gap-3 mt-3 color-blue-dark">
+                                   <div class="d-flex flex-row align-items-center gap-2 col-lg-5">
+                                        <i class="bi bi-envelope"></i>
+                                        <a href="mailto:poglyad@info-center.by" class="color-blue-dark">Lorem ipsum dolor sit </a>
+                                   </div>
+                                   <div class="d-flex flex-row align-items-center gap-2 col-lg-5">
+                                        <i class="bi bi-phone"></i>
+                                        <a href="tel:+375(17)269-18-71" class="color-blue-dark">
+                                             Lorem ipsum dolor
+                                        </a>
+                                   </div>
+                                   <div class="d-flex">
+                                        Lorem ipsum dolor sit<a href="http://poglyad.by" target="_blank" rel="noopener noreferrer" class="color-blue-dark">Lorem ipsum do</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
      </main>
      <div class="position-relative">
      <button class="btn-up" id="btnUp">
